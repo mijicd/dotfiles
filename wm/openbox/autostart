@@ -1,0 +1,38 @@
+#
+# These things are run when an Openbox X Session is started.
+# You may place a similar script in $HOME/.config/openbox/autostart
+# to run user-specific things.
+#
+
+# daemonize urxvt
+urxvtd --quiet --opendisplay --fork
+
+# disable beeping
+xset b off &
+
+# caps lock
+setxkbmap -option ctrl:nocaps
+
+# toggle keyboard layout
+setxkbmap -option "grp:alt_shift_toggle" -layout "us,hr"
+
+# daemonize thunar
+thunar --daemon &
+
+# daemonize emacs
+emacs --daemon &
+
+# set wallpaper
+nitrogen --restore &
+
+# composition
+xcompmgr -cfF -t-9 -l-11 -r9 -o.95 -D6 &
+
+# tint2 panel
+tint2 &
+
+# run pidgin
+(sleep 3s && pidgin) &
+
+# start system monitor
+(sleep 5s && conky -q) &

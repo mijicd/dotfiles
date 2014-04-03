@@ -1,0 +1,28 @@
+""" general """
+set history=700
+set showmatch
+
+" outside changes
+set autoread
+
+""" searching """
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+""" coloring & fonts """
+syntax on
+colorscheme zenburn
+set encoding=utf8
+
+""" backups """
+set nobackup
+set nowb
+set noswapfile
+
+""" tabbing """
+set expandtab
+set smarttab
+set shiftwidth=4
+set tabstop=4

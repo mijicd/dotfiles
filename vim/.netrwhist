@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/home/dejan/Desktop/indie/indie/settings'
+let g:netrw_dirhist_2='/home/dejan/.offlineimap'
+let g:netrw_dirhist_3='/home/dejan/postponed'
+let g:netrw_dirhist_4='/home/dejan/.mutt/cache'
+let g:netrw_dirhist_5='/home/dejan/.mutt/temp'
+let g:netrw_dirhist_6='/home/dejan/.offlineimap'
