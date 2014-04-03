@@ -30,6 +30,7 @@ URxvt*background:[80]Black
 URxvt.depth: 32
 
 ! addons
+URxvt.perl-lib: /home/dejan/.urxvt
 URxvt.perl-ext-common: default,clipboard,url-select,keyboard-select
 URxvt.keysym.M-c: perl:clipboard:copy
 URxvt.keysym.M-v: perl:clipboard:paste
