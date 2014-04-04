@@ -42,7 +42,7 @@ background yes
     CPU $alignr ${cpu cpu0}%
     ${cpubar cpu0}
 
-    MEM $alignc $mem / $memmax $alignr $memperc%
+    RAM $alignc $mem / $memmax $alignr $memperc%
     $membar
 
     
@@ -57,7 +57,7 @@ background yes
     PROCESSES ${hr 2}
     $processes processes ($running_processes running)
     
-    NAME $alignr PID    CPU  MEM
+    NAME $alignr PID    CPU  RAM
     ${top name 1} $alignr ${top pid 1} ${top cpu 1} ${top mem 1}
     ${top name 2} $alignr ${top pid 2} ${top cpu 2} ${top mem 2}
     ${top name 3} $alignr ${top pid 3} ${top cpu 3} ${top mem 3}
