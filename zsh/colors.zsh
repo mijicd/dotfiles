@@ -12,10 +12,7 @@ export PR_RED PR_GREEN PR_YELLOW PR_BLUE PR_WHITE PR_BLACK
 export PR_BOLD_RED PR_BOLD_GREEN PR_BOLD_YELLOW PR_BOLD_BLUE 
 export PR_BOLD_WHITE PR_BOLD_BLACK
 
-# Clear LS_COLORS
-unset LS_COLORS
-
-# Main change, you can see directories on a dark background
+# color setup
 export CLICOLOR=1
 export LS_COLORS=exfxcxdxbxegedabagacad
 
