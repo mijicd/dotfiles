@@ -81,20 +81,6 @@ function git_prompt_string() {
   [ -n "$git_where" ] && echo "on %{$fg[blue]%}${git_where#(refs/heads/|tags/)}$(parse_git_state)"
 }
 
-# determine Ruby version whether using RVM or rbenv
-# the chpwd_functions line cause this to update only when the directory changes
-function _update_ruby_version() {
-    typeset -g ruby_version=''
-    if which rvm-prompt &> /dev/null; then
-      ruby_version="$(rvm-prompt i v g)"
-    else
-      if which rbenv &> /dev/null; then
-        ruby_version="$(rbenv version | sed -e "s/ (set.*$//")"
-      fi
-    fi
-}
-chpwd_functions+=(_update_ruby_version)
-
 function current_pwd {
   echo $(pwd | sed -e "s,^$HOME,~,")
 }
@@ -105,5 +91,5 @@ $(prompt_char) '
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
 
-RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%} ${PR_RED}${ruby_version}%{$reset_color%}'
+RPROMPT='${PR_GREEN}$(virtualenv_info)%{$reset_color%}'
 
