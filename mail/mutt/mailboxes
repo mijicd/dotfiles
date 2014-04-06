@@ -1,0 +1,9 @@
+mailboxes \
+  "+gmail/INBOX" \
+  "+gmail/archive" \
+  "+gmail/drafts" \
+  "+gmail/eunet" \
+  "+gmail/hetzner" \
+  "+gmail/sent" \
+  "+gmail/trash" \
+  "+gmail/typhoon"

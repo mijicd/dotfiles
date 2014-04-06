@@ -1,0 +1,3 @@
+mail/mutt/cache/*
+!mail/mutt/cache/.gitkeep
+!mail/mutt/cache/headers/

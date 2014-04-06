@@ -1,0 +1,15 @@
+# vim: ft=muttrc
+set from          = "dejan.mjc@gmail.com"
+set sendmail      = "/usr/bin/msmtp -a gmail"
+set mbox          = "+gmail/archive"
+set postponed     = "+gmail/drafts"
+#set query_command = "echo; ~/.local/bin/gcontacts -a pbrisbin@gmail.com '%s'"
+
+color status green default
+
+#macro index ,c "<change-folder>+Thoughtbot/INBOX<return>" "change accounts"
+macro index D "<save-message>+gmail/trash<enter>" "move message to the trash"
+macro index S "<save-message>+gmail/spam<enter>"  "mark message as spam"
+
+set pgp_sign_as = F07881A2
+my_hdr X-PGP-Key: http://pgp.mit.edu/pks/lookup?op=vindex&search=0xC359CC681C309808
