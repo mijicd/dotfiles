@@ -13,7 +13,7 @@
 		</item>
 		<item label="Terminal">
 			<action name="Execute">
-				<execute>urxvtc -e /bin/bash -i -c "tmux attach"</execute>
+				<execute>urxvtc -e /bin/bash -i -c &quot;tmux attach&quot;</execute>
 			</action>
 		</item>
 		<separator/>
@@ -37,9 +37,9 @@
 			</item>
 		</menu>
 		<menu id="root-menu-80913" label="Multimedia">
-			<item label="VLC">
+			<item label="MPLAYER">
 				<action name="Execute">
-					<execute>vlc</execute>
+					<execute>gmplayer</execute>
 				</action>
 			</item>
 		</menu>
