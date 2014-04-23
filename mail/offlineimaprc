@@ -25,7 +25,7 @@ nametrans = nt_local
 [Repository gmail-Remote]
 type = Gmail
 remoteuser = dejan.mjc@gmail.com
-remotepass = <enter password>
+remotepasseval = get_password('gmail')
 realdelete = no
 maxconnections = 1
 nametrans = nt_remote
