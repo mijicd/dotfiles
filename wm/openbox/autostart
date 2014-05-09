@@ -31,8 +31,5 @@ xcompmgr -cfF -t-9 -l-11 -r9 -o.95 -D6 &
 # tint2 panel
 tint2 &
 
-# run pidgin
-(sleep 3s && pidgin) &
-
 # start system monitor
-(sleep 5s && conky -q) &
+(sleep 3s && conky -q) &
