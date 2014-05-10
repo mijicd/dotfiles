@@ -19,7 +19,11 @@ chatnets = {
 };
 
 channels = (
-  { name = "##linux"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "##linux"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#debian"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#gentoo"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#python"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -227,6 +231,22 @@ ignores = (
   { 
     level = "MODES JOINS PARTS QUITS NICKS";
     channels = ( "##linux" );
+  },
+  { 
+    level = "MODES JOINS PARTS QUITS NICKS";
+    channels = ( "#debian" );
+  },
+  { 
+    level = "MODES JOINS PARTS QUITS NICKS";
+    channels = ( "#gentoo" );
+  },
+  { 
+    level = "MODES JOINS PARTS QUITS NICKS";
+    channels = ( "#python" );
+  },
+  { 
+    level = "MODES JOINS PARTS QUITS NICKS";
+    channels = ( "#django" );
   }
 );
 
@@ -239,6 +259,46 @@ windows = {
         type = "CHANNEL";
         chat_type = "IRC";
         name = "##linux";
+        tag = "Freenode";
+      }
+    );
+  };
+  4 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#debian";
+        tag = "Freenode";
+      }
+    );
+  };
+  5 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#gentoo";
+        tag = "Freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#python";
+        tag = "Freenode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#django";
         tag = "Freenode";
       }
     );
