@@ -127,7 +127,7 @@ $socket = $socket_path . "/" . $socket_name;
 # register config variables
 Irssi::settings_add_bool('misc', $IRSSI{'name'} . '_active', 1);
 Irssi::settings_add_int('misc', $IRSSI{'name'} . '_repeat', 5);
-Irssi::settings_add_str('misc', $IRSSI{'name'} . '_message', "not here ...");
+Irssi::settings_add_str('misc', $IRSSI{'name'} . '_message', "screen's detached, i'll catch up later...");
 Irssi::settings_add_str('misc', $IRSSI{'name'} . '_window', "1");
 Irssi::settings_add_str('misc', $IRSSI{'name'} . '_nick', "");
 

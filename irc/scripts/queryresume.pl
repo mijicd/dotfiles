@@ -21,11 +21,12 @@ use File::Glob ':glob';
 sub draw_box ($$$$) {
     my ($title, $text, $footer, $colour) = @_;
     my $box = '';
-    $box .= '%R,--[%n%9%U'.$title.'%U%9%R]%n'."\n";
+    #$box .= '%R,--[%n%9%U'.$title.'%U%9%R]%n'."\n";
     foreach (split(/\n/, $text)) {
-        $box .= '%R|%n '.$_."\n";
+        #$box .= '%R|%n '.$_."\n";
+        $box .= '%w> '.$_."%n\n";
     }
-    $box .= '%R`--<%n'.$footer.'%R>->%n';
+    #$box .= '%R`--<%n'.$footer.'%R>->%n';
     $box =~ s/%.//g unless $colour;
     return $box;
 }
