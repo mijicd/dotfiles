@@ -1,8 +1,5 @@
-" .vimrc
-" Maintained by: Mark Nichols
-" mark@zanshin.net
-" http;//zanshin.net
-"
+" Written by Mark Nichols <mark@zanshin.net>
+
 " -------------------------------------------------------------------
 " Forget compatibility with vi. Who cares.
 " -------------------------------------------------------------------
@@ -29,18 +26,20 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'sjl/badwolf/'
-" Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'bling/vim-airline'
 Bundle 'benmills/vimux'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'plasticboy/vim-markdown'
-" Bundle 'fholgado/minibufexpl.vim'
+Bundle 'fholgado/minibufexpl.vim'
+
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
+
 " Some snippets to get started
 Bundle "honza/vim-snippets"
 
@@ -184,9 +183,9 @@ let g:badwolf_darkgutter = 1
 " -------------------------------------------------------------------
 " Set tab stuff
 " -------------------------------------------------------------------
-set tabstop=2           " 2 spaces for a tab
-set shiftwidth=2        " 2 spaces for autoindenting
-set softtabstop=2       " when <BS>, pretend a tab is removed even if spaces
+set tabstop=4           " 4 spaces for a tab
+set shiftwidth=4        " 4 spaces for autoindenting
+set softtabstop=4       " when <BS>, pretend a tab is removed even if spaces
 set expandtab           " expand tabs to spaces (overloadable by file type)
 
 " -------------------------------------------------------------------
