@@ -8,7 +8,7 @@ servers = (
     autoconnect = "yes";
   },
 
-  { address = "localhost"; chatnet = "bitlbee"; autoconnect = "yes"; }  
+  { address = "localhost"; chatnet = "bitlbee"; autoconnect = "yes"; }
 );
 
 chatnets = {
@@ -24,7 +24,7 @@ chatnets = {
 channels = (
   { name = "##linux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#debian"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#gentoo"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#python"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; }
 );
@@ -177,7 +177,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#gentoo";
+        name = "#archlinux";
         tag = "Freenode";
       }
     );
@@ -209,3 +209,4 @@ mainwindows = {
   1 = { first_line = "6"; lines = "55"; };
   2 = { first_line = "1"; lines = "5"; };
 };
+logs = { };
