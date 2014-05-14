@@ -24,5 +24,10 @@ def nt_local(folder):
 def exclude(excludes):
     return lambda folder: not folder in excludes
 
-def get_password(email_address):
-    pass
+def get_password(account):
+    path = '/home/dejan/.passwd/%s.gpg' % account
+    args = ['gpg', '--batch', '--quiet', '-d', path]
+    try:
+        return subprocess.check_output(args).strip()
+    except subprocess.CalledProcessError:
+        return None

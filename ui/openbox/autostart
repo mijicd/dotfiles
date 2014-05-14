@@ -20,7 +20,7 @@ setxkbmap -option "grp:alt_shift_toggle" -layout "us,hr"
 thunar --daemon &
 
 # set wallpaper
-nitrogen --restore &
+feh --bg-scale ~/Documents/wallpaper.png &
 
 # composition
 xcompmgr -cfF -t-9 -l-11 -r9 -o.95 -D6 &
