@@ -1,44 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
 	<menu id="root-menu" label="Openbox 3">
-		<item label="File Manager">
-			<action name="Execute">
-				<execute>thunar</execute>
-			</action>
-		</item>
-		<item label="Browser">
-			<action name="Execute">
-				<execute>x-www-browser</execute>
-			</action>
-		</item>
 		<item label="Terminal">
 			<action name="Execute">
 				<execute>urxvtc -e /bin/bash -i -c &quot;tmux attach&quot;</execute>
 			</action>
 		</item>
+		<item label="File Manager">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
 		<separator/>
+		<item label="Browser">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
 		<!-- This requires the presence of the 'menu' package to work -->
-		<menu id="/Debian/Applications/Office" label="Office">
-		</menu>
-		<menu id="root-menu-362416" label="Graphics">
-			<item label="nitrogen">
-				<action name="Execute">
-					<execute>nitrogen</execute>
-				</action>
-			</item>
-			<item label="dia">
-				<action name="Execute">
-					<execute>dia</execute>
-				</action>
-			</item>
-		</menu>
-		<menu id="root-menu-80913" label="Multimedia">
-			<item label="MPLAYER">
-				<action name="Execute">
-					<execute>gmplayer</execute>
-				</action>
-			</item>
-		</menu>
+		<item label="Office">
+			<action name="Execute">
+				<execute>loffice</execute>
+			</action>
+		</item>
+		<item label="Astah UML">
+			<action name="Execute">
+				<execute>astah</execute>
+			</action>
+		</item>
 		<separator/>
 		<item label="ObConf">
 			<action name="Execute">
