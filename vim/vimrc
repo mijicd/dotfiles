@@ -380,6 +380,9 @@ nmap <leader>vi :call VimuxRunCommand("ingen")<CR>
 nmap <leader>vz :call VimuxRunCommand("dz")<CR>
 nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 
+" NERD tree toggling
+nmap <C-n> :NERDTreeToggle<CR>
+
 " MiniBufExpl setup
 " let g:miniBufExplMapWindowNavVim = 1 
 " let g:miniBufExplMapWindowNavArrows = 1 
