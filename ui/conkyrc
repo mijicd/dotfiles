@@ -59,6 +59,7 @@ background yes
     Data $alignc ${fs_used /mnt/data} / ${fs_size /mnt/data} $alignr ${fs_used_perc /mnt/data}%
     ${fs_bar /mnt/data}
 
+
     PROCESSES ${hr 2}
     $processes processes ($running_processes running)
     
@@ -74,10 +75,10 @@ background yes
 
     
     NETWORK ${hr 2}
-    IP: ${addr eth0}
+    IP: ${addr enp0s25}
     
-    Inbound $alignr ${downspeed eth0} kb/s
-    ${downspeedgraph eth0}
+    Inbound $alignr ${downspeed enp0s25} kb/s
+    ${downspeedgraph enp0s25}
     
-    Outbound $alignr ${upspeed eth0} kb/s
-    ${upspeedgraph eth0}
+    Outbound $alignr ${upspeed enp0s25} kb/s
+    ${upspeedgraph enp0s25}
