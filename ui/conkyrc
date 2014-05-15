@@ -53,7 +53,12 @@ background yes
     Root $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
     ${fs_bar /}
    
- 
+    Home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home}%
+    ${fs_bar /home}
+
+    Data $alignc ${fs_used /mnt/data} / ${fs_size /mnt/data} $alignr ${fs_used_perc /mnt/data}%
+    ${fs_bar /mnt/data}
+
     PROCESSES ${hr 2}
     $processes processes ($running_processes running)
     
