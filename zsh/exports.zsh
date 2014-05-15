@@ -1,5 +1,5 @@
 # initialize path
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH
 
 # setup terminal
 export TERM=rxvt-unicode
@@ -24,4 +24,4 @@ export MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:/usr/local/man:/usr/lo
 
 # python virtual envirinoment setup
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh 
+source /usr/bin/virtualenvwrapper.sh 
