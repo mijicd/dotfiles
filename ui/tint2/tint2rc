@@ -5,17 +5,17 @@
 #---------------------------------------------
 # BACKGROUND AND BORDER
 #---------------------------------------------
-rounded = 5
+rounded = 4
 border_width = 1
 background_color = #1A1A1A 0
 border_color = #979797 100
 
-rounded = 5
+rounded = 4
 border_width = 0
 background_color = #ffffff 20
 border_color = #ffffff 20
 
-rounded = 5
+rounded = 4
 border_width = 0
 background_color = #ffffff 0
 border_color = #ffffff 0
@@ -72,14 +72,14 @@ clock_background_id = 1
 #---------------------------------------------
 # BATTERY
 #---------------------------------------------
-#battery = 0
-#battery_low_status = 7
-#battery_low_cmd = notify-send "battery low"
-#bat1_font = sans 8
-#bat2_font = sans 6
-#battery_font_color = #ffffff 76
-#battery_padding = 1 0
-#battery_background_id = 0
+battery = 0
+battery_low_status = 7
+battery_low_cmd = notify-send "battery low"
+bat1_font = sans 8
+bat2_font = sans 6
+battery_font_color = #ffffff 76
+battery_padding = 1 0
+battery_background_id = 0
 
 
 #---------------------------------------------
