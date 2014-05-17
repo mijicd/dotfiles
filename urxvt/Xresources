@@ -41,10 +41,8 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.clipboard.copycmd: xclip -i -selection clipboard
 URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 
-! fonts
-! run "fc-list" for a list of available fonts
-URxvt*font: xft:Droid Sans Mono:pixelsize=12
-URxvt*letterSpace: -1
+! font setup
+URxvt*font: xft:Inconsolata:pixelsize=14:antialias=true:hinting=slight
 
 ! remove scroll bar
 URxvt*scrollBar: False
