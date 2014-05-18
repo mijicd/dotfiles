@@ -1,84 +1,108 @@
-background yes
-    use_xft yes
-    xftfont snap:size=9
-    xftalpha 0.5
-    update_interval 4.0
-    total_run_times 0
-    own_window yes
-    own_window_type normal
-    own_window_transparent yes
-    own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-    double_buffer yes
-    minimum_size 200 5
-    maximum_width 250
-    draw_shades no
-    draw_outline no
-    draw_borders no
-    draw_graph_borders yes
-   
-    default_color grey
-    default_shade_color red
-    default_outline_color grey
-    alignment top_left 
-    gap_x 12
-    gap_y 48
-    no_buffers yes
-    uppercase no
-    cpu_avg_samples 2
-    override_utf8_locale no
+######################
+# - Conky settings - #
+######################
+update_interval 1
+total_run_times 0
+net_avg_samples 1
+cpu_avg_samples 1
 
-    TEXT
-    DATE & TIME ${hr 2}
-    ${alignc}${font Arial Black:size:24}${time %H:%M}${font}
-    ${alignc}${Time %A %m %d %Y}
-    
-    INFO ${hr 2}
-    Hostname $alignr $nodename
-    Kernel $alignr $kernel
-    Uptime $alignr $uptime
+imlib_cache_size 0
+double_buffer yes
+no_buffers yes
 
+#####################
+# - Text settings - #
+#####################
+use_xft yes
+xftfont Ubuntu:size=8
+override_utf8_locale yes
+text_buffer_size 2048
 
-    CPU & MEMORY ${hr 2}    
-    CPU $alignr ${cpu cpu0}%
-    ${cpubar cpu0}
+#############################
+# - Window specifications - #
+#############################
+own_window_class Conky
+own_window yes
+own_window_type normal
+own_window_transparent yes
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
 
-    RAM $alignc $mem / $memmax $alignr $memperc%
-    $membar
+alignment top_left
+gap_x 25
+gap_y 40
+minimum_size 182 800 
 
-    
-    PARTITIONS ${hr 2}
-    Swap $alignc $swap / $swapmax $alignr $swapperc%
-    ${swapbar}
+default_bar_size 60 8
 
-    Root $alignc ${fs_used /} / ${fs_size /} $alignr ${fs_used_perc /}%
-    ${fs_bar /}
-   
-    Home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_used_perc /home}%
-    ${fs_bar /home}
+#########################
+# - Graphics settings - #
+#########################
+draw_shades no
+default_color cccccc
 
-    Data $alignc ${fs_used /mnt/data} / ${fs_size /mnt/data} $alignr ${fs_used_perc /mnt/data}%
-    ${fs_bar /mnt/data}
+color0 white
+color1 E07A1F
+color2 white
 
 
-    PROCESSES ${hr 2}
-    $processes processes ($running_processes running)
-    
-    NAME $alignr PID    CPU  RAM
-    ${top name 1} $alignr ${top pid 1} ${top cpu 1} ${top mem 1}
-    ${top name 2} $alignr ${top pid 2} ${top cpu 2} ${top mem 2}
-    ${top name 3} $alignr ${top pid 3} ${top cpu 3} ${top mem 3}
-    ${top name 4} $alignr ${top pid 4} ${top cpu 4} ${top mem 4}
-    ${top name 5} $alignr ${top pid 5} ${top cpu 5} ${top mem 5}
-    ${top name 6} $alignr ${top pid 6} ${top cpu 6} ${top mem 6}
-    ${top name 7} $alignr ${top pid 7} ${top cpu 7} ${top mem 7}
-    ${top name 8} $alignr ${top pid 8} ${top cpu 8} ${top mem 8}
+TEXT
+SYSTEM ${hr 2}
+${goto 6}${voffset 6}${font conkycolorslogos:size=32}a${font}${goto 55}${voffset -25}$machine
+${goto 55}Kernel: ${kernel} 
 
-    
-    NETWORK ${hr 2}
-    IP: ${addr enp0s25}
-    
-    Inbound $alignr ${downspeed enp0s25} kb/s
-    ${downspeedgraph enp0s25}
-    
-    Outbound $alignr ${upspeed enp0s25} kb/s
-    ${upspeedgraph enp0s25}
+${hr 2}
+
+CPU Usage ${hr 2}
+${goto 6}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}CPU1: ${cpu cpu1}%${alignr}CPU2: ${cpu cpu2}%
+${goto 6}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}CPU3: ${cpu cpu3}%${alignr}CPU4: ${cpu cpu4}%
+${goto 6}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}CPU5: ${cpu cpu5}%${alignr}CPU6: ${cpu cpu6}%
+${goto 6}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}CPU7: ${cpu cpu7}%${alignr}CPU8: ${cpu cpu8}%
+
+CPU Temperatures ${hr 2}
+${goto 6}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}Core0:${alignr}${color #FCAF3E}${execi 30 sensors | grep 'Core 0' | awk '{print $3}' | sed 's/+//' | sed 's/\.0//g'} $color
+${goto 6}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}Core1:${alignr}${color #FCAF3E}${execi 30 sensors | grep 'Core 1' | awk '{print $3}' | sed 's/+//' | sed 's/\.0//g'} $color
+${goto 6}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}Core2:${alignr}${color #FCAF3E}${execi 30 sensors | grep 'Core 2' | awk '{print $3}' | sed 's/+//' | sed 's/\.0//g'} $color
+${goto 7}${voffset 4}${font conkycolors:size=16}c${font}${voffset -4}${goto 32}Core3:${alignr}${color #FCAF3E}${execi 30 sensors | grep 'Core 3' | awk '{print $3}' | sed 's/+//' | sed 's/\.0//g'} $color
+
+Resources ${hr 2}
+${goto 6}${voffset 4}${font conkycolors:size=16}g${font}${voffset -4}${goto 32}Memory: ${mem} ${alignr}${membar 8,60}
+${goto 6}${voffset 4}${font conkycolors:size=16}i${font}${voffset -4}${goto 32}Disk: ${diskio}${alignr}${diskiograph 8,60 F57900 FCAF3E}
+${goto 6}${voffset 4}${font conkycolors:size=16}i${font}${voffset -4}${goto 32}Swap: $swapperc% ${alignr}${swapbar 8,60}
+${goto 6}${voffset 4}${font conkycolors:size=16}o${font}${voffset -4}${goto 32}Uptime: ${alignr}${uptime}
+${goto 6}${voffset 4}${font conkycolors:size=16}C${font}${voffset -4}${goto 32}Processes: ${alignr}$processes ($running_processes running)
+${goto 7.5}${voffset 4}${font Poky:size=15}a${font}${goto 32}${voffset -10}Name: ${alignr 13}CPU${alignr}RAM
+${goto 32}${voffset -5.5}${hr 1}
+${voffset -1}${goto 32}${top name 1} ${goto 124}${top cpu 1}${alignr }${top mem 1}
+${voffset -1}${goto 32}${top name 2} ${goto 124}${top cpu 2}${alignr }${top mem 2}
+${voffset -1}${goto 32}${top name 3} ${goto 124}${top cpu 3}${alignr }${top mem 3}
+${voffset -1}${goto 32}${top name 4} ${goto 124}${top cpu 4}${alignr }${top mem 4}
+
+HDD ${hr 2}
+${font conkycolors:size=16}i${font} ${voffset -5}/
+${voffset 4}${fs_free /}/${fs_size /} ${alignr}${fs_bar 8,60 /}
+${font conkycolors:size=16}i${font} ${voffset -5}/home
+${voffset 4}${fs_free /home}/${fs_size /home} ${alignr}${fs_bar 8,60 /home}
+${font conkycolors:size=16}i${font} ${voffset -5}data
+${voffset 4}${fs_free /mnt/data}/${fs_size /mnt/data} ${alignr}${fs_bar 8,60 /mnt/data}
+
+Network ${hr 2}
+# wlp3s0
+${if_up wlp3s0}
+${font conkycolors:size=14}k${font}${goto 32}${voffset -8}SSID: ${wireless_essid wlp3s0}
+${goto 32}Signal: ${wireless_link_qual wlp3s0}% ${alignr}${wireless_link_bar 8,60 wlp3s0}
+${voffset 4}${font conkycolors:size=14}x${font}${goto 32}${voffset -6}Up: ${upspeed wlp3s0}${font} ${alignr}${upspeedgraph wlp3s0 8,60 F57900 FCAF3E}
+${goto 32}Total: ${totalup wlp3s0}
+${voffset 4}${font conkycolors:size=14}u${font}${goto 32}${voffset -6}Down: ${downspeed wlp3s0}${font} ${alignr}${downspeedgraph wlp3s0 8,60 F57900 FCAF3E}
+${goto 32}Total: ${totaldown wlp3s0}
+${voffset 4}${font conkycolors:size=13}A${font}${goto 32}${voffset -8}Local IP: ${alignr}${addr wlp3s0}
+
+# enp0s25
+${else}${if_up enp0s25}
+${voffset -13}${font conkycolors:size=14}x${font}${goto 32}${voffset -6}Up: ${upspeed enp0s25}${font} ${alignr}${upspeedgraph enp0s25 8,60 F57900 FCAF3E}
+${goto 32}Total: ${totalup enp0s25}
+${voffset -2}${font conkycolors:size=14}u${font}${goto 32}${voffset -6}Down: ${downspeed enp0s25}${font} ${alignr}${downspeedgraph enp0s25 8,60 F57900 FCAF3E}
+${goto 32}Total: ${totaldown enp0s25}
+
+${voffset -2}${font conkycolors:size=13}A${font}${goto 32}${voffset -4}Local IP: ${alignr}${addr enp0s25}
+${endif}${else}${voffset 4}${font PizzaDude Bullets:size=12}4${font}${goto 32}Network Unavailable${endif}
+${hr 2}
