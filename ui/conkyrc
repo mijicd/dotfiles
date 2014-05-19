@@ -5,6 +5,7 @@ update_interval 1
 total_run_times 0
 net_avg_samples 1
 cpu_avg_samples 1
+if_up_strictness address
 
 imlib_cache_size 0
 double_buffer yes
@@ -108,4 +109,3 @@ ${voffset 4}${font conkycolors:size=14}u${font}${goto 32}${voffset -6}Down: ${do
 ${goto 32}Total: ${totaldown wlp3s0}
 ${voffset 4}${font conkycolors:size=13}A${font}${goto 32}${voffset -8}Local IP: ${alignr}${addr wlp3s0}
 ${else}${voffset 4}${font PizzaDude Bullets:size=12}4${font}${goto 32}Network Unavailable${endif}${endif}
-${hr 2}
