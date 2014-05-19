@@ -18,6 +18,11 @@
 			</action>
 		</item>
 		<!-- This requires the presence of the 'menu' package to work -->
+		<item label="Skype">
+			<action name="Execute">
+				<execute>skype</execute>
+			</action>
+		</item>
 		<item label="Office">
 			<action name="Execute">
 				<execute>loffice</execute>
