@@ -34,14 +34,25 @@
 				<execute>obconf</execute>
 			</action>
 		</item>
+		<item label="ObMenu">
+			<action name="Execute">
+				<execute>obmenu</execute>
+			</action>
+		</item>
+		<item label="Reconfigure">
+			<action name="Execute">
+				<execute>openbox --reconfigure</execute>
+			</action>
+		</item>
+		<separator/>
 		<item label="Reboot">
 			<action name="Execute">
-				<command>sudo reboot</command>
+				<command>systemctl reboot</command>
 			</action>
 		</item>
 		<item label="Shutdown">
 			<action name="Execute">
-				<command>sudo shutdown -h now</command>
+				<command>systemctl poweroff</command>
 			</action>
 		</item>
 	</menu>

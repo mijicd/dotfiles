@@ -28,5 +28,8 @@ xcompmgr -cfF -t-9 -l-11 -r9 -o.95 -D6 &
 # tint2 panel
 tint2 &
 
+# start network manager
+wicd-client --tray &
+
 # start system monitor
 (sleep 3s && conky -q) &
