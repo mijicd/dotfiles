@@ -27,6 +27,8 @@ channels = (
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#python"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#ruby"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -198,6 +200,26 @@ windows = {
         type = "CHANNEL";
         chat_type = "IRC";
         name = "#django";
+        tag = "Freenode";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ruby";
+        tag = "Freenode";
+      }
+    );
+  };
+  9 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#rubyonrails";
         tag = "Freenode";
       }
     );
