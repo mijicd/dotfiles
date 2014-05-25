@@ -64,7 +64,7 @@ endif
 cmap w!! w !sudo tee > /dev/null %
 
 " -------------------------------------------------------------------
-" time out mappings after 1 second (1000) 
+" time out mappings after 1 second (1000)
 " and key codes after 1/2 a second (500)
 " -------------------------------------------------------------------
 set timeout timeoutlen=1000 ttimeoutlen=500
@@ -134,7 +134,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 " -------------------------------------------------------------------
-" Move line(s) up or down via C-j and C-k respectively 
+" Move line(s) up or down via C-j and C-k respectively
 " -------------------------------------------------------------------
 " Normal mode
 nnoremap <C-j> :m .+1<CR>==
@@ -362,7 +362,6 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-
 let g:airline_theme='dark'
 
 " Vimux settings
@@ -382,27 +381,31 @@ nmap <leader>vi :call VimuxRunCommand("ingen")<CR>
 nmap <leader>vz :call VimuxRunCommand("dz")<CR>
 nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 
+" Lint settings
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_javascript_checkers = ['jshint']
+
 " NERD tree toggling
 nmap <C-n> :NERDTreeToggle<CR>
 
 " MiniBufExpl setup
-" let g:miniBufExplMapWindowNavVim = 1 
-" let g:miniBufExplMapWindowNavArrows = 1 
-" let g:miniBufExplMapCTabSwitchBufs = 1 
-" let g:miniBufExplModSelTarget = 1 
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
 
 " MiniBufExpl Colors
-" hi MBENormal               ctermfg=244 ctermbg=235
-" hi MBEChanged              ctermfg=166 ctermbg=235
-" hi MBEVisibleNormal        ctermfg=147 ctermbg=235
-" hi MBEVisibleChanged       ctermfg=164 ctermbg=235
-" hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
-" hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
+hi MBENormal               ctermfg=244 ctermbg=235
+hi MBEChanged              ctermfg=166 ctermbg=235
+hi MBEVisibleNormal        ctermfg=147 ctermbg=235
+hi MBEVisibleChanged       ctermfg=164 ctermbg=235
+hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
+hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 
 " Control-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 " -------------------------------------------------------------------
-"  finis
+"  finished
 " -------------------------------------------------------------------
