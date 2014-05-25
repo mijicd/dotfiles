@@ -1,0 +1,136 @@
+//
+// JSHint Configuration
+//
+{
+    //
+    // These options tell JSHint to be more strict towards JS code.
+    //
+
+    // prohibit bitwise operators
+    "bitwise": true,
+
+    // require {} for every new block or scopre
+    "curly": true,
+
+    // triple equals
+    "eqeqeq": true,
+
+    // allow for in without hasOwnPrototype
+    "forin": true,
+
+    // require immediate invocations to be wrapped in parens
+    "immed": true,
+
+    // prohibit variable use before definition
+    "latedef": true,
+
+    // require capitalization of all constructors
+    "newcap": true,
+
+    // prohibit use of arguments.caller and arguments.callee
+    "noarg": true,
+
+    // prohibit use of empty blocks
+    "noempty": true,
+
+    // prohibit use of constructors for side-effects
+    "nonew": true,
+
+    // prohibit use of ++ and --
+    "plusplus": true,
+
+    // prohibit '.' and '[^...]' in regexes
+    "regexp": true,
+
+    // non-globals must be declared before they are used
+    "undef": true,
+
+    // use-strict pragma must be used
+    "strict": true,
+
+    // prohibit trailing whitespaces
+    "trailing": true,
+
+    //
+    // These options allow suppression of certain types of warnings. When set
+    // to true, it will make JSHint produce more warnings.
+    //
+
+    // don't tolerate semicolon insertions
+    "asi": false,
+
+    // tolerate assignments inside if, for & while
+    "boss": false,
+
+    // allow debugger
+    "debug": false,
+
+    // EcmaScript 5 syntax is allowed
+    "es5": false,
+
+    // allow ES.next features
+    "esnext": false,
+
+    // global use-strict
+    "globalstrict": false,
+
+    // prohibit __iterator__
+    "iterator": false,
+
+    // tolerate missing semicolons
+    "lastsemic": false,
+
+    // tolerate unsafe line breaks
+    "laxbreak": false,
+
+    // comma-first coding
+    "laxcomma": false,
+
+    // tolerate multi-line strings
+    "multistr": false,
+
+    // tolerate script-targeted urls
+    "scripturl": false,
+
+    // allow variable redefinitions
+    "shadow": false,
+
+    // tolerate various subcsript notations
+    "sub": false,
+
+    // object creation 'new function () { ... };' and 'new Object;'
+    "supernew": false,
+
+    // tolerate strict violations
+    "validthis": false,
+
+    //
+    // Environments
+    //
+
+    // allows browser globals
+    "browser": true,
+
+    // allows development statements
+    "devel": true,
+
+    // enable jQuery globals
+    "jquery": true,
+
+    // enable globals from NodeJS environment
+    "node": true,
+
+    //
+    // Other
+    //
+
+    // maximum number of errors before stopping
+    "maxerr": 100,
+
+    // predefined globals
+    "predef": ["angular"],
+
+    // indentation
+    "indent": 4
+}
+
