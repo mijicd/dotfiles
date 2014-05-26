@@ -31,11 +31,11 @@ Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'bling/vim-airline'
 Bundle 'benmills/vimux'
-Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'tpope/vim-surround'
 
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -345,10 +345,6 @@ endif
 " -------------------------------------------------------------------
 " Stuff for Bundles
 " -------------------------------------------------------------------
-
-" Command-t
-nmap <leader>t :CommandT <CR>
-nmap <leader>T :CommandTFlush<CR>:CommandT<CR>
 
 " vim-airline settings
 let g:airline_left_sep=''
