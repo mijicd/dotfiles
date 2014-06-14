@@ -24,4 +24,4 @@ export MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:/usr/local/man:/usr/lo
 
 # python virtual envirinoment setup
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh 
+source /usr/bin/virtualenvwrapper.sh
