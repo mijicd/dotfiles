@@ -1,0 +1,12 @@
+[user]
+	name = mijicd
+	email = dejan.mjc@gmail.com
+[core]
+	editor = vi
+	autocrlf = input
+[color]
+	ui = true
+[merge]
+	tool = meld
+[push]
+	default = simple
