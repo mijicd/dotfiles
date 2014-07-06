@@ -1,4 +1,4 @@
-" Written by Mark Nichols <mark@zanshin.net>
+" Thanks to Mark Nichols <mark@zanshin.net>
 
 " -------------------------------------------------------------------
 " Forget compatibility with vi. Who cares.
@@ -26,9 +26,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'sjl/badwolf'
+Bundle 'sjl/gundo.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'bling/vim-airline'
 Bundle 'benmills/vimux'
 Bundle 'plasticboy/vim-markdown'
@@ -37,6 +39,9 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'marijnh/tern_for_vim'
 
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -355,12 +360,41 @@ let g:airline#extensions#whitespace#trailing_format = 'trailing[%s]'
 let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent[%s]'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
+
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme='dark'
+
+" NERD tree toggling
+nmap <C-n> :NERDTreeToggle<CR>
+
+" Control-P
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+" GUndo
+nnoremap <F5> :GundoToggle<CR>
+let g:gundo_width = 60
+let g:gundo_preview_height = 40
+let g:gundo_right = 1
+
+" MiniBufExpl setup
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+
+" MiniBufExpl Colors
+hi MBENormal               ctermfg=244 ctermbg=235
+hi MBEChanged              ctermfg=166 ctermbg=235
+hi MBEVisibleNormal        ctermfg=147 ctermbg=235
+hi MBEVisibleChanged       ctermfg=164 ctermbg=235
+hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
+hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 
 " Vimux settings
 let g:VimuxHeight = "30"
@@ -380,30 +414,50 @@ nmap <leader>vz :call VimuxRunCommand("dz")<CR>
 nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 
 " Lint settings
+let g:syntastic_check_on_open = 1
+let g:syntastic_mode_map={
+    \'mode': 'active',
+    \'active_filetypes': [],
+    \'passive_filetypes': ['html']
+\}
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_javascript_checkers = ['jshint']
 
-" NERD tree toggling
-nmap <C-n> :NERDTreeToggle<CR>
+" Parentheses
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['Darkblue',    'SeaGreen3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkgreen',   'firebrick3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['Darkblue',    'firebrick3'],
+    \ ['darkgreen',   'RoyalBlue3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
 
-" MiniBufExpl setup
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
 
-" MiniBufExpl Colors
-hi MBENormal               ctermfg=244 ctermbg=235
-hi MBEChanged              ctermfg=166 ctermbg=235
-hi MBEVisibleNormal        ctermfg=147 ctermbg=235
-hi MBEVisibleChanged       ctermfg=164 ctermbg=235
-hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
-hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
-" Control-P
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
+" Completion
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+set completeopt-=preview
+
 " -------------------------------------------------------------------
 "  finished
 " -------------------------------------------------------------------
