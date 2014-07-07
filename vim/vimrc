@@ -27,7 +27,6 @@ Bundle 'gmarik/vundle'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'sjl/badwolf'
 Bundle 'sjl/gundo.vim'
-Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
@@ -368,13 +367,11 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme='dark'
 
-" NERD tree toggling
-nmap <C-n> :NERDTreeToggle<CR>
-
 " Control-P
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+nmap <C-n> :CtrlPDir<space>
 
 " GUndo
 nnoremap <F5> :GundoToggle<CR>
@@ -412,6 +409,9 @@ nmap <leader>vg :call VimuxRunCommand("gen")<CR>
 nmap <leader>vi :call VimuxRunCommand("ingen")<CR>
 nmap <leader>vz :call VimuxRunCommand("dz")<CR>
 nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
+
+" Ack shortcut
+nmap <leader>/ :Ack<space>
 
 " Lint settings
 let g:syntastic_check_on_open = 1
