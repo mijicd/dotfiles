@@ -371,6 +371,9 @@ let g:airline_theme='dark'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 nmap <C-n> :CtrlPDir<space>
 
 " GUndo
@@ -410,7 +413,8 @@ nmap <leader>vi :call VimuxRunCommand("ingen")<CR>
 nmap <leader>vz :call VimuxRunCommand("dz")<CR>
 nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 
-" Ack shortcut
+" Ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 nmap <leader>/ :Ack<space>
 
 " Lint settings
