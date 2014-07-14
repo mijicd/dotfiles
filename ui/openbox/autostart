@@ -31,5 +31,8 @@ tint2 &
 # start network manager
 wicd-client --tray &
 
+# start battery monitor
+(sleep 1s && cbatticon) &
+
 # start system monitor
 (sleep 3s && conky -q) &
