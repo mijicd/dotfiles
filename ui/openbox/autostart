@@ -31,6 +31,9 @@ tint2 &
 # start network manager
 wicd-client --tray &
 
+# start pulseaudio
+pulseaudio --start &
+
 # start battery monitor
 (sleep 1s && cbatticon) &
 
