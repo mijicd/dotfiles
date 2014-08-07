@@ -7,6 +7,9 @@
 [color]
 	ui = true
 [merge]
-	tool = meld
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
 [push]
 	default = simple
