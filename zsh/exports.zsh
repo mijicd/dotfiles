@@ -17,11 +17,6 @@ export EDITOR=vim
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
 export LC_COLLATE=C 
 
-# LaTeX
-export PATH=/usr/local/texlive/2013/bin/i386-linux:$PATH
-export INFOPATH=/usr/local/texlive/2013/texmf-dist/doc/info:$INFOPATH
-export MANPATH=/usr/local/texlive/2013/texmf-dist/doc/man:/usr/local/man:/usr/local/share/man:/usr/share/man
-
 # python virtual envirinoment setup
 export WORKON_HOME=$HOME/.virtualenvs
-source /usr/bin/virtualenvwrapper.sh
+source /usr/bin/virtualenvwrapper.sh 
