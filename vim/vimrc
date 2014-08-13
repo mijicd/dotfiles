@@ -33,7 +33,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'fholgado/minibufexpl.vim'
-Bundle 'mileszs/ack.vim'
+Bundle 'rking/ag.vim'
 Bundle 'Lokaltog/vim-easymotion'
 
 " coding utilities
@@ -416,9 +416,9 @@ nmap <leader>vi :call VimuxRunCommand("ingen")<CR>
 nmap <leader>vz :call VimuxRunCommand("dz")<CR>
 nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 
-" Ack
-let g:ackprg = 'ag --nogroup --nocolor --column'
-nmap <leader>/ :Ack<space>
+" Silver searcher
+let g:agprg = 'ag --nogroup --nocolor --column'
+nmap <leader>/ :Ag<space>
 
 " Lint settings
 let g:syntastic_check_on_open = 1
