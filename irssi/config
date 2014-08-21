@@ -23,11 +23,11 @@ chatnets = {
 
 channels = (
   { name = "##linux"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#debian"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#centos"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#python"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; }
-  { name = "#ruby"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; },
+  { name = "#ruby"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
@@ -169,7 +169,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#debian";
+        name = "#centos";
         tag = "Freenode";
       }
     );
