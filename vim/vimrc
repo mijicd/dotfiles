@@ -37,7 +37,6 @@ Bundle 'rking/ag.vim'
 Bundle 'Lokaltog/vim-easymotion'
 
 " coding utilities
-Bundle 'benmills/vimux'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
@@ -398,23 +397,6 @@ hi MBEVisibleNormal        ctermfg=147 ctermbg=235
 hi MBEVisibleChanged       ctermfg=164 ctermbg=235
 hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
 hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
-
-" Vimux settings
-let g:VimuxHeight = "30"
-let g:VimuxOrientation = "v"
-let g:VimuxUseNearestPane = 0
-
-" Vimux Mappings
-nmap <leader>vp :VimuxPromptCommand<cr>
-nmap <leader>vl :VimuxRunLastCommand<cr>
-nmap <leader>vq :VimuxCloseRunner<cr>
-nmap <leader>vx :VimuxInterruptRunner<cr>
-
-" Vimux Octopress helpers
-nmap <leader>vg :call VimuxRunCommand("gen")<CR>
-nmap <leader>vi :call VimuxRunCommand("ingen")<CR>
-nmap <leader>vz :call VimuxRunCommand("dz")<CR>
-nmap <leader>vd :call VimuxRunCommand("deploy")<CR>
 
 " Silver searcher
 let g:agprg = 'ag --nogroup --nocolor --column'
