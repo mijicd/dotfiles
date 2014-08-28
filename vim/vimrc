@@ -100,7 +100,6 @@ set wrap                          " use line wrapping
 set textwidth=79                  " at column 79
 set ruler                         " display current cursor position
 set list                          " show invisible characters
-set listchars=tab:▸\ ,eol:¬,trail:⋅,nbsp:␣,extends:❯,precedes:❮
 set showmatch                     " show matching brackets
 if exists("&relativenumber")
   set relativenumber              " use relative line numbers
@@ -398,7 +397,18 @@ hi MBEVisibleChanged       ctermfg=164 ctermbg=235
 hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
 hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 
-" Silver searcher
+" EasyMotion
+let g:EasyMotion_do_mapping = 0     " disable default mappings
+let g:EasyMotion_smartcase = 1      " turn on case sensitive
+
+" line motions
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+
+" bidirectional find motion
+nmap s <Plug>(easymotion-s2)
+
+" Ag
 let g:agprg = 'ag --nogroup --nocolor --column'
 nmap <leader>/ :Ag<space>
 
