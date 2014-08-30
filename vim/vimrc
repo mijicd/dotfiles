@@ -99,7 +99,6 @@ set linebreak                     " wrap intelligently, won't insert hard line b
 set wrap                          " use line wrapping
 set textwidth=79                  " at column 79
 set ruler                         " display current cursor position
-set list                          " show invisible characters
 set showmatch                     " show matching brackets
 if exists("&relativenumber")
   set relativenumber              " use relative line numbers
