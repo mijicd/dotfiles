@@ -30,4 +30,4 @@ realdelete = no
 maxconnections = 1
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 nametrans = nt_remote
-folderfilter = exclude(['Trash','[Gmail]/Spam','[Gmail]/Important','[Gmail]/Starred','Travel'])
+folderfilter = exclude(['Trash','[Gmail]/Spam','[Gmail]/Important','[Gmail]/Starred'])

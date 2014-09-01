@@ -1,9 +1,11 @@
 mailboxes \
   "+gmail/INBOX" \
+  "+gmail/Travel" \
   "+gmail/archive" \
   "+gmail/drafts" \
   "+gmail/eunet" \
   "+gmail/hetzner" \
+  "+gmail/io" \
   "+gmail/sent" \
   "+gmail/trash" \
   "+gmail/typhoon"
