@@ -82,7 +82,7 @@ alias pacexpl="pacman -D --asexp"
 alias pacimpl="pacman -D --asdep"
 
 # '[r]emove [o]rphans' - recursively remove ALL orphaned packages
-alias pacro="pacman -Qtdq > /dev/null && sudo pacman -Rns \$(pacman -Qtdq | sed -e ':a;N;$!ba;s/\n/ /g')"
+alias pacro="pacman -Qtdq > /dev/null && sudo pacman -Rns \$(pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
 
 # Additional pacman alias examples
 alias pacupd='sudo pacman -Sy && sudo abs'         # Update and refresh the local package and ABS databases against repositories
