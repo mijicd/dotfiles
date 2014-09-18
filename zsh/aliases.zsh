@@ -64,27 +64,28 @@ alias gu="git shortlog | grep -E '^[^ ]'"
 alias vi='vim'
 
 # -------------------------------------------------------------------
-# Pacman
+# aura
 # -------------------------------------------------------------------
-alias pacupg='sudo pacman -Syu'
-alias pacin='sudo pacman -S'
-alias pacins='sudo pacman -U'
-alias pacre='sudo pacman -R'
-alias pacrem='sudo pacman -Rns'
-alias pacrep='pacman -Si'
-alias pacreps='pacman -Ss'
-alias pacloc='pacman -Qi'
-alias paclocs='pacman -Qs'
-alias paclo="pacman -Qdt"
-alias pacc="sudo pacman -Scc"
-alias paclf="pacman -Ql"
-alias pacexpl="pacman -D --asexp"
-alias pacimpl="pacman -D --asdep"
+alias pacupg='sudo aura -Syu'
+alias pacaur='sudo aura -A'
+alias pacin='sudo aura -S'
+alias pacins='sudo aura -U'
+alias pacre='sudo aura -R'
+alias pacrem='sudo aura -Rns'
+alias pacrep='aura -Si'
+alias pacreps='aura -Ss'
+alias pacloc='aura -Qi'
+alias paclocs='aura -Qs'
+alias paclo="aura -Qdt"
+alias pacc="sudo aura -Scc"
+alias paclf="aura -Ql"
+alias pacexpl="aura -D --asexp"
+alias pacimpl="aura -D --asdep"
 
 # '[r]emove [o]rphans' - recursively remove ALL orphaned packages
-alias pacro="pacman -Qtdq > /dev/null && sudo pacman -Rns \$(pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
+alias pacro="aura -Qtdq > /dev/null && sudo aura -Rns \$(aura -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
 
-# Additional pacman alias examples
-alias pacupd='sudo pacman -Sy && sudo abs'         # Update and refresh the local package and ABS databases against repositories
-alias pacinsd='sudo pacman -S --asdeps'            # Install given package(s) as dependencies
-alias pacmir='sudo pacman -Syy'                    # Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
+# Additional aura alias examples
+alias pacupd='sudo aura -Sy && sudo abs'         # Update and refresh the local package and ABS databases against repositories
+alias pacinsd='sudo aura -S --asdeps'            # Install given package(s) as dependencies
+alias pacmir='sudo aura -Syy'                    # Force refresh of all package lists after updating /etc/aura.d/mirrorlist
