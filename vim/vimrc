@@ -197,7 +197,7 @@ set noswapfile
 " Set the color scheme
 " -------------------------------------------------------------------
 set background=dark
-silent! colorscheme jellybeans
+silent! colorscheme distinguished
 
 " -------------------------------------------------------------------
 " Set tab stuff
