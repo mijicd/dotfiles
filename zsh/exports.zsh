@@ -1,9 +1,6 @@
 # initialize path
 PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH
 
-# setup terminal
-export TERM=rxvt-unicode
-
 # grep colors
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
