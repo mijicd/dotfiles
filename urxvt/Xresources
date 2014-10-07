@@ -43,7 +43,7 @@ URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.url-select.launcher: chromium
 
 ! font setup
-URxvt*font: xft:Droid Sans Mono for Powerline:pixelsize=14:antialias=true:hinting=true
+URxvt*font: xft:Inconsolata for Powerline:pixelsize=14:antialias=true:hinting=true
 
 ! remove scroll bar
 URxvt*scrollBar: False
