@@ -30,9 +30,7 @@
 		</item>
 		<item label="Text Editor">
 			<action name="Execute">
-				<command>
-					geany
-				</command>
+				<command>gvim</command>
 			</action>
 		</item>
 		<separator/>
@@ -51,11 +49,9 @@
 					</command>
 				</action>
 			</item>
-			<item label="Geany Text Editor">
+			<item label="Vim GUI">
 				<action name="Execute">
-					<command>
-						geany
-					</command>
+					<command>gvim</command>
 				</action>
 			</item>
 			<item label="Task Manager (htop)">
