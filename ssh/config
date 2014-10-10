@@ -1,0 +1,16 @@
+Host github.com
+    User mijicd
+    IdentityFile ~/.ssh/git/github.key
+
+Host bitbucket.org
+    User mijicd
+    IdentityFile ~/.ssh/git/bitbucket.key
+
+Host gregor
+    User dejan.mijic
+    HostName gitlab.gregorllc.com
+    IdentityFile ~/.ssh/git/gregor.key
+
+Host weblines.io
+    User root
+    IdentityFile ~/.ssh/servers/weblines.key
