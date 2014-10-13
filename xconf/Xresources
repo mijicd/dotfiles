@@ -25,8 +25,8 @@ URxvt.color15 : #EEEEEEEEECEC
 
 ! look
 URxvt.iconFile: /usr/share/icons/gnome/32x32/apps/gnome-terminal.png
-URxvt*foreground:White
-URxvt*background:[80]Black
+URxvt.foreground:White
+URxvt.background:[80]Black
 URxvt.depth: 32
 
 ! addons
@@ -43,11 +43,11 @@ URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.url-select.launcher: chromium
 
 ! font setup
-URxvt*font: xft:Inconsolata for Powerline:pixelsize=14:antialias=true:hinting=true
+URxvt.font: xft:Inconsolata for Powerline:pixelsize=14:antialias=true:hinting=true
 
 ! remove scroll bar
-URxvt*scrollBar: False
-URxvt*scrollTtyOutput: False
-URxvt*scrollTtyKeypress: True
-URxvt*secondaryScroll: True
-URxvt*saveLines: 8000
+URxvt.scrollBar: False
+URxvt.scrollTtyOutput: False
+URxvt.scrollTtyKeypress: True
+URxvt.secondaryScroll: True
+URxvt.saveLines: 8000
