@@ -196,9 +196,9 @@
         <command>thunar</command>
       </action>
     </keybind>
-    <keybind key="C-A-m">
+    <keybind key="A-F2">
       <action name="Execute">
-        <command>claws-mail</command>
+        <command>gmrun</command>
       </action>
     </keybind>
     <keybind key="Print">
