@@ -1,12 +1,33 @@
 [user]
 	name = mijicd
-	email = dejan.mjc@gmail.com
+    email = dejan.mjc@gmail.com
+
+[color]
+    ui = auto
+    interactive = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
 [core]
 	editor = vi
 	autocrlf = input
-[color]
-	ui = true
+    safecrlf = warn
+    quotepath = false
+
+[diff]
+    tool = vimdiff
+
 [merge]
     tool = kdiff3
-[mergetool]
-    prompt = false
+
+[push]
+	default = simple
