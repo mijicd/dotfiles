@@ -1,5 +1,5 @@
 [user]
-	name = mijicd
+    name = mijicd
     email = dejan.mjc@gmail.com
 
 [color]
@@ -18,8 +18,8 @@
     new = green bold
 
 [core]
-	editor = vi
-	autocrlf = input
+    editor = vi
+    autocrlf = input
     safecrlf = warn
     quotepath = false
 
@@ -30,4 +30,4 @@
     tool = kdiff3
 
 [push]
-	default = simple
+    default = simple
