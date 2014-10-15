@@ -1,3 +1,6 @@
+# autostart ssh agent
+eval $(ssh-agent)
+
 source ~/.zsh/colors.zsh
 source ~/.zsh/options.zsh
 source ~/.zsh/exports.zsh
