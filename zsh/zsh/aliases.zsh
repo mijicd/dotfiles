@@ -1,3 +1,6 @@
+# substitue vi with vim
+alias vi=vim
+
 # -------------------------------------------------------------------
 # directory movement
 # -------------------------------------------------------------------
@@ -32,36 +35,34 @@ alias 'clone=hg clone'
 # -------------------------------------------------------------------
 # Git
 # -------------------------------------------------------------------
+
+# committing
 alias ga='git add'
-alias gp='git push'
+alias gs='git status'
+alias gc='git commit -m'
+alias gta='git tag -a -m'
+
+# logs
 alias gl='git log'
 alias gpl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gs='git status'
-alias gd='git diff'
-alias gm='git commit -m'
-alias gma='git commit -am'
+
+# branches
 alias gb='git branch'
-alias gc='git checkout'
+alias gco='git checkout'
 alias gcb='git checkout -b'
+
+# remotes
+alias gcl='git clone'
+alias gp='git push'
+alias gpu='git pull'
 alias gra='git remote add'
 alias grr='git remote rm'
-alias gpu='git pull'
-alias gcl='git clone'
-alias gta='git tag -a -m'
-alias gf='git reflog'
-alias gv='git log --pretty=format:'%s' | cut -d " " -f 1 | sort | uniq -c | sort -nr'
 
-# merging
+# diff & merge
+alias gd='git diff'
+alias gdt='git difftool'
+alias gm='git merge'
 alias gmt='git mergetool'
-
-# curiosities 
-# gsh shows the number of commits for the current repos for all developers
-alias gsh="git shortlog | grep -E '^[ ]+\w+' | wc -l"
-
-# gu shows a list of all developers and the number of commits they've made
-alias gu="git shortlog | grep -E '^[^ ]'"
-
-alias vi='vim'
 
 # -------------------------------------------------------------------
 # aura
