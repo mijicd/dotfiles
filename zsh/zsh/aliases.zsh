@@ -76,7 +76,7 @@ alias aurupg='sudo aura -Ayu'
 alias aurrep='aura -Ai'
 
 # package search
-alias pacfind='aura -As'
+alias aurfind='aura -As'
 
 # -------------------------------------------------------------------
 # pacman
@@ -93,8 +93,8 @@ alias pacrem='sudo pacman -Rns'
 alias pacc="sudo pacman -Scc"
 
 # package info
-alias pacrep='pacman -Si'
-alias pacloc='pacman -Qi'
+alias pacfind='pacman -Si'
+alias locfind='pacman -Qi'
 
 # package search
 alias pacfind='pacman -Ss'
