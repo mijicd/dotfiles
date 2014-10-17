@@ -67,26 +67,44 @@ alias gmt='git mergetool'
 # -------------------------------------------------------------------
 # aura
 # -------------------------------------------------------------------
-alias pacupg='sudo aura -Syu'
-alias pacaur='sudo aura -A'
-alias pacin='sudo aura -S'
-alias pacins='sudo aura -U'
-alias pacre='sudo aura -R'
-alias pacrem='sudo aura -Rns'
-alias pacrep='aura -Si'
-alias pacreps='aura -Ss'
-alias pacloc='aura -Qi'
-alias paclocs='aura -Qs'
-alias paclo="aura -Qdt"
-alias pacc="sudo aura -Scc"
-alias paclf="aura -Ql"
-alias pacexpl="aura -D --asexp"
-alias pacimpl="aura -D --asdep"
 
-# '[r]emove [o]rphans' - recursively remove ALL orphaned packages
-alias pacro="aura -Qtdq > /dev/null && sudo aura -Rns \$(aura -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
+# installation & update
+alias aurin='sudo aura -A'
+alias aurupg='sudo aura -Ayu'
 
-# Additional aura alias examples
-alias pacupd='sudo aura -Sy && sudo abs'         # Update and refresh the local package and ABS databases against repositories
-alias pacinsd='sudo aura -S --asdeps'            # Install given package(s) as dependencies
-alias pacmir='sudo aura -Syy'                    # Force refresh of all package lists after updating /etc/aura.d/mirrorlist
+# package info
+alias aurrep='aura -Ai'
+
+# package search
+alias pacfind='aura -As'
+
+# -------------------------------------------------------------------
+# pacman
+# -------------------------------------------------------------------
+
+# installation & update
+alias pacin='sudo pacman -S'
+alias paclin='sudo pacman -U'
+alias paclf="pacman -Ql"
+alias pacupg='sudo pacman -Syu'
+
+# package & cache removal
+alias pacrem='sudo pacman -Rns'
+alias pacc="sudo pacman -Scc"
+
+# package info
+alias pacrep='pacman -Si'
+alias pacloc='pacman -Qi'
+
+# package search
+alias pacfind='pacman -Ss'
+alias paclocs='pacman -Qs'
+
+# orphans management (list & remove)
+alias paclo="pacman -Qdt"
+alias pacro="pacman -Qtdq > /dev/null && sudo pacman -Rns \$(pacman -Qtdq | sed -e ':a;N;\$!ba;s/\n/ /g')"
+
+# Additional pacman alias examples
+alias pacupd='sudo pacman -Sy && sudo abs'         # Update and refresh the local package and ABS databases against repositories
+alias pacinsd='sudo pacman -S --asdeps'            # Install given package(s) as dependencies
+alias pacmir='sudo pacman -Syy'                    # Force refresh of all package lists after updating /etc/pacman.d/mirrorlist
