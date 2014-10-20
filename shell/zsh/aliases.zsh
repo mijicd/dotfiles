@@ -65,18 +65,18 @@ alias gm='git merge'
 alias gmt='git mergetool'
 
 # -------------------------------------------------------------------
-# aura
+# pacaur
 # -------------------------------------------------------------------
 
 # installation & update
-alias aurin='sudo aura -A'
-alias aurupg='sudo aura -Ayu'
+alias aurin='pacaur -S'
+alias aurupg='pacaur -Syu'
 
 # package info
-alias aurrep='aura -Ai'
+alias aurrep='pacaur -Si'
 
 # package search
-alias aurfind='aura -As'
+alias aurfind='pacaur -Ss'
 
 # -------------------------------------------------------------------
 # pacman
