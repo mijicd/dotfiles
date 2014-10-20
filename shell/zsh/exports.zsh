@@ -14,10 +14,6 @@ export EDITOR=vim
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
 export LC_COLLATE=C 
 
-# locale settings
-export LANG=en_US.UTF-8
-export LC_MESSAGES="C"
-
 # python virtual envirinoment setup
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/bin/virtualenvwrapper.sh 

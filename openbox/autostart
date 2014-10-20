@@ -1,20 +1,9 @@
-# SSH agent
-# eval $(ssh-agent) &
+#
+# Openbox autostart configuration
+#
 
 # enable compositing
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
-
-# restore wallpaper
-nitrogen --restore &
-
-# start tint
-tint2 &
-
-# start conky
-conky -q &
-
-# daemonize thunar
-thunar --daemon &
 
 # caps lock
 setxkbmap -option ctrl:nocaps
@@ -27,3 +16,21 @@ xrdb -merge ~/.Xresources
 
 # daemonize urxvt
 urxvtd -q -o -f
+
+# daemonize thunar
+thunar --daemon &
+
+# restore wallpaper
+nitrogen --restore &
+
+# start conky
+conky -q &
+
+# start tint
+tint2 &
+
+# power manager
+xfce4-power-manager &
+
+# clipboard manager
+(sleep 3s && clipit) &
