@@ -34,53 +34,6 @@
 			</action>
 		</item>
 		<separator/>
-		<menu id="accessories" label="Accessories">
-			<item label="Catfish File Search">
-				<action name="Execute">
-					<command>
-						catfish
-					</command>
-				</action>
-			</item>
-			<item label="Archive Manager">
-				<action name="Execute">
-					<command>
-						file-roller
-					</command>
-				</action>
-			</item>
-			<item label="Vim GUI">
-				<action name="Execute">
-					<command>gvim</command>
-				</action>
-			</item>
-			<item label="Task Manager (htop)">
-				<action name="Execute">
-					<command>terminator --command=&quot;htop&quot;</command>
-				</action>
-			</item>
-			<item label="Terminator Terminal">
-				<action name="Execute">
-					<command>
-						terminator
-					</command>
-				</action>
-			</item>
-			<item label="Thunar File Manager">
-				<action name="Execute">
-					<command>
-						thunar
-					</command>
-				</action>
-			</item>
-			<item label="Thunar File Manager (root)">
-				<action name="Execute">
-					<command>
-						gksudo thunar
-					</command>
-				</action>
-			</item>
-		</menu>
 		<menu id="graphics" label="Graphics">
 			<item label="GIMP">
 				<action name="Execute">
@@ -152,7 +105,6 @@
 			</item>
 		</menu>
 		<menu id="network" label="Network">
-			<menu execute="cb-x-www-browser-pipemenu" id="wwwbrowsers" label="WWW Browsers"/>
 			<item label="gFTP Client">
 				<action name="Execute">
 					<command>
@@ -163,13 +115,6 @@
 			<item label="Deluge">
 				<action name="Execute">
 					<command>deluge-gtk</command>
-				</action>
-			</item>
-			<item label="XChat IRC Client">
-				<action name="Execute">
-					<command>
-						xchat
-					</command>
 				</action>
 			</item>
 			<item label="Remote Filesystems">
@@ -184,34 +129,6 @@
 		</menu>
 		<menu id="office" label="Office">
 			<menu execute="cb-libreoffice-pipemenu" id="libreoffice" label="LibreOffice"/>
-			<item label="Google Docs">
-				<action name="Execute">
-					<command>
-						x-www-browser https://drive.google.com/
-					</command>
-				</action>
-			</item>
-			<item label="AbiWord Word Processor">
-				<action name="Execute">
-					<command>
-						abiword
-					</command>
-				</action>
-			</item>
-			<item label="Gnumeric Spreadsheet">
-				<action name="Execute">
-					<command>
-						gnumeric
-					</command>
-				</action>
-			</item>
-			<item label="Calculator">
-				<action name="Execute">
-					<command>
-						galculator
-					</command>
-				</action>
-			</item>
 			<item label="Evince PDF Viewer">
 				<action name="Execute">
 					<command>
@@ -220,9 +137,6 @@
 				</action>
 			</item>
 		</menu>
-		<separator/>
-		<menu execute="cb-places-pipemenu" id="pipe-placesmenu" label="Places"/>
-		<menu execute="cb-recent-files-pipemenu" id="pipe-recentfilesmenu" label="Recent Files"/>
 		<separator/>
 		<menu id="settings" label="Settings">
 			<menu execute="cb-compositor" id="CompositingPipeMenu" label="Compositor"/>
@@ -341,23 +255,6 @@
 				</item>
 				<item label="Restart">
 					<action name="Restart"/>
-				</item>
-			</menu>
-			<menu id="terminatorconfig" label="Terminator">
-				<item label="Edit config file">
-					<action name="Execute">
-						<command>
-							geany ~/.config/terminator/config
-						</command>
-					</action>
-				</item>
-				<separator label="Help?"/>
-				<item label="man page">
-					<action name="Execute">
-						<command>
-							terminator --command=&quot;man terminator_config&quot;
-						</command>
-					</action>
 				</item>
 			</menu>
 			<menu id="tint2config" label="tint2">

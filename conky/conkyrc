@@ -54,18 +54,18 @@ $font${top_mem name 3}${alignr}${top mem 3} %
 $font${top_mem name 4}${alignr}${top mem 4} %
 $font${top_mem name 5}${alignr}${top mem 5} %
 
-${font sans-serif:bold:size=8}NETWORK ${hr 2}${if_existing /proc/net/route eth0}
-${font sans-serif:normal:size=8}IP address: $alignr ${addr eth0}
-${downspeedgraph eth0}
-DLS:${downspeed eth0} kb/s $alignr total: ${totaldown eth0}
-${upspeedgraph eth0}
-ULS:${upspeed eth0} kb/s $alignr total: ${totalup eth0}
-${else}${if_existing /proc/net/route wlan0}
-${font sans-serif:normal:size=8}IP address: $alignr ${addr wlan0}
-ESSID: $alignr ${wireless_essid wlan0}
-Connection quality: $alignr ${wireless_link_qual_perc wlan0}%
-${downspeedgraph wlan0}
-DLS:${downspeed wlan0} kb/s $alignr total: ${totaldown wlan0}
-${upspeedgraph wlan0}
-ULS:${upspeed wlan0} kb/s $alignr total: ${totalup wlan0}
+${font sans-serif:bold:size=8}NETWORK ${hr 2}${if_existing /proc/net/route enp0s25}
+${font sans-serif:normal:size=8}IP address: $alignr ${addr enp0s25}
+${downspeedgraph enp0s25}
+DLS:${downspeed enp0s25} kb/s $alignr total: ${totaldown enp0s25}
+${upspeedgraph enp0s25}
+ULS:${upspeed enp0s25} kb/s $alignr total: ${totalup enp0s25}
+${else}${if_existing /proc/net/route wlp3s0}
+${font sans-serif:normal:size=8}IP address: $alignr ${addr wlp3s0}
+ESSID: $alignr ${wireless_essid wlp3s0}
+Connection quality: $alignr ${wireless_link_qual_perc wlp3s0}%
+${downspeedgraph wlp3s0}
+DLS:${downspeed wlp3s0} kb/s $alignr total: ${totaldown wlp3s0}
+${upspeedgraph wlp3s0}
+ULS:${upspeed wlp3s0} kb/s $alignr total: ${totalup wlp3s0}
 ${endif}
