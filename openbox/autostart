@@ -29,6 +29,9 @@ conky -q &
 # start tint
 tint2 &
 
+# volume
+volumeicon &
+
 # power manager
 xfce4-power-manager &
 
