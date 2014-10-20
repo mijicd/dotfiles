@@ -85,7 +85,7 @@
 			<item label="Volume Control">
 				<action name="Execute">
 					<command>
-						pavucontrol
+						xfce4-mixer
 					</command>
 				</action>
 			</item>
