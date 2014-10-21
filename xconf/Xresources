@@ -42,7 +42,7 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.url-select.launcher: chromium
 
 ! font setup
-URxvt.font: xft:Inconsolata:pixelsize=14:antialias=true:hinting=true
+URxvt.font: xft:Inconsolata for Powerline:pixelsize=14:antialias=true:hinting=true
 
 ! remove scroll bar
 URxvt.scrollBar: False
