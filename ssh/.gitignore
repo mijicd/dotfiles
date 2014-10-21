@@ -1,0 +1,9 @@
+# ignore created keys
+git/*
+servers/*
+docker/*
+
+# keep directories in repositories
+!git/.gitkeep
+!servers/.gitkeep
+!docker/.gitkeep
