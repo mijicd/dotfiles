@@ -7,3 +7,6 @@ docker/*
 !git/.gitkeep
 !servers/.gitkeep
 !docker/.gitkeep
+
+# ignore known_hosts
+known_hosts
