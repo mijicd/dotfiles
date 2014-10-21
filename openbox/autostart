@@ -5,6 +5,10 @@
 # enable compositing
 xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55 &
 
+# screensaver & locker
+xscreensaver-command -exit &
+xscreensaver -no-splash &
+
 # caps lock
 setxkbmap -option ctrl:nocaps
 

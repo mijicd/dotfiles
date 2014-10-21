@@ -218,7 +218,7 @@
 		<item label="Lock Screen">
 			<action name="Execute">
 				<command>
-					cb-lock
+					xscreensaver-command --lock
 				</command>
 			</action>
 		</item>

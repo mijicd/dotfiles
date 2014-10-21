@@ -243,7 +243,7 @@
             </action>
         </keybind>
 
-        <!-- browset -->
+        <!-- browser -->
         <keybind key="C-A-c">
             <action name="Execute">
                 <command>chromium</command>
@@ -261,6 +261,13 @@
         <keybind key="A-F2">
             <action name="Execute">
                 <command>gmrun</command>
+            </action>
+        </keybind>
+
+        <!-- screen locker -->
+        <keybind key="C-A-l">
+            <action name="Execute">
+                <command>xscreensaver-command --lock</command>
             </action>
         </keybind>
         <!-- custom bindings -->
