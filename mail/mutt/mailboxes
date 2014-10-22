@@ -1,5 +1,8 @@
 mailboxes \
+  "+gmail/Drafts" \
   "+gmail/INBOX" \
+  "+gmail/Sent" \
+  "+gmail/Slackware" \
   "+gmail/Travel" \
   "+gmail/archive" \
   "+gmail/drafts" \

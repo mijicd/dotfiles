@@ -1,2 +1,6 @@
+# ignore mutt cache
 mutt/cache/*
 !mutt/cache/.gitkeep
+
+# ignore compiled stuff
+mutt/*.pyc
