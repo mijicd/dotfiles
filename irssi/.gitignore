@@ -1,3 +1,6 @@
 sasl.auth
 logs
 saved_colors
+
+# ignore auto-updates
+config
