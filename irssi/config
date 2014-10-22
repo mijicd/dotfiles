@@ -28,7 +28,7 @@ channels = (
   { name = "#python"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#ruby"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#scala"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
