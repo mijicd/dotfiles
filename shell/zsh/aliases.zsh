@@ -73,7 +73,7 @@ alias aurin='pacaur -S'
 alias aurupg='pacaur -Syu'
 
 # package info
-alias aurrep='pacaur -Si'
+alias aurinfo='pacaur -Si'
 
 # package search
 alias aurfind='pacaur -Ss'
@@ -93,12 +93,12 @@ alias pacrem='sudo pacman -Rns'
 alias pacc="sudo pacman -Scc"
 
 # package info
-alias pacfind='pacman -Si'
-alias locfind='pacman -Qi'
+alias pacinfo='pacman -Si'
+alias paclinfo='pacman -Qi'
 
 # package search
 alias pacfind='pacman -Ss'
-alias paclocs='pacman -Qs'
+alias paclfind='pacman -Qs'
 
 # orphans management (list & remove)
 alias paclo="pacman -Qdt"
