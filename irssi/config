@@ -121,7 +121,7 @@ settings = {
 
   "fe-common/core" = {
     emphasis = "OFF";
-    theme = "pbrisbin";
+    theme = "main";
     beep_msg_level = "NOTICE MSGS HILIGHT";
     bell_beeps = "no";
     hilight_nick_matches = "no";
