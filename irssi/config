@@ -22,13 +22,8 @@ chatnets = {
 };
 
 channels = (
-  { name = "##linux"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#centos"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#archlinux"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#python"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#django"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#ruby"; chatnet = "Freenode"; autojoin = "yes"; },
-  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; },
   { name = "#scala"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
@@ -167,7 +162,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "##linux";
+        name = "#archlinux";
         tag = "Freenode";
       }
     );
@@ -177,62 +172,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#centos";
-        tag = "Freenode";
-      }
-    );
-  };
-  5 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#archlinux";
-        tag = "Freenode";
-      }
-    );
-  };
-  6 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#python";
         tag = "Freenode";
       }
     );
   };
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#django";
-        tag = "Freenode";
-      }
-    );
-  };
-  8 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#ruby";
-        tag = "Freenode";
-      }
-    );
-  };
-  9 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#rubyonrails";
-        tag = "Freenode";
-      }
-    );
-  };
-  10 = {
+  5 = {
     items = (
       {
         type = "CHANNEL";
