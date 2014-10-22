@@ -13,7 +13,10 @@ xscreensaver -no-splash &
 setxkbmap -option ctrl:nocaps
 
 # monitor config
-xrandr --output VGA-1 --right-of LVDS-1
+(
+xrandr --output LVDS-1 --mode 1680x1050 &&
+xrandr --output VGA-1 --mode 1440x900 --right-of LVDS-1
+) &
 
 # urxvt setup
 xrdb -merge ~/.Xresources
@@ -28,7 +31,7 @@ thunar --daemon &
 nitrogen --restore &
 
 # start conky
-conky -q &
+(sleep 2s && conky -q) &
 
 # start tint
 tint2 &
