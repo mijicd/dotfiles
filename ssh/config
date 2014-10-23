@@ -6,9 +6,8 @@ Host bitbucket.org
     User mijicd
     IdentityFile ~/.ssh/git/bitbucket.key
 
-Host gregor
+Host gitlab.gregorllc.com
     User dejan.mijic
-    HostName gitlab.gregorllc.com
     IdentityFile ~/.ssh/git/gregor.key
 
 Host weblines.io
