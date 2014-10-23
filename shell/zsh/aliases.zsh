@@ -50,6 +50,7 @@ alias gpl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgre
 alias gb='git branch'
 alias gco='git checkout'
 alias gcb='git checkout -b'
+alias gr='git rebase'
 
 # remotes
 alias gcl='git clone'
