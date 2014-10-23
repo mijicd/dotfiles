@@ -1,0 +1,164 @@
+--- Log opened Wed Oct 22 23:30:51 2014
+23:30 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:30   root@: Welcome to the BitlBee gateway!
+23:30   root@:  
+23:30   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:30   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:30 :: Irssi: Join to &bitlbee was synced in 0 secs
+23:31          mijicd@: register
+23:31            root@: About to register, use /OPER to enter the password
+23:32            root@: Account successfully created
+23:32          mijicd@: identify
+23:32            root@: You're already logged in.
+--- Log closed Wed Oct 22 23:32:17 2014
+--- Log opened Wed Oct 22 23:32:21 2014
+23:32 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:32   root@: Welcome to the BitlBee gateway!
+23:32   root@:  
+23:32   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:32   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:32 :: Irssi: Join to &bitlbee was synced in 0 secs
+23:32 mijicd@: identify
+23:32   root@: About to identify, use /OPER to enter the password
+23:32   root@: Password accepted, settings and accounts loaded
+23:32   root@: No accounts known. Use `account add' to add one.
+23:32          mijicd@: account add jabber dejan.mjc@gmail.com AhlEBosniHastam#87
+23:32            root@: Account successfully added with tag gtalk
+23:33          mijicd@: account gtalk on
+23:33            root@: jabber - Logging in: Connecting
+23:33            root@: jabber - Logging in: Connected to server, logging in
+23:33            root@: jabber - Logging in: Converting stream to TLS
+23:33            root@: jabber - Logging in: Connected to server, logging in
+23:33            root@: jabber - Logging in: Authentication finished
+23:33            root@: jabber - Logging in: Server changed session resource string to `BitlBee1908C75C'
+23:33            root@: jabber - Logging in: Authenticated, requesting buddy list
+23:33            root@: jabber - Logging in: Logged in
+23:33          mijicd@: blist
+23:33            root@: Nick              Handle/Account                            Status
+23:33            root@: miloradfilipovic  milorad.filipovic19@gmail.com gtalk       Online (tiruriruru.)
+23:33            root@: mladjenovicdusan  mladjenovic.dusan@gmail.com gtalk         Online (POTRCKO OD KORISTI)
+23:33            root@: stankonovakovic   stankonovakovic@gmail.com gtalk           Online
+23:33            root@: _2jj4zlvtl0y5c1k  2jj4zlvtl0y5c1k9h3m1ccvcnt@public.talk.g  Away
+23:33            root@: _3fvxf2zuw2shs25  3fvxf2zuw2shs25t03iebyh4d7@public.talk.g  Away
+23:33            root@: backonovisad      backonovisad@gmail.com gtalk              Away
+23:33            root@: borisspas         boris.spas@gmail.com gtalk                Away
+23:33            root@: choopa666         choopa666@gmail.com gtalk                 Away (https://play.google.com/store/apps/details?id=com.dakucnemudrvo&hl=en)
+23:33            root@: damjangataric     damjan.gataric@gmail.com gtalk            Away
+23:33            root@: dejan021          dejan021@gmail.com gtalk                  Away
+23:33            root@: drazenzaric       drazen.zaric@gmail.com gtalk              Away
+23:33            root@: gajo01            gajo01@gmail.com gtalk                    Away
+23:33            root@: ivandobric        ivan.dobric@gmail.com gtalk               Away
+23:33            root@: kladarin          kladarin@gmail.com gtalk                  Away
+23:33            root@: nmarcetic86       n.marcetic86@gmail.com gtalk              Away
+23:33            root@: obradovicdjordje  obradovic.djordje@gmail.com gtalk         Away
+23:33            root@: petarbjeljac      petar.bjeljac@gmail.com gtalk             Away
+23:33            root@: predragarandjelo  predrag.arandjelovic@gmail.com gtalk      Away
+23:33            root@: sagimihaly        sagimihaly@gmail.com gtalk                Away
+23:33            root@: savic071          savic071@gmail.com gtalk                  Away
+23:33            root@: thebogy           thebogy@gmail.com gtalk                   Away
+23:33            root@: 35 buddies (3 available, 18 away, 14 offline)
+--- Log closed Wed Oct 22 23:33:12 2014
+--- Log opened Wed Oct 22 23:33:41 2014
+23:33 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:33   root@: Welcome to the BitlBee gateway!
+23:33   root@:  
+23:33   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:33   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:33 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:33:45 2014
+--- Log opened Wed Oct 22 23:34:47 2014
+23:34 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:34   root@: Welcome to the BitlBee gateway!
+23:34   root@:  
+23:34   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:34   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:34 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:34:49 2014
+--- Log opened Wed Oct 22 23:36:15 2014
+23:36 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:36   root@: Welcome to the BitlBee gateway!
+23:36   root@:  
+23:36   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:36   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:36 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:38:32 2014
+--- Log opened Wed Oct 22 23:39:41 2014
+23:39 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:39   root@: Welcome to the BitlBee gateway!
+23:39   root@:  
+23:39   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:39   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:39 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:39:57 2014
+--- Log opened Wed Oct 22 23:41:58 2014
+23:41 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:41   root@: Welcome to the BitlBee gateway!
+23:41   root@:  
+23:41   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:41   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:41 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:42:44 2014
+--- Log opened Wed Oct 22 23:45:00 2014
+23:45 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:45   root@: Welcome to the BitlBee gateway!
+23:45   root@:  
+23:45   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:45   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:45 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:45:45 2014
+--- Log opened Wed Oct 22 23:47:51 2014
+23:47 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:47   root@: Welcome to the BitlBee gateway!
+23:47   root@:  
+23:47   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:47   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:47 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:48:11 2014
+--- Log opened Wed Oct 22 23:51:59 2014
+23:51 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:51   root@: Welcome to the BitlBee gateway!
+23:51   root@:  
+23:51   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:51   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:51 :: Irssi: Join to &bitlbee was synced in 0 secs
+--- Log closed Wed Oct 22 23:53:50 2014
+--- Log opened Wed Oct 22 23:57:28 2014
+23:57 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:57   root@: Welcome to the BitlBee gateway!
+23:57   root@:  
+23:57   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:57   root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:57 :: Irssi: Join to &bitlbee was synced in 0 secs
+23:58            root@: Failed to change setting
+23:59            root@: Unknown command: RHELmax#987. Please use help commands to get a list of available commands.
+23:59            root@: Unknown command: idenify. Please use help commands to get a list of available commands.
+--- Log closed Wed Oct 22 23:59:27 2014
+--- Log opened Wed Oct 22 23:59:27 2014
+23:59 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+23:59            root@: Welcome to the BitlBee gateway!
+23:59            root@:  
+23:59            root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+23:59            root@: If you already have an account on this server, just use the identify command to identify yourself.
+23:59 :: Irssi: Join to &bitlbee was synced in 0 secs
+23:59            root@: Incorrect password
+--- Day changed Thu Oct 23 2014
+00:00            root@: Incorrect password
+--- Log closed Thu Oct 23 00:00:31 2014
+--- Log opened Thu Oct 23 00:00:33 2014
+00:00 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+00:00   root@: Welcome to the BitlBee gateway!
+00:00   root@:  
+00:00   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+00:00   root@: If you already have an account on this server, just use the identify command to identify yourself.
+00:00 :: Irssi: Join to &bitlbee was synced in 0 secs
+00:01            root@: Failed to change setting
+--- Log closed Thu Oct 23 00:02:28 2014
+--- Log opened Thu Oct 23 00:02:30 2014
+00:02 :: Irssi: &bitlbee: Total of 2 nicks [2 ops, 0 halfops, 0 voices, 0 normal]
+00:02   root@: Welcome to the BitlBee gateway!
+00:02   root@:  
+00:02   root@: If you've never used BitlBee before, please do read the help information using the help command. Lots of FAQs are answered there.
+00:02   root@: If you already have an account on this server, just use the identify command to identify yourself.
+00:02 :: Irssi: Join to &bitlbee was synced in 0 secs
+00:03            root@: Failed to change setting
+--- Log closed Thu Oct 23 00:07:25 2014

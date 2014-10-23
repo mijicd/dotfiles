@@ -98,6 +98,11 @@
 			</item>
 		</menu>
 		<menu id="network" label="Network">
+			<item label="IRC">
+				<action name="Execute">
+					<execute>xchat</execute>
+				</action>
+			</item>
 			<item label="gFTP Client">
 				<action name="Execute">
 					<command>
@@ -222,8 +227,8 @@
 			</action>
 		</item>
 		<item label="Reboot">
-            <action name="Execute">
-                <execute>systemctl reboot</execute>
+			<action name="Execute">
+				<execute>systemctl reboot</execute>
 			</action>
 		</item>
 		<item label="Shutdown">

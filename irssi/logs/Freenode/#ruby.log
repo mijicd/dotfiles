@@ -1,0 +1,54 @@
+--- Log opened Wed Oct 22 23:15:25 2014
+23:15 :: Irssi: #ruby: Total of 920 nicks [0 ops, 0 halfops, 0 voices, 920 normal]
+--- Log closed Wed Oct 22 23:15:30 2014
+--- Log opened Wed Oct 22 23:18:08 2014
+23:18 :: Irssi: #ruby: Total of 920 nicks [0 ops, 0 halfops, 0 voices, 920 normal]
+23:18 :: Irssi: Join to #ruby was synced in 19 secs
+--- Log closed Wed Oct 22 23:18:24 2014
+--- Log opened Wed Oct 22 23:20:04 2014
+23:20 :: Irssi: #ruby: Total of 916 nicks [0 ops, 0 halfops, 0 voices, 916 normal]
+23:20 :: Irssi: Join to #ruby was synced in 19 secs
+--- Log closed Wed Oct 22 23:20:18 2014
+--- Log opened Wed Oct 22 23:21:24 2014
+23:21 :: Irssi: #ruby: Total of 917 nicks [0 ops, 0 halfops, 0 voices, 917 normal]
+23:21 :: Irssi: Join to #ruby was synced in 19 secs
+--- Log closed Wed Oct 22 23:21:39 2014
+--- Log opened Wed Oct 22 23:23:16 2014
+23:23 :: Irssi: #ruby: Total of 918 nicks [0 ops, 0 halfops, 0 voices, 918 normal]
+23:23 :: Irssi: Join to #ruby was synced in 19 secs
+--- Log closed Wed Oct 22 23:23:36 2014
+--- Log opened Wed Oct 22 23:27:11 2014
+23:27 :: Irssi: #ruby: Total of 914 nicks [0 ops, 0 halfops, 0 voices, 914 normal]
+23:27       definity_ : whops sorry
+23:27 :: Irssi: Join to #ruby was synced in 20 secs
+23:27        wasamasa : definity_: ruby is that nice and let's you choose the name of the variable(s) your block is using
+23:27        wasamasa : definity_: this is done by that rather peculiar syntax
+23:28       definity_ : The only thing I can really relate to ruby is perl, and it is rather diffrent so some of the ideas have thrown me a bit
+23:28        wasamasa : >> {a: 1, b: 2}.map { |k, v| [v, k] }.to_h
+23:28       eval-in__ : wasamasa => {1=>:a, 2=>:b} (https://eval.in/209043)
+--- Log closed Wed Oct 22 23:28:20 2014
+--- Log opened Wed Oct 22 23:31:06 2014
+23:31 :: Irssi: #ruby: Total of 910 nicks [0 ops, 0 halfops, 0 voices, 910 normal]
+23:31 :: Irssi: Join to #ruby was synced in 19 secs
+23:31          atmosx : night all
+--- Log closed Wed Oct 22 23:32:17 2014
+--- Log opened Wed Oct 22 23:32:35 2014
+23:32 :: Irssi: #ruby: Total of 912 nicks [0 ops, 0 halfops, 0 voices, 912 normal]
+23:32 :: Irssi: Join to #ruby was synced in 20 secs
+--- Log closed Wed Oct 22 23:33:14 2014
+--- Log opened Wed Oct 22 23:36:32 2014
+23:36 :: Irssi: #ruby: Total of 907 nicks [0 ops, 0 halfops, 0 voices, 907 normal]
+23:36         apeiros : a "nested" method will simply become defined at the same level as the outer method when the outer method is called
+23:36 :: Irssi: Join to #ruby was synced in 20 secs
+23:37           jhass : in other words the def keyword changes self but not the definee
+23:37         apeiros : and with the same visibility
+23:38 theotherstupidg : apeiros, jhass, awesome to knw, but how i can manipulate this and get somthing like level_d work as an alias for level_b, etc.
+--- Log closed Wed Oct 22 23:38:17 2014
+--- Log opened Wed Oct 22 23:39:54 2014
+23:39 :: Irssi: #ruby: Total of 904 nicks [0 ops, 0 halfops, 0 voices, 904 normal]
+--- Log closed Wed Oct 22 23:39:57 2014
+--- Log opened Wed Oct 22 23:42:13 2014
+23:42 :: Irssi: #ruby: Total of 907 nicks [0 ops, 0 halfops, 0 voices, 907 normal]
+23:42 !card.freenode.net [freenode-info] why register and identify? your IRC nick is how people know you. http://freenode.net/faq.shtml#nicksetup
+23:42 :: Irssi: Join to #ruby was synced in 19 secs
+--- Log closed Wed Oct 22 23:42:37 2014
