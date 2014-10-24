@@ -40,6 +40,7 @@ alias 'clone=hg clone'
 alias ga='git add'
 alias gs='git status'
 alias gc='git commit -m'
+alias gca='git commit --amend'
 alias gta='git tag -a -m'
 
 # logs
@@ -56,7 +57,7 @@ alias gr='git rebase -i'
 # remotes
 alias gcl='git clone'
 alias gp='git push'
-alias gpu='git pull'
+alias gpu='git pull --rebase'
 alias gra='git remote add'
 alias grr='git remote rm'
 
