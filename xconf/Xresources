@@ -39,7 +39,7 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 ! commands
 ! URxvt.clipboard.copycmd: xclip -i -selection clipboard
 ! URxvt.clipboard.pastecmd: xclip -o -selection clipboard
-URxvt.url-select.launcher: chromium
+URxvt.url-select.launcher: firefox
 
 ! font setup
 URxvt.font: xft:Inconsolata for Powerline:pixelsize=14:antialias=true:hinting=true

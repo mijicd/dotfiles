@@ -244,9 +244,9 @@
         </keybind>
 
         <!-- browser -->
-        <keybind key="C-A-c">
+        <keybind key="C-A-f">
             <action name="Execute">
-                <command>chromium</command>
+                <command>firefox</command>
             </action>
         </keybind>
 

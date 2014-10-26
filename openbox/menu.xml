@@ -17,7 +17,7 @@
 		<item label="Web Browser">
 			<action name="Execute">
 				<command>
-					chromium
+					firefox
 				</command>
 			</action>
 		</item>
