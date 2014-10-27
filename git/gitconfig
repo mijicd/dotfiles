@@ -23,7 +23,7 @@
     untracked = cyan
 
 [core]
-    editor = vi
+    editor = vim
     pager = less
     autocrlf = input
     safecrlf = warn
