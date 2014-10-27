@@ -52,7 +52,8 @@ alias grl='git reflog'
 alias gb='git branch'
 alias gco='git checkout'
 alias gcb='git checkout -b'
-alias gr='git rebase -i'
+alias gr='git rebase'
+alias gri='git rebase -i'
 
 # remotes
 alias gcl='git clone'
@@ -65,6 +66,8 @@ alias grr='git remote rm'
 alias gd='git diff'
 alias gdt='git difftool'
 alias gm='git merge'
+alias gms='git merge --squash'
+alias gmf='git merge --no-ff'
 alias gmt='git mergetool'
 
 # -------------------------------------------------------------------
