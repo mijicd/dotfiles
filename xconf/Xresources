@@ -1,5 +1,5 @@
-﻿! black
-URxvt.color0  : #2E2E34343636
+﻿URxvt.color0  : #2E2E34343636
+! black
 URxvt.color8  : #555557575353
 ! red
 URxvt.color1  : #CCCC00000000
@@ -42,7 +42,7 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.url-select.launcher: firefox
 
 ! font setup
-URxvt.font: xft:Inconsolata for Powerline:pixelsize=14:antialias=true:hinting=true
+URxvt.font: xft:Inconsolata for Powerline:pixelsize=18:antialias=true:hinting=true
 
 ! remove scroll bar
 URxvt.scrollBar: False
