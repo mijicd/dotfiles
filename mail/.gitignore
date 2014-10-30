@@ -2,5 +2,9 @@
 mutt/cache/*
 !mutt/cache/.gitkeep
 
+# ignore temp & mailboxes
+mutt/temp/*
+mutt/mailboxes
+
 # ignore compiled stuff
 mutt/*.pyc
