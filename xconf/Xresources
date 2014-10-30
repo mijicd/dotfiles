@@ -37,8 +37,8 @@ URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.keysym.M-s: perl:keyboard-select:search
 
 ! commands
-! URxvt.clipboard.copycmd: xclip -i -selection clipboard
-! URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+URxvt.clipboard.copycmd: xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.url-select.launcher: firefox
 
 ! font setup
