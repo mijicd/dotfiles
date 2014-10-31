@@ -16,3 +16,6 @@ bind pager j  next-line
 
 # properly view attachments
 bind attach <return> view-mailcap
+
+# gpg keys
+bind compose p pgp-menu

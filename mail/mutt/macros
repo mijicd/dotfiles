@@ -26,3 +26,5 @@ macro index M "<save-message>?<toggle-mailboxes>" "move a message to a mailbox"
 # view url
 macro pager \Cu "|urlview<enter>" "call urlview to open links"
 
+# no gpg
+macro compose Y pfy "send mail without GPG"
