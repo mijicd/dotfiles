@@ -8,3 +8,6 @@ source ~/.zsh/bindings.zsh
 source ~/.zsh/functions.zsh
 source ~/.zsh/history.zsh
 source ~/.zsh/zsh_hooks.zsh
+
+# trigger z
+source ~/.z.sh
