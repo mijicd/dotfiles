@@ -10,4 +10,4 @@ source ~/.zsh/history.zsh
 source ~/.zsh/zsh_hooks.zsh
 
 # trigger z
-source ~/.z.sh
+source ~/.dotfiles/shell/z/z.sh
