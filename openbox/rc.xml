@@ -122,8 +122,8 @@
     <firstdesk>1</firstdesk>
     <names>
       <name>main</name>
-      <name>secondary #1</name>
-      <name>secondary #2</name>
+      <name>docs</name>
+      <name>other</name>
     </names>
     <!-- The number of milliseconds to show the popup for when switching
                desktops.  Set this to 0 to disable the popup. -->
@@ -182,10 +182,15 @@
         <command>urxvtc -e tmux</command>
       </action>
     </keybind>
-    <!-- editor -->
+    <!-- editors -->
     <keybind key="C-A-g">
       <action name="Execute">
         <command>gvim</command>
+      </action>
+    </keybind>
+    <keybind key="C-A-e">
+      <action name="Execute">
+        <command>lighttable</command>
       </action>
     </keybind>
     <!-- browser -->
