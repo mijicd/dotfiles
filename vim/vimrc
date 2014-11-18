@@ -26,16 +26,14 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " look & feel, core vi
-Bundle 'altercation/vim-colors-solarized'
 Bundle 'bling/vim-airline'
 Bundle 'sjl/gundo.vim'
+Bundle 'itchyny/landscape.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'rking/ag.vim'
 Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-distinguished'
-Bundle 'nanotech/jellybeans.vim'
 
 " coding utilities
 Bundle 'plasticboy/vim-markdown'
@@ -197,7 +195,7 @@ set noswapfile
 " Set the color scheme
 " -------------------------------------------------------------------
 set background=dark
-silent! colorscheme distinguished
+silent! colorscheme landscape
 
 " -------------------------------------------------------------------
 " Set tab stuff
