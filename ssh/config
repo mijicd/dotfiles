@@ -10,6 +10,10 @@ Host gitlab.gregorllc.com
     User dejan.mijic
     IdentityFile ~/.ssh/git/gregor.key
 
+Host https://www.typhoon-hil.com/gitlab
+    User dejan.mijic
+    IdentityFile ~/.ssh/git/typhoon.key
+
 Host weblines.io
     User root
     IdentityFile ~/.ssh/servers/weblines.key
