@@ -183,6 +183,11 @@
       </action>
     </keybind>
     <!-- editors -->
+    <keybind key="C-A-g">
+      <action name="Execute">
+        <command>gvim</command>
+      </action>
+    </keybind>
     <keybind key="C-A-e">
       <action name="Execute">
         <command>lighttable</command>
