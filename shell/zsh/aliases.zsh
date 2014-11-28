@@ -52,6 +52,7 @@ alias grl='git reflog'
 alias gb='git branch'
 alias gco='git checkout'
 alias gcb='git checkout -b'
+alias gcp='git cherry-pick'
 alias gr='git rebase'
 alias gri='git rebase -i'
 
