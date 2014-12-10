@@ -2,8 +2,8 @@
 PATH=/usr/local/bin:/usr/local/sbin:$HOME/.rvm/bin:$PATH
 
 # grep colors
-export GREP_OPTIONS='--color=auto'
-export GREP_COLOR='3;33'
+# export GREP_OPTIONS='--color=auto'
+# export GREP_COLOR='3;33'
 
 # set editor and pager
 export LESS='--ignore-case --raw-control-chars'
