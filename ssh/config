@@ -1,3 +1,9 @@
+Host sciplay
+    HostName repo.sg-platform-vpc.wms.com
+    User ubuntu
+    IdentityFile ~/.ssh/sciplay/platform-vpc-vpci.pem
+    IdentitiesOnly yes
+
 Host github.com
     User mijicd
     IdentityFile ~/.ssh/git/github.key
