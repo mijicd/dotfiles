@@ -12,3 +12,6 @@ docker/*
 
 # ignore known_hosts
 known_hosts
+
+# ignore OSx stuff
+id_boot2docker*
