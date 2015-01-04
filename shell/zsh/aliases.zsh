@@ -1,6 +1,10 @@
 # substitue vi with vim
 alias vi=vim
 
+if [[ $IS_MAC -eq 1 ]]; then
+    alias emacs="/usr/local/Cellar/emacs/24.4/Emacs.app/Contents/MacOS/Emacs -nw"
+fi
+
 # -------------------------------------------------------------------
 # directory movement
 # -------------------------------------------------------------------
