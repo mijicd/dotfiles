@@ -1,3 +1,4 @@
+source ~/.zsh/checks.zsh
 source ~/.zsh/colors.zsh
 source ~/.zsh/options.zsh
 source ~/.zsh/exports.zsh

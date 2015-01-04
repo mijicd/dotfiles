@@ -13,6 +13,8 @@ export EDITOR=vim
 
 # CTAGS Sorting in VIM/Emacs is better behaved with this in place
 export LC_COLLATE=C 
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # python virtual envirinoment setup
 export WORKON_HOME=$HOME/.virtualenvs
@@ -20,3 +22,10 @@ export WORKON_HOME=$HOME/.virtualenvs
 
 # start rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
+# export boot2docker variables (Mac only)
+if [[ $IS_MAC -eq 1 ]]; then
+    export DOCKER_HOST=tcp://192.168.59.103:2376
+    export DOCKER_CERT_PATH=/Users/mijicd/.boot2docker/certs/boot2docker-vm
+    export DOCKER_TLS_VERIFY=1    
+fi
