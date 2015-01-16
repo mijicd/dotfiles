@@ -29,3 +29,8 @@ if [[ $IS_MAC -eq 1 ]]; then
     export DOCKER_CERT_PATH=/Users/mijicd/.boot2docker/certs/boot2docker-vm
     export DOCKER_TLS_VERIFY=1    
 fi
+
+# libraries
+if [[ $IS_LINUX -eq 1 ]]; then
+    export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+fi
