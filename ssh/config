@@ -20,10 +20,6 @@ Host www.typhoon-hil.com
     User dejan.mijic
     IdentityFile ~/.ssh/git/typhoon.key
 
-Host weblines.io
-    User root
-    IdentityFile ~/.ssh/servers/weblines.key
-
 Host docker-skype
     User docker
     IdentityFile ~/.ssh/docker/docker.key
