@@ -28,7 +28,6 @@
     autocrlf = input
     safecrlf = warn
     quotepath = false
-	excludesfile = /Users/mijicd/.gitignore_global
 
 [diff]
     tool = meld
@@ -37,15 +36,10 @@
     prompt = false
 
 [merge]
-       keepBackup = false
-       tool = custom
- 
+    tool = meld
+
+[mergetool]
+    prompt = false
+
 [push]
     default = tracking
-
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
