@@ -64,7 +64,10 @@ endif
 " gVim settings
 if has('gui_running')
     " set font
-    set guifont=Inconsolata\ for\ Powerline\ 12
+    let s:uname = system("uname")
+    if s:uname == "Darwin\n"
+        set guifont=Inconsolata-g\ for\ Powerline:h14
+    endif
 
     " remove bars
     set guioptions-=m   " remove menu bar
