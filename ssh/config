@@ -26,10 +26,6 @@ Host www.typhoon-hil.com
     User dejan.mijic
     IdentityFile ~/.ssh/git/typhoon.key
 
-Host docker-skype
-    User docker
-    IdentityFile ~/.ssh/docker/docker.key
-    Port 55555
-    HostName 127.0.0.1
-    RemoteForward 64713 localhost:4713
-    ForwardX11 yes
+Host registry
+    User ubuntu
+    IdentityFile ~/.ssh/servers/weblines-registry.key
