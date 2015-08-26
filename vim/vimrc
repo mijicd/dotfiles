@@ -39,9 +39,6 @@ Bundle 'luochen1990/rainbow'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-" Bundle 'Valloric/YouCompleteMe'
 Bundle 'marijnh/tern_for_vim'
 
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
@@ -77,9 +74,10 @@ if has('gui_running')
 endif
 
 " -------------------------------------------------------------------
-"  change map <leader> from \ to ,
+"  change leaders
 "  ------------------------------------------------------------------
 :let mapleader = ","
+:let maplocalleader = "\\"
 
 " -------------------------------------------------------------------
 " Allow saving of files as sudo when I forgot to start vim using sudo.
@@ -440,13 +438,6 @@ let g:syntastic_javascript_checkers = ['jshint']
 
 " Parentheses
 let g:rainbow_active = 1
-
-" Completion
-let g:ycm_add_preview_to_completeopt=0
-let g:ycm_confirm_extra_conf=0
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-set completeopt-=preview
 
 " -------------------------------------------------------------------
 "  finished
