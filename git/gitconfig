@@ -30,7 +30,7 @@
     quotepath = false
 
 [diff]
-    tool = meld
+    tool = vimdiff
 
 [difftool]
     prompt = false
