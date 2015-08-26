@@ -1,0 +1,46 @@
+[user]
+    name = mijicd
+    email = dejan.mjc@gmail.com
+
+[color]
+    ui = auto
+    interactive = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = cyan
+
+[core]
+    editor = vim
+    pager = less
+    autocrlf = input
+    safecrlf = warn
+    quotepath = false
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[mergetool]
+    prompt = false
+
+[push]
+    default = tracking

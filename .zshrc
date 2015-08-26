@@ -11,4 +11,4 @@ source ~/.zsh/history.zsh
 source ~/.zsh/zsh_hooks.zsh
 
 # trigger z
-source ~/.dotfiles/shell/z/z.sh
+source ~/.zsh/z.sh
