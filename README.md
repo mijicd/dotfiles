@@ -1,2 +1,4 @@
-This repository contains my configuration files for vim, git, tmux and
-Z shell.
+# Dotfiles
+
+This repository contains configuration files for tools I use on daily
+basis: git, tmux, Z shell, vim and Sublime Text 3.
