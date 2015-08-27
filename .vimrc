@@ -28,7 +28,6 @@ Bundle 'gmarik/vundle'
 " look & feel, core vi
 Bundle 'bling/vim-airline'
 Bundle 'sjl/gundo.vim'
-Bundle 'itchyny/landscape.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'fholgado/minibufexpl.vim'
 Bundle 'rking/ag.vim'
@@ -237,22 +236,6 @@ endif
 " Map escape to jj -- much faster to reach and type
 imap jj <esc>
 
-" Highlight words to avoid in tech writing
-" =======================================
-"
-"   obviously, basically, simply, of course, clearly,
-"   just, everyone knows, However, So, easy
-"
-"   http://css-tricks.com/words-avoid-educational-writing/
-"   https://github.com/pengwynn/dotfiles/commit/12159ea233180344be4e25d57056ccd37061a153
-
-highlight TechWordsToAvoid ctermbg=red ctermfg=white
-match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however\|so,\|easy/
-autocmd BufWinEnter * match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-autocmd InsertEnter * match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-autocmd InsertLeave * match TechWordsToAvoid /\cobviously\|basically\|simply\|of\scourse\|clearly\|just\|everyone\sknows\|however,\|so,\|easy/
-autocmd BufWinLeave * call clearmatches()
-
 " -------------------------------------------------------------------
 " Searching
 " -------------------------------------------------------------------
@@ -362,6 +345,12 @@ endif
 " Stuff for Bundles
 " -------------------------------------------------------------------
 
+" theme
+let g:badwolf_darkgutter = 1
+let g:badwolf_tabline = 1
+let g:badwolf_html_link_underline = 0
+colorscheme badwolf
+
 " vim-airline settings
 let g:airline_powerline_fonts = 1
 
@@ -376,7 +365,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='luna'
+let g:airline_theme='badwolf'
 
 " Control-P
 let g:ctrlp_map = '<c-p>'
