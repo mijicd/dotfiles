@@ -1,0 +1,10 @@
+{
+	"color_scheme": "Packages/User/SublimeLinter/predawn (SL).tmTheme",
+	"font_face": "Inconsolata-g for Powerline",
+	"font_size": 14,
+	"ignored_packages":
+	[
+	],
+	"theme": "predawn.sublime-theme",
+	"translate_tabs_to_spaces": true
+}
