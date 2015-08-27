@@ -36,9 +36,7 @@ Bundle 'luochen1990/rainbow'
 
 " coding utilities
 Bundle 'plasticboy/vim-markdown'
-Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-surround'
-Bundle 'marijnh/tern_for_vim'
 
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -414,16 +412,6 @@ nmap s <Plug>(easymotion-s2)
 " Ag
 let g:agprg = 'ag --nogroup --nocolor --column'
 nmap <leader>/ :Ag<space>
-
-" Lint settings
-let g:syntastic_check_on_open = 1
-let g:syntastic_mode_map={
-    \'mode': 'active',
-    \'active_filetypes': [],
-    \'passive_filetypes': ['html']
-\}
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_javascript_checkers = ['jshint']
 
 " Parentheses
 let g:rainbow_active = 1

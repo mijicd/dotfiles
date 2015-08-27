@@ -1,6 +1,9 @@
 [user]
-    name = mijicd
-    email = dejan.mjc@gmail.com
+    name = Dejan Mijic
+    email = dejan.mijic@scientificgames.com
+
+[github]
+    user = mijicd
 
 [color]
     ui = auto
@@ -32,15 +35,9 @@
 [diff]
     tool = vimdiff
 
-[difftool]
-    prompt = false
-
 [merge]
     tool = vimdiff
     conflictstyle = diff3
 
-[mergetool]
-    prompt = false
-
 [push]
-    default = tracking
+    default = current
