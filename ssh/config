@@ -1,9 +1,3 @@
-Host sciplay
-    HostName repo.sg-platform-vpc.wms.com
-    User ubuntu
-    IdentityFile ~/.ssh/sciplay/platform-vpc-vpci.pem
-    IdentitiesOnly yes
-
 Host gitlab.sg-platform-vpc.wms.com
     User git
     HostName gitlab.sg-platform-vpc.wms.com
@@ -17,11 +11,3 @@ Host github.com
 Host bitbucket.org
     User mijicd
     IdentityFile ~/.ssh/git/bitbucket.key
-
-Host gitlab.gregorllc.com
-    User dejan.mijic
-    IdentityFile ~/.ssh/git/gregor.key
-
-Host www.typhoon-hil.com
-    User dejan.mijic
-    IdentityFile ~/.ssh/git/typhoon.key
