@@ -34,7 +34,7 @@ Bundle 'rking/ag.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'luochen1990/rainbow'
 
-" coding utilities
+" editing utilities
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-surround'
 
@@ -45,6 +45,7 @@ Bundle "tomtom/tcomment_vim"
 Bundle "garbas/vim-snipmate"
 
 " Some snippets to get started
+Bundle "SirVer/ultisnips"
 Bundle "honza/vim-snippets"
 
 if has('autocmd')
@@ -416,6 +417,10 @@ nmap <leader>/ :Ag<space>
 " Parentheses
 let g:rainbow_active = 1
 
-" -------------------------------------------------------------------
+" Snippeting
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
 "  finished
 " -------------------------------------------------------------------
