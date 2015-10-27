@@ -11,3 +11,7 @@ Host github.com
 Host bitbucket.org
     User mijicd
     IdentityFile ~/.ssh/git/bitbucket.key
+
+Host 192.168.1.253
+    User nt_git
+    IdentityFile ~/.ssh/git/ntsystems.key
