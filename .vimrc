@@ -37,6 +37,7 @@ Bundle 'luochen1990/rainbow'
 " editing utilities
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-surround'
+Bundle 'editorconfig/editorconfig-vim'
 
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
