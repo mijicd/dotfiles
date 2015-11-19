@@ -39,6 +39,9 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-surround'
 Bundle 'editorconfig/editorconfig-vim'
 
+" languages
+Bundle "digitaltoad/vim-jade.git"
+
 " vim-snipmate requires vim-addon-mw-utils and tlib_vim
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
