@@ -22,7 +22,6 @@ Plugin 'sjl/gundo.vim'
 
 " editing utilities
 Plugin 'tomtom/tcomment_vim'
-" Plugin 'plasticboy/vim-markdown'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
@@ -57,12 +56,13 @@ let g:airline#extensions#whitespace#mixed_indent_format = 'mixed-indent[%s]'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#branch#empty_message = ''
 
-" Enable the list of buffers
+" Enable the list of buffers & hide function display
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tagbar#enabled = 0
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='badwolf'
+let g:airline_theme='apprentice'
 
 " Control-P
 let g:ctrlp_map = '<c-p>'
