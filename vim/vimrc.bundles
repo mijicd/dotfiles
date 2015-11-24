@@ -29,6 +29,8 @@ Plugin 'editorconfig/editorconfig-vim'
 " languages
 Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 " snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
