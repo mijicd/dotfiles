@@ -26,6 +26,10 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'tpope/vim-surround'
 Plugin 'editorconfig/editorconfig-vim'
 
+" git
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
+
 " languages
 Plugin 'scrooloose/syntastic'
 Plugin 'sheerun/vim-polyglot'
@@ -48,8 +52,6 @@ endif
 if has('syntax') && !exists('g:syntax_on')
   syntax on
 endif
-
-" theme
 
 " Airline
 let g:airline_powerline_fonts = 1
