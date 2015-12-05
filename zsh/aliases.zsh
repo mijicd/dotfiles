@@ -1,10 +1,6 @@
-# substitue vi with vim
+
+# substitute vi with vim
 alias vi=vim
-
-if [[ $IS_MAC -eq 1 ]]; then
-    alias emacs="/usr/local/Cellar/emacs/24.4/Emacs.app/Contents/MacOS/Emacs -nw"
-fi
-
 # -------------------------------------------------------------------
 # directory movement
 # -------------------------------------------------------------------
@@ -26,15 +22,6 @@ alias 'dus=du -sckx * | sort -nr' #directories sorted by size
 
 alias 'wordy=wc -w * | sort | tail -n10' # sort files in current directory by the number of words they contain
 alias 'filecount=find . -type f | wc -l' # number of files (not directories)
-
-# -------------------------------------------------------------------
-# Mercurial (hg)
-# -------------------------------------------------------------------
-alias 'h=hg status'
-alias 'hc=hg commit'
-alias 'push=hg push'
-alias 'pull=hg pull'
-alias 'clone=hg clone'
 
 # -------------------------------------------------------------------
 # Git
