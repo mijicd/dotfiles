@@ -100,15 +100,15 @@ hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 " EasyMotion
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
-map <Leader>w <Plug>(easymotion-w)
-map <Leader>b <Plug>(easymotion-b)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
+map <leader>w <Plug>(easymotion-w)
+map <leader>b <Plug>(easymotion-b)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
 nmap s <Plug>(easymotion-s2)
 
 " Ag
 let g:ag_prg = 'ag --nogroup --nocolor --column'
-nmap <Leader>/ :Ag<space>
+nmap <leader>/ :Ag<space>
 
 " Parentheses
 let g:rainbow_active = 1
