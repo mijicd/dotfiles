@@ -1,5 +1,5 @@
 # initialize path
-PATH=/usr/local/bin:/usr/local/sbin:$HOME/.anaconda3/bin:$PATH
+PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # set editor and pager
 export LESS='--ignore-case --raw-control-chars'
