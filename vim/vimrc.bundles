@@ -3,47 +3,43 @@
 filetype on                     " best to have it on before turning it off
 filetype off                    " needs to be off to setup Vundle
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-Plugin 'gmarik/vundle'
+call plug#begin()
 
 " look & feel
-Plugin 'bling/vim-airline'
-Plugin 'fholgado/minibufexpl.vim'
-Plugin 'romainl/Apprentice'
+Plug 'bling/vim-airline'
+Plug 'fholgado/minibufexpl.vim'
+Plug 'romainl/Apprentice'
 
 " core functionality
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
-Plugin 'luochen1990/rainbow'
-Plugin 'sjl/gundo.vim'
+Plug 'rking/ag.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'luochen1990/rainbow'
+Plug 'sjl/gundo.vim'
 
 " editing utilities
-Plugin 'tomtom/tcomment_vim'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-surround'
-Plugin 'editorconfig/editorconfig-vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'editorconfig/editorconfig-vim'
 
 " git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 " languages
-Plugin 'scrooloose/syntastic'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plug 'scrooloose/syntastic'
+Plug 'sheerun/vim-polyglot'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 
 " snippets
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
-call vundle#end()
+call plug#end()
 
 if has('autocmd')
   filetype plugin indent on
