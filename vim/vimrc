@@ -17,6 +17,13 @@ if has('syntax') && !exists('g:syntax_on')
   syntax on
 endif
 
+if has('gui_running')
+    set guifont=Inconsolata-g\ for\ Powerline\ 14
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+endif
+
 " Leaders
 :let mapleader = " "
 :let maplocalLeader = "\\"
