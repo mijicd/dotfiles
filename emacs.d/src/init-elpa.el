@@ -8,7 +8,10 @@
     (message "Removing local package.el from load-path to avoid shadowing bundled version")
     (setq load-path (remove package-el-site-lisp-dir load-path))))
 
+
+;;; Fire up package.el
 (require 'package)
+(setq package-enable-at-startup nil)
 
 ;;; Standard package repositories
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
@@ -18,18 +21,16 @@
 (add-to-list 'package-archives '("elpy" . "https://jorgenschaefer.github.io/packages/"))
 
 ;;; Pin some packages to specific repositories.
-(setq package-pinned-packages '((gtags . "marmalade")
-                                (php-extras . "marmalade")))
+(setq package-pinned-packages '((gtags . "marmalade")))
 
-;; If gpg cannot be found, signature checking will fail, so we
-;; conditionally enable it according to whether gpg is available. We
-;; re-run this check once $PATH has been configured
-(defun sanityinc/package-maybe-enable-signatures ()
-  (setq package-check-signature (when (executable-find "gpg") 'allow-unsigned)))
+(package-initialize)
 
-(sanityinc/package-maybe-enable-signatures)
-(after-load 'init-exec-path
-  (sanityinc/package-maybe-enable-signatures))
+(unless (package-installed-p 'use-package)
+  (package-refresh-content)
+  (package-install 'use-package))
+
+(eval-when-compile
+  (require 'use-package))
 
 ;;; On-demand installation of packages
 (defun require-package (package &optional min-version no-refresh)
@@ -55,11 +56,6 @@ locate PACKAGE."
     (error
      (message "Couldn't install package `%s': %S" package err)
      nil)))
-
-;;; Fire up package.el
-(setq load-prefer-newer t)
-(setq package-enable-at-startup nil)
-(package-initialize)
 
 (require-package 'fullframe)
 (fullframe list-packages quit-window)

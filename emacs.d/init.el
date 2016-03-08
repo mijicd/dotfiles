@@ -1,19 +1,7 @@
 ;;; "root" configuration file
 
 (add-to-list 'load-path (expand-file-name "src" user-emacs-directory))
-(add-to-list 'custom-theme-load-path (expand-file-name "themes" user-emacs-directory))
-; (add-to-list 'exec-path "/usr/local/bin")
-
-(require 'package)
-(package-initialize)
-
-;; bootstrap use-package
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-
-(eval-when-compile
-  (require 'use-package))
+(require 'init-elpa)
 
 ;; essential settings
 (setq inhibit-splash-screen t
@@ -57,7 +45,6 @@
 ;;; load personal configuration
 (require 'init-utils)
 (require 'init-global-functions)
-(require 'init-elpa)
 (require 'diminish)
 (require 'bind-key)
 (require 'init-gtags)
@@ -239,11 +226,6 @@
   (mmm-add-mode-ext-class 'markdown-mode nil 'markdown-cl)
   (mmm-add-mode-ext-class 'markdown-mode nil 'markdown-php))
 
-;; GNU PG
-(require 'epa-file)
-(epa-file-enable)
-(setq-default epa-file-cache-passphrase-for-symmetric-encryption t)
-
 (defvar show-paren-delay 0
   "Delay (in seconds) before matching paren is highlighted.")
 
@@ -330,17 +312,10 @@
 
 ;; UI
 (use-package zenburn-theme :ensure t :defer t)
-(use-package airline-themes :ensure t :defer t)
 
 (load-theme 'zenburn)
-(load-theme 'airline-badwolf)
-(set-frame-font "Monaco-14")
 
-(setq airline-utf-glyph-separator-left      #xe0b0
-      airline-utf-glyph-separator-right     #xe0b2
-      airline-utf-glyph-subseparator-left   #xe0b1
-      airline-utf-glyph-subseparator-right  #xe0b3
-      airline-utf-glyph-branch              #xe0a0
-      airline-utf-glyph-readonly            #xe0a2
-      airline-utf-glyph-linenumber          #xe0a1)
+(if (eq system-type 'darwin)
+    (set-frame-font "Monaco-14"))
+
 (provide 'init)
