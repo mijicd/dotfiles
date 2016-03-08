@@ -19,7 +19,7 @@
   :config
   (setq org-agenda-text-search-extra-files '(agenda-archives))
   (setq org-todo-keywords
-        '((sequence "TODO" "IN-PROGRESS" "WAITING" "|" "DONE" "CANCELED")))
+        '((sequence "TODO" "DOING" "|" "DONE" "CANCELED")))
 
   (setq org-blank-before-new-entry '((heading . t)
                                      (plain-list-item . t)))
