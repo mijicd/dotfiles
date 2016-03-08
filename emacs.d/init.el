@@ -319,26 +319,6 @@
                             (setq sgml-basic-offset 2)
                             (setq indent-tabs-mode nil)))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(org-modules
-   (quote
-    (org-bbdb org-bibtex org-docview org-gnus org-habit org-info org-irc org-mhe org-rmail org-w3m)))
- '(package-selected-packages
-   (quote
-    (yaml-mode which-key wgrep-ag web-mode w3m use-package rainbow-mode powerline-evil org-bullets mmm-mode markdown-mode magit highlight-symbol helm-projectile gtags fullframe flycheck-package exec-path-from-shell evil-surround evil-leader evil-jumper evil-indent-textobject emmet-mode elpy dictionary bpr avy auto-complete ag)))
- '(safe-local-variable-values (quote ((no-byte-compile t)))))
-
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:background "#282828" :foreground "#fdf4c1")))))
-
 (put 'narrow-to-region 'disabled nil)
 (diminish 'undo-tree-mode)
 (require 'init-linum)
