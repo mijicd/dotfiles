@@ -4,6 +4,8 @@
 ;; Basic Org Mode configuration, assuming presence of Evil & Evil Leader.
 
 ;;; Code:
+(use-package visual-fill-column :ensure t)
+
 (use-package org
   :ensure t
   :defer t
@@ -153,3 +155,4 @@ TAG is chosen interactively from the global tags completion table."
   (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
 
 (provide 'init-org)
+;;; init-org.el ends here

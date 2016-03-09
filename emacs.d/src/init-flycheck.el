@@ -25,4 +25,9 @@
 
   (setq flycheck-display-errors-function #'flycheck-display-error-messages-unless-error-list))
 
+(add-hook 'flycheck-mode-hook
+          (lambda ()
+            (evil-define-key 'normal flycheck-mode-map (kbd "]e") 'flycheck-next-error)
+            (evil-define-key 'normal flycheck-mode-map (kbd "[e") 'flycheck-previous-error)))
+
 (provide 'init-flycheck)
