@@ -17,6 +17,7 @@ Plug 'tomtom/tcomment_vim'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'fatih/vim-go'
 
 " git
 Plug 'tpope/vim-fugitive'
