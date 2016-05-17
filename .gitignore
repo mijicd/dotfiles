@@ -8,8 +8,3 @@ ssh/git/*
 
 # ignore known_hosts
 known_hosts
-
-# ignore emacs downloads
-emacs.d/*
-!emacs.d/src
-!emacs.d/init.el
