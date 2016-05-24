@@ -17,13 +17,6 @@ if has('syntax') && !exists('g:syntax_on')
   syntax on
 endif
 
-if has('gui_running')
-    set guifont=Inconsolata-g\ for\ Powerline\ 14
-    set guioptions-=m
-    set guioptions-=T
-    set guioptions-=r
-endif
-
 " Leaders
 :let mapleader = ","
 :let maplocalLeader = "\\"
@@ -75,10 +68,16 @@ imap <left> <nop>
 imap <right> <nop>
 
 " use <C>hjkl to switch between splits
-nnoremap <bs> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+let s:uname = system("uname -s")
+if s:uname == "Darwin"
+    nnoremap <bs> <C-w>h
+else
+    nnoremap <C-h> <C-w>h
+endif
 
 " Move line(s) up or down via C-j and C-k respectively
 nnoremap <C-j> :m .+1<CR>==

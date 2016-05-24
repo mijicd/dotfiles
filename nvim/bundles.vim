@@ -26,7 +26,11 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
 " utilities
-Plug 'kien/ctrlp.vim'
+function! DoRemote(arg)
+    UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
@@ -48,6 +52,11 @@ endif
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 """
+""" Deoplete
+"""
+let g:deoplete#enable_at_startup = 1
+
+"""
 """ Ctrl-P
 """
 let g:ctrlp_map = '<c-p>'
@@ -56,6 +65,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 nmap <C-n> :CtrlPDir<space>
 
 """
@@ -77,7 +87,13 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 """
 """ EasyMotion
 """
-let g:EasyMotion_leader_key = '<Space>'
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_smartcase = 1
+map <leader>w <Plug>(easymotion-w)
+map <leader>b <Plug>(easymotion-b)
+map <leader>j <Plug>(easymotion-j)
+map <leader>k <Plug>(easymotion-k)
+nmap s <Plug>(easymotion-s2)
 
 """
 """ Colorscheme
