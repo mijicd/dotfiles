@@ -1,6 +1,7 @@
 # ignore created keys
 ssh/sciplay/*
 ssh/git/*
+ssh/linode/*
 
 # keep directories in repositories
 !ssh/sciplay/.gitkeep
@@ -8,3 +9,7 @@ ssh/git/*
 
 # ignore known_hosts
 known_hosts
+
+# nvim
+nvim/autoload
+nvim/plugged
