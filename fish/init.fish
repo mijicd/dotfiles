@@ -12,6 +12,7 @@ set -g -x LC_ALL en_US.UTF-8
 set -g -x LANG en_US.UTF-8
 
 alias vi nvim
+alias l 'ls -la'
 
 #
 # Git
