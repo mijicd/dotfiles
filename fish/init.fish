@@ -1,5 +1,3 @@
-fish_vi_mode
-
 set -g -x Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
 
 #
