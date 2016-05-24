@@ -21,7 +21,6 @@ alias gs 'git status'
 alias gc 'git commit -m'
 alias gca 'git commit --amend'
 alias gl 'git log'
-alias gpl "git log --pretty format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias gb 'git branch'
 alias gco 'git checkout'
 alias gcb 'git checkout -b'
