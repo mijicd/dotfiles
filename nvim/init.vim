@@ -155,13 +155,8 @@ nnoremap <Leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h
 " open vimrc in new tab for editing
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
-" automatically source .vimrc when it is saved (from vimcasts.org #24)
-if has("autocmd")
-  autocmd! bufwritepost .vimrc source $MYVIMRC
-endif
-
-" reload .vimrc
-map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+" reload init.vim
+map <silent> <Leader>V :source ~/.config/nvim/init.vim<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " Command line completion
 set wildmenu

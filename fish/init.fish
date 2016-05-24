@@ -1,4 +1,4 @@
-set -g -x Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
+set -gx Z_SCRIPT_PATH $OMF_CONFIG/z.sh
 
 #
 # Exports
