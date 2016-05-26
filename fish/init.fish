@@ -1,4 +1,11 @@
-set -gx Z_SCRIPT_PATH $OMF_CONFIG/z.sh
+#
+# Z setup for Mac and Linux
+#
+if test (uname) == Darwin
+    set -gx Z_SCRIPT_PATH (brew --prefix)/etc/profile.d/z.sh
+else
+    set -gx Z_SCRIPT_PATH $OMF_CONFIG/z.sh
+end
 
 #
 # Exports
