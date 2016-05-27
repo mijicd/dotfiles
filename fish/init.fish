@@ -8,6 +8,13 @@ else
 end
 
 #
+# Java resolver
+#
+function jhome
+    set -gx JAVA_HOME (/usr/libexec/java_home $argv)
+end
+
+#
 # Exports
 #
 set -g -x LESS '--ignore-case --raw-control-chars'
