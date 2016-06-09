@@ -72,8 +72,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-let s:uname = system("uname -s")
-if s:uname == "Darwin"
+if has("mac")
     nnoremap <bs> <C-w>h
 else
     nnoremap <C-h> <C-w>h
