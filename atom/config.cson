@@ -5,12 +5,13 @@
     scrollPastEnd: true
   "exception-reporting":
     userId: "275ac211-1421-e192-de45-9db4387ee587"
+  "linter-jshint": {}
   "tree-view":
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
   welcome:
     showOnStartup: false
 "linter-jshint":
+  disableWhenNoJshintrcFileInPath: false
   executablePath: "/usr/local/bin/jshint"
   lintInlineJavaScript: false
-  disableWhenNoJshintrcFileInPath: false
