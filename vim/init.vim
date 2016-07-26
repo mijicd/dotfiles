@@ -4,17 +4,21 @@
 set nocompatible
 
 " load plugin manager
-if empty(glob("~/.config/nvim/autoload/plug.vim"))
-    execute '!curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+if empty(glob("~/.vim/autoload/plug.vim"))
+    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
 endif
 
 " load bundles
-if filereadable(expand("~/.config/nvim/bundles.vim"))
-  source ~/.config/nvim/bundles.vim
+if filereadable(expand("~/.dotfiles/vim/bundles.vim"))
+  source ~/.dotfiles/vim/bundles.vim
 endif
 
-if has('syntax') && !exists('g:syntax_on')
-  syntax on
+if has('gui_running')
+    set guifont=Inconsolata-g\ for\ Powerline:h14
+    set guioptions-=m
+    set guioptions-=T
+    set guioptions-=r
+    set lines=999 columns=9999
 endif
 
 " Leaders
@@ -47,7 +51,7 @@ set history=1000
 set ffs=unix,mac,dos              " default file types
 set autoread                      " automatically update file when editted outside of vim
 
-" Setup automatic text formatting/wrapping (previously: grn1 )
+" Setup automatic text formatting/wrapping (previously: grn1)
 set formatoptions=
 set formatoptions-=t              " don't autowrap text
 set formatoptions+=c              " do autowrap comments
@@ -71,12 +75,7 @@ imap <right> <nop>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-if has("mac")
-    nnoremap <bs> <C-w>h
-else
-    nnoremap <C-h> <C-w>h
-endif
+nnoremap <C-h> <C-w>h
 
 " Move line(s) up or down via C-j and C-k respectively
 nnoremap <C-j> :m .+1<CR>==
@@ -155,7 +154,7 @@ nnoremap <Leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h
 nmap <Leader>ev :tabedit $MYVIMRC<cr>
 
 " reload init.vim
-map <silent> <Leader>V :source ~/.config/nvim/init.vim<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " Command line completion
 set wildmenu

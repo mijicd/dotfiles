@@ -3,7 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " editing
 Plug 'editorconfig/editorconfig-vim'
-Plug 'dahu/vim-fanfingtastic'
 Plug 'luochen1990/rainbow'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-commentary'
@@ -26,10 +25,6 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
 " utilities
-function! DoRemote(arg)
-    UpdateRemotePlugins
-endfunction
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
@@ -50,11 +45,6 @@ endif
 """
 " Avoid causing problems with the vim-fugitive plugin
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
-
-"""
-""" Deoplete
-"""
-let g:deoplete#enable_at_startup = 1
 
 """
 """ Ctrl-P

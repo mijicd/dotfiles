@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/mijicd/Desktop/work/SG/image-builder/projects/wallet'
+let g:netrw_dirhist_2='/Users/mijicd/Desktop/work/SG/image-builder/projects/wallet/payload'
+let g:netrw_dirhist_3='/Users/mijicd/Desktop/SG/deployment/centos-base-image'
+let g:netrw_dirhist_4='/Users/mijicd/Desktop/SG/deployment/centos-base-image/builds'
+let g:netrw_dirhist_5='/Users/mijicd/.dotfiles/.git'

@@ -11,7 +11,5 @@ ssh/linode/*
 known_hosts
 
 # nvim
-nvim/.init.vim-rplugin~
-nvim/.netrwhist
 nvim/autoload
 nvim/plugged
