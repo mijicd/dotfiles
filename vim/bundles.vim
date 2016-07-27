@@ -136,8 +136,6 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>gd <Plug>(go-doc-browser)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
-" let $GOPATH = "~/.golang"
-let g:go_bin_path = "/usr/bin"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
