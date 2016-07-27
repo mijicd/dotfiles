@@ -10,6 +10,6 @@ ssh/linode/*
 # ignore known_hosts
 known_hosts
 
-# nvim
-nvim/autoload
-nvim/plugged
+# vim
+vim/.init.vim-rplugin~
+vim/.netrwhist

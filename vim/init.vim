@@ -18,7 +18,6 @@ if has('gui_running')
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r
-    set lines=999 columns=9999
 endif
 
 " Leaders
