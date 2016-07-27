@@ -18,7 +18,7 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'junegunn/seoul256.vim'
 
 " languages
-Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
@@ -55,8 +55,6 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-
-nmap <C-n> :CtrlPDir<space>
 
 """
 """ Completion
@@ -123,7 +121,7 @@ let g:rainbow_active = 1
 """
 """ NERDTree
 """
-map <c-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 """
 """ Go IDE
@@ -138,10 +136,10 @@ au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 au FileType go nmap <Leader>gd <Plug>(go-doc-browser)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
+" let $GOPATH = "~/.golang"
+let g:go_bin_path = "/usr/bin"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
