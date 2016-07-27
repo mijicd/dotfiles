@@ -1,31 +1,30 @@
 " vimrc.bundles
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " editing
 Plug 'editorconfig/editorconfig-vim'
 Plug 'luochen1990/rainbow'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " look & feel
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'junegunn/seoul256.vim'
-Plug 'romainl/Apprentice'
 
 " languages
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
-" snippets
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-
 " utilities
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -59,20 +58,11 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 nmap <C-n> :CtrlPDir<space>
 
 """
-""" Neosnippet
+""" Completion
 """
-" expand snippets in select, insert, or visual mode
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-
-" move between snippet placeholders using tab
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-\ "\<Plug>(neosnippet_expand_or_jump)"
-\: "\<TAB>"
+let g:UltiSnipsExpandTrigger = "ee"
+let g:UltiSnipsJumpForwardTrigger = "ff"
+let g:UltiSnipsJumpBackwardTrigger = "bb"
 
 """
 """ EasyMotion
@@ -106,7 +96,7 @@ let g:airline#extensions#tagbar#enabled = 0
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='apprentice'
+let g:airline_theme='badwolf'
 
 """
 """ MiniBuf
