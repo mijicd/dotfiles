@@ -23,8 +23,9 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
 " utilities
-Plug 'scrooloose/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'sjl/gundo.vim'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
@@ -40,11 +41,8 @@ if has('syntax') && !exists('g:syntax_on')
   syntax on
 endif
 
-"""
-""" Editor config
-"""
-" Avoid causing problems with the vim-fugitive plugin
-let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+set background=dark
+silent! colorscheme seoul256
 
 """
 """ Ctrl-P
@@ -73,12 +71,6 @@ map <leader>b <Plug>(easymotion-b)
 map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 nmap s <Plug>(easymotion-s2)
-
-"""
-""" Colorscheme
-"""
-set background=dark
-silent! colorscheme seoul256
 
 """
 """ Airline
@@ -114,13 +106,15 @@ hi MBEVisibleActiveNormal  ctermfg=229 ctermbg=235
 hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 
 """
-""" Parentheses
+""" Other
 """
+" Avoid causing problems with the vim-fugitive plugin
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:rainbow_active = 1
 
-"""
-""" NERDTree
-"""
+let g:gundo_right = 1
+nnoremap <F5> :GundoToggle<CR>
+
 map <C-n> :NERDTreeToggle<CR>
 
 """
