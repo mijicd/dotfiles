@@ -1,5 +1,3 @@
-" Thanks to Mark Nichols <mark@zanshin.net>
-
 " Forget compatibility with vi. Who cares.
 set nocompatible
 

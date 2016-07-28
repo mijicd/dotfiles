@@ -17,13 +17,14 @@ end
 #
 # Exports
 #
-set -g -x LESS '--ignore-case --raw-control-chars'
-set -g -x PAGER 'less'
-set -g -x VISUAL nvim
-set -g -x EDITOR nvim
-set -g -x LC_COLLATE C
-set -g -x LC_ALL en_US.UTF-8
-set -g -x LANG en_US.UTF-8
+set -gx LESS '--ignore-case --raw-control-chars'
+set -gx PAGER 'less'
+set -gx VISUAL vim
+set -gx EDITOR vim
+set -gx LC_COLLATE C
+set -gx LC_ALL en_US.UTF-8
+set -gx LANG en_US.UTF-8
+set -gx GOPATH $HOME/Desktop/gophers
 
 alias vi 'vim'
 alias l 'ls -la'

@@ -18,7 +18,7 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'junegunn/seoul256.vim'
 
 " languages
-Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 
