@@ -47,6 +47,7 @@ set foldenable                    " enable code folding
 set history=1000
 set ffs=unix,mac,dos              " default file types
 set autoread                      " automatically update file when editted outside of vim
+set completeopt=menu              " don't show any previews
 
 " Setup automatic text formatting/wrapping (previously: grn1)
 set formatoptions=
