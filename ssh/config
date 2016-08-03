@@ -1,9 +1,3 @@
-Host gitlab.sg-platform-vpc.wms.com
-    User git
-    HostName gitlab.sg-platform-vpc.wms.com
-    Port 11022
-    IdentityFile ~/.ssh/git/sciplay.key
-
 Host github.com
     User mijicd
     IdentityFile ~/.ssh/git/github.key
