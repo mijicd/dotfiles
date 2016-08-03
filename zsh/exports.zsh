@@ -12,6 +12,9 @@ export LC_COLLATE=C
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# Golang environment
+export GOPATH=$HOME/Desktop/gophers
+
 # libraries
 if [[ $IS_LINUX -eq 1 ]]; then
     export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
