@@ -13,7 +13,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Golang environment
-export GOPATH=$HOME/Desktop/gophers
+export GOPATH=$HOME/Work/golang
 
 # libraries
 if [[ $IS_LINUX -eq 1 ]]; then
