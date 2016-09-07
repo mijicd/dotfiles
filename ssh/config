@@ -1,7 +1,7 @@
 Host github.com
     User mijicd
-    IdentityFile ~/.ssh/git/github.key
+    IdentityFile ~/.dotfiles/ssh/git/github.key
 
 Host 192.168.1.253
     User nt_git
-    IdentityFile ~/.ssh/git/ntsystems.key
+    IdentityFile ~/.dotfiles/ssh/git/ntsystems.key
