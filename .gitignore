@@ -1,5 +1,5 @@
 # ignore created keys
-ssh/sciplay/*
+ssh/aws/*
 ssh/git/*
 ssh/linode/*
 
