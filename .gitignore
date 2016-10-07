@@ -1,10 +1,5 @@
-# ignore created keys
-ssh/aws/*
+# keep directories while ignoring keys
 ssh/git/*
-ssh/linode/*
-
-# keep directories in repositories
-!ssh/sciplay/.gitkeep
 !ssh/git/.gitkeep
 
 # ignore known_hosts
