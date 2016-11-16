@@ -21,6 +21,7 @@ Plug 'junegunn/seoul256.vim'
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
 " utilities
 Plug 'ctrlpvim/ctrlp.vim'
@@ -135,3 +136,8 @@ let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+"""
+""" Terraform
+"""
+let g:terraform_fmt_on_save = 1
