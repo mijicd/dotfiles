@@ -1,15 +1,12 @@
 " vimrc.bundles
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.vim/bundle')
 
-" editing
+" core editing
 Plug 'editorconfig/editorconfig-vim'
 Plug 'luochen1990/rainbow'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 
 " look & feel
 Plug 'vim-airline/vim-airline'
@@ -17,9 +14,13 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'junegunn/seoul256.vim'
 
-" languages
+" programming
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'vim-syntastic/syntastic'
+Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
@@ -117,6 +118,18 @@ let g:gundo_right = 1
 nnoremap <F5> :GundoToggle<CR>
 
 map <C-n> :NERDTreeToggle<CR>
+
+"""
+""" Syntastic
+"""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """
 """ Go IDE
