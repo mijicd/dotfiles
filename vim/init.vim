@@ -12,7 +12,7 @@ if filereadable(expand("~/.dotfiles/vim/bundles.vim"))
 endif
 
 if has('gui_running')
-    set guifont=Inconsolata-g\ for\ Powerline:h14
+    set guifont=Inconsolata-g\ for\ Powerline\ 12
     set guioptions-=m
     set guioptions-=T
     set guioptions-=r

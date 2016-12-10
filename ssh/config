@@ -5,3 +5,8 @@ Host github.com
 Host bitbucket.org
     User dejanmijic
     IdentityFile ~/.dotfiles/ssh/git/improve.key
+
+Host gitlab.sg-platform-vpc.wms.com
+    User git
+    Port 11022
+    IdentityFile ~/.dotfiles/ssh/git/sg.key
