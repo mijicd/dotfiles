@@ -2,10 +2,6 @@ Host github.com
     User mijicd
     IdentityFile ~/.dotfiles/ssh/git/github.key
 
-Host bitbucket.org
-    User dejanmijic
-    IdentityFile ~/.dotfiles/ssh/git/improve.key
-
 Host gitlab.sg-platform-vpc.wms.com
     User git
     Port 11022
