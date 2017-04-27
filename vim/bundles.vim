@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'junegunn/seoul256.vim'
+Plug 'altercation/vim-colors-solarized'
 
 " programming
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
@@ -22,7 +23,6 @@ Plug 'vim-syntastic/syntastic'
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
 " utilities
 Plug 'ctrlpvim/ctrlp.vim'
@@ -44,7 +44,7 @@ if has('syntax') && !exists('g:syntax_on')
 endif
 
 set background=dark
-silent! colorscheme seoul256
+colorscheme solarized
 
 """
 """ Ctrl-P
@@ -89,7 +89,7 @@ let g:airline#extensions#tagbar#enabled = 0
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='badwolf'
+let g:airline_theme='solarized'
 
 """
 """ MiniBuf
@@ -149,8 +149,3 @@ let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
-
-"""
-""" Terraform
-"""
-let g:terraform_fmt_on_save = 1
