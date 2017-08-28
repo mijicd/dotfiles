@@ -1,9 +1,6 @@
 # keep directories while ignoring keys
-ssh/git/*
-!ssh/git/.gitkeep
-
-# ignore known_hosts
-known_hosts
+ssh/
+!ssh/config
 
 # vim
 vim/.init.vim-rplugin~
