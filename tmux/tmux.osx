@@ -59,8 +59,8 @@ set-window-option -g automatic-rename on
 setw -g mode-keys vi
 
 # setup 'v' to begin selection as in Vim
-bind-key -T copy-mode-vi v begin-selection
-bind-key -T copy-mode-vi y send -X copy-pipe "reattach-to-user-namespace pbcopy"
+bind-key -T copy-mode v begin-selection
+bind-key -T copy-mode y send -X copy-pipe "reattach-to-user-namespace pbcopy"
 
 # update default binding of 'Enter' to also use copy-pipe
 unbind -T copy-mode-vi Enter
