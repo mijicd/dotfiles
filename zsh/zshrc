@@ -1,4 +1,3 @@
-source ~/.dotfiles/zsh/checks.zsh
 source ~/.dotfiles/zsh/colors.zsh
 source ~/.dotfiles/zsh/options.zsh
 source ~/.dotfiles/zsh/exports.zsh
