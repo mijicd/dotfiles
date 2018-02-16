@@ -13,7 +13,7 @@ export LANG=en_US.UTF-8
 export GOPATH=$HOME/Work/golang
 
 # libraries
-if [[ $IS_LINUX -eq 1 ]]; then
+if [[ $(uname) = 'Linux' ]]; then
     export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 fi
 
