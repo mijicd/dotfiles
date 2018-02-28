@@ -1,3 +1,0 @@
-Host github.com
-    User mijicd
-    IdentityFile ~/.dotfiles/ssh/git/github.key
