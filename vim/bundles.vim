@@ -1,34 +1,24 @@
 " vimrc.bundles
 call plug#begin('~/.vim/bundle')
 
-" core editing
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'luochen1990/rainbow'
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'fholgado/minibufexpl.vim'
+Plug 'honza/vim-snippets'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'luochen1990/rainbow'
+Plug 'morhetz/gruvbox'
+Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
-
-" look & feel
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer --clang-completer' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'fholgado/minibufexpl.vim'
-Plug 'junegunn/seoul256.vim'
-Plug 'altercation/vim-colors-solarized'
-
-" programming
-Plug 'Shougo/neocomplete.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
 Plug 'vim-syntastic/syntastic'
-Plug 'ternjs/tern_for_vim', { 'for': 'javascript' }
-Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-
-" utilities
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'sjl/gundo.vim'
-Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -44,7 +34,7 @@ if has('syntax') && !exists('g:syntax_on')
 endif
 
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 
 """
 """ Ctrl-P
@@ -59,28 +49,8 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 """
 """ Completion
 """
-let g:acp_enableAtStartup = 0
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
- 
-inoremap <expr><C-g>     neocomplete#undo_completion()
-inoremap <expr><C-l>     neocomplete#complete_common_string()
- 
-" <CR>: close popup and save indent.
-inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-function! s:my_cr_function()
-    return neocomplete#close_popup() . "\<CR>"
-endfunction
-
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
-" <C-h>, <BS>: close popup and delete backword char.
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-y>  neocomplete#close_popup()
-inoremap <expr><C-e>  neocomplete#cancel_popup()
 
 let g:UltiSnipsExpandTrigger = "<leader>e"
 let g:UltiSnipsJumpForwardTrigger = "<leader>f"
@@ -112,7 +82,7 @@ let g:airline#extensions#tagbar#enabled = 0
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme='solarized'
+let g:airline_theme='gruvbox'
 
 """
 """ MiniBuf
