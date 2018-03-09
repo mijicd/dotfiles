@@ -2,7 +2,9 @@
 call plug#begin('~/.vim/bundle')
 
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'editorconfig/editorconfig-vim'
+Plug 'ensime/ensime-vim', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'fholgado/minibufexpl.vim'
 Plug 'honza/vim-snippets'
@@ -132,13 +134,20 @@ au FileType go nmap <leader>gb <Plug>(go-build)
 au FileType go nmap <leader>gt <Plug>(go-test)
 au FileType go nmap <leader>gc <Plug>(go-coverage)
 au FileType go nmap <leader>gx <Plug>(go-coverage-clear)
-au FileType go nmap <Leader>gv <Plug>(go-vet)
-au FileType go nmap <Leader>gd <Plug>(go-def-vertical)
-au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
-au FileType go nmap <Leader>ge <Plug>(go-rename)
+au FileType go nmap <leader>gv <Plug>(go-vet)
+au FileType go nmap <leader>gd <Plug>(go-def-vertical)
+au FileType go nmap <leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <leader>ge <Plug>(go-rename)
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+
+"""
+""" ENSIME
+"""
+autocmd BufWritePost *.scala silent :EnTypeCheck
+au FileType scala nmap <leader>t :EnType<CR>
+au FileType scala nmap <leader>df :EnDeclaration<CR>
