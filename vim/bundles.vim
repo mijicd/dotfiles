@@ -52,7 +52,7 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 """ Completion
 """
 " <TAB>: completion.
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+imap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 let g:UltiSnipsExpandTrigger = "<leader>e"
 let g:UltiSnipsJumpForwardTrigger = "<leader>f"
@@ -63,10 +63,10 @@ let g:UltiSnipsJumpBackwardTrigger = "<leader>b"
 """
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
-map <leader>w <Plug>(easymotion-w)
-map <leader>b <Plug>(easymotion-b)
-map <leader>j <Plug>(easymotion-j)
-map <leader>k <Plug>(easymotion-k)
+nmap <leader>w <Plug>(easymotion-w)
+nmap <leader>b <Plug>(easymotion-b)
+nmap <leader>j <Plug>(easymotion-j)
+nmap <leader>k <Plug>(easymotion-k)
 nmap s <Plug>(easymotion-s2)
 
 """
@@ -109,10 +109,7 @@ hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:rainbow_active = 1
 
-let g:gundo_right = 1
-nnoremap <F5> :GundoToggle<CR>
-
-map <C-n> :NERDTreeToggle<CR>
+nmap <C-n> :NERDTreeToggle<CR>
 
 """
 """ Syntastic
@@ -150,4 +147,4 @@ let g:go_fmt_command = "goimports"
 """
 autocmd BufWritePost *.scala silent :EnTypeCheck
 au FileType scala nmap <leader>t :EnType<CR>
-au FileType scala nmap <leader>df :EnDeclaration<CR>
+au FileType scala nmap <leader>d :EnDeclaration<CR>
