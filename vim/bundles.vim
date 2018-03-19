@@ -3,6 +3,7 @@ call plug#begin('~/.vim/bundle')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ensime/ensime-vim', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }
@@ -13,6 +14,7 @@ Plug 'luochen1990/rainbow'
 Plug 'morhetz/gruvbox'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Shougo/vimproc.vim', { 'do' : 'make', 'for': 'haskell' }
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -119,8 +121,8 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 """
@@ -148,3 +150,11 @@ let g:go_fmt_command = "goimports"
 autocmd BufWritePost *.scala silent :EnTypeCheck
 au FileType scala nmap <leader>t :EnType<CR>
 au FileType scala nmap <leader>d :EnDeclaration<CR>
+
+"""
+""" Haskell
+"""
+au FileType haskell nmap <leader>tw :GhcModTypeInsert<CR>
+au FileType haskell nmap <leader>ts :GhcModSplitFunCase<CR>
+au FileType haskell nmap <leader>tq :GhcModType<CR>
+au FileType haskell nmap <leader>te :GhcModTypeClear<CR>
