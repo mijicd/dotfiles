@@ -11,13 +11,6 @@ if filereadable(expand("~/.dotfiles/vim/bundles.vim"))
   source ~/.dotfiles/vim/bundles.vim
 endif
 
-if has('gui_running')
-    set guifont=Inconsolata-g\ for\ Powerline\ 12
-    set guioptions-=m
-    set guioptions-=T
-    set guioptions-=r
-endif
-
 " Leaders
 :let mapleader = ","
 :let maplocalLeader = "\\"

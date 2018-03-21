@@ -22,7 +22,7 @@ Plug 'tpope/vim-surround'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --go-completer --clang-completer' }
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 
 call plug#end()
 
@@ -109,21 +109,11 @@ hi MBEVisibleActiveChanged ctermfg=203 ctermbg=235
 """
 " Avoid causing problems with the vim-fugitive plugin
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+
 let g:rainbow_active = 1
 
 nmap <C-n> :NERDTreeToggle<CR>
-
-"""
-""" Syntastic
-"""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
+nmap <leader>t :ALEToggle<CR>
 
 """
 """ Go IDE
