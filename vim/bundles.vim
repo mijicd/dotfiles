@@ -4,6 +4,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
+Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ensime/ensime-vim', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }
@@ -144,7 +145,10 @@ au FileType scala nmap <leader>d :EnDeclaration<CR>
 """
 """ Haskell
 """
-au FileType haskell nmap <leader>tw :GhcModTypeInsert<CR>
-au FileType haskell nmap <leader>ts :GhcModSplitFunCase<CR>
-au FileType haskell nmap <leader>tq :GhcModType<CR>
-au FileType haskell nmap <leader>te :GhcModTypeClear<CR>
+let g:haskellmode_completion_ghc = 0
+au FileType haskell setlocal omnifunc=necoghc#omnifunc
+let g:ycm_semantic_triggers = {'haskell': ['.']}
+
+au FileType haskell nmap <leader>ht :GhcModType<CR>
+au FileType haskell nmap <leader>htc :GhcModTypeClear<CR>
+au FileType haskell nmap <leader>hc :GhcModCheck<CR>
