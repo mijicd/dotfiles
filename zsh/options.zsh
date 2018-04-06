@@ -1,11 +1,11 @@
 # disable beep on error
-setopt no_beep 
+setopt no_beep
 
 # comments in interactive shells
 setopt interactive_comments
 
 # fix mistaken commands to directories
-setopt auto_cd 
+setopt auto_cd
 
 # if argument to cd is the name of a parameter whose value is a valid directory, it will become the current directory
 setopt cdablevarS

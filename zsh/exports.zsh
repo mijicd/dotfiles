@@ -9,12 +9,8 @@ export LC_COLLATE=C
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Golang environment
+# environments
 export GOPATH=$HOME/Work/golang
+export STACKPATH=$HOME/.local
 
-# libraries
-if [[ $(uname) = 'Linux' ]]; then
-    export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-fi
-
-export PATH=/usr/local/bin:/usr/local/sbin:$GOPATH/bin:$PATH
+export PATH=$STACKPATH/bin:$GOPATH/bin:$PATH
