@@ -138,9 +138,10 @@ let g:go_fmt_command = "goimports"
 """
 """ ENSIME
 """
-autocmd BufWritePost *.scala silent :EnTypeCheck
+au BufWritePost *.scala :EnTypeCheck
 au FileType scala nmap <leader>t :EnType<CR>
 au FileType scala nmap <leader>d :EnDeclaration<CR>
+au FileType scala nmap <leader>r :EnRename
 
 """
 """ Haskell
@@ -149,6 +150,6 @@ let g:haskellmode_completion_ghc = 0
 au FileType haskell setlocal omnifunc=necoghc#omnifunc
 let g:ycm_semantic_triggers = {'haskell': ['.']}
 
-au FileType haskell nmap <leader>ht :GhcModType<CR>
-au FileType haskell nmap <leader>htc :GhcModTypeClear<CR>
-au FileType haskell nmap <leader>hc :GhcModCheck<CR>
+au FileType haskell nmap <leader>t :GhcModType<CR>
+au FileType haskell nmap <leader>x :GhcModTypeClear<CR>
+au FileType haskell nmap <leader>c :GhcModCheck<CR>
