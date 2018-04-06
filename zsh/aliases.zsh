@@ -25,5 +25,5 @@ alias gmf='git merge --no-ff'
 alias gmt='git mergetool'
 
 # utilities
-alias ensime='ctags -R . & sbt clean ensimeConfig test:compile ensimeServerIndex'
+alias ensime='sbt clean ensimeConfig test:compile ensimeServerIndex'
 alias vi=vim
