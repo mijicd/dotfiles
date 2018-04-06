@@ -2,7 +2,6 @@
 call plug#begin('~/.vim/bundle')
 
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
 Plug 'editorconfig/editorconfig-vim'
