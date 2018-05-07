@@ -1,6 +1,7 @@
 " vimrc.bundles
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'alx741/vim-hindent', { 'for': 'haskell' }
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
 Plug 'eagletmt/neco-ghc', { 'for': 'haskell' }
@@ -11,7 +12,9 @@ Plug 'fholgado/minibufexpl.vim'
 Plug 'honza/vim-snippets'
 Plug 'Lokaltog/vim-easymotion'
 Plug 'luochen1990/rainbow'
+Plug 'jaspervdj/stylish-haskell', { 'for': 'haskell' }
 Plug 'morhetz/gruvbox'
+Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Shougo/vimproc.vim', { 'do' : 'make', 'for': 'haskell' }
@@ -53,6 +56,8 @@ let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|sv
 """
 """ Completion
 """
+let g:deoplete#enable_at_startup = 1
+
 " <TAB>: completion.
 imap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
