@@ -1,5 +1,5 @@
 " vimrc.bundles
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.vim/bundle')
 
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'eagletmt/ghcmod-vim', { 'for': 'haskell' }
@@ -14,7 +14,6 @@ Plug 'luochen1990/rainbow'
 Plug 'jaspervdj/stylish-haskell', { 'for': 'haskell' }
 Plug 'morhetz/gruvbox'
 Plug 'neovimhaskell/haskell-vim', { 'for': 'haskell' }
-Plug 'parsonsmatt/intero-neovim', { 'for': 'haskell' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Shougo/vimproc.vim', { 'do' : 'make', 'for': 'haskell' }
