@@ -10,7 +10,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # environments
-export GOPATH=$HOME/Work/golang
 export STACKPATH=$HOME/.local
 
-export PATH=$STACKPATH/bin:$GOPATH/bin:$PATH
+export PATH=$STACKPATH/bin:$PATH
