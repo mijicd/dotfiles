@@ -49,7 +49,8 @@ values."
      git
      (haskell :variables
               haskell-completion-backend 'intero
-              haskell-enable-hindent-style "johan-tibell")
+              haskell-enable-hindent-style "johan-tibell"
+              haskell-process-type 'stack-ghci)
      latex
      markdown
      org
