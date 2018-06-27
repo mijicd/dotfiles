@@ -12,7 +12,7 @@ if filereadable(expand("~/.dotfiles/vim/bundles.vim"))
 endif
 
 " Leaders
-:let mapleader = ","
+:let mapleader = " "
 :let maplocalLeader = "\\"
 
 " timeouts
@@ -127,8 +127,8 @@ if has("autocmd")
   autocmd WinEnter * set cursorline
 endif
 
-" Map escape to jj -- much faster to reach and type
-imap jj <esc>
+" Map escape to fd
+imap fd <esc>
 
 " Searching
 set incsearch           " use incremental search
