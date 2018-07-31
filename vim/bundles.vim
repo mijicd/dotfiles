@@ -4,7 +4,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fholgado/minibufexpl.vim'
-Plug 'Lokaltog/vim-easymotion'
 Plug 'luochen1990/rainbow'
 Plug 'morhetz/gruvbox'
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
@@ -42,17 +41,6 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
-
-"""
-""" EasyMotion
-"""
-let g:EasyMotion_do_mapping = 0
-let g:EasyMotion_smartcase = 1
-nmap <leader>w <Plug>(easymotion-w)
-nmap <leader>b <Plug>(easymotion-b)
-nmap <leader>j <Plug>(easymotion-j)
-nmap <leader>k <Plug>(easymotion-k)
-nmap s <Plug>(easymotion-s2)
 
 """
 """ Airline
