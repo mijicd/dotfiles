@@ -2,8 +2,8 @@
 set nocompatible
 
 " load plugin manager
-if empty(glob("~/.vim/autoload/plug.vim"))
-    execute '!curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+if empty(glob("~/.local/share/nvim/site/autoload/plug.vim"))
+  execute '!curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 endif
 
 " load bundles
@@ -12,8 +12,8 @@ if filereadable(expand("~/.dotfiles/vim/bundles.vim"))
 endif
 
 " Leaders
-:let mapleader = " "
-:let maplocalLeader = "\\"
+let mapleader = " "
+let maplocalLeader = "\\"
 
 " timeouts
 set timeout timeoutlen=1000 ttimeoutlen=500
@@ -30,6 +30,7 @@ set wrap                          " use line wrapping
 set textwidth=79                  " at column 79
 set ruler                         " display current cursor position
 set showmatch                     " show matching brackets
+set showtabline=0                 " disable tabline
 if exists("&relativenumber")
   set relativenumber              " use relative line numbers
 endif
@@ -110,25 +111,32 @@ set sidescroll=1        " number of cols to scroll at a time
 cmap w!! w !sudo tee % >/dev/null
 
 " toggle listchars on or off
-noremap <Leader>i :set list!<CR>
+noremap <leader>i :set list!<CR>
 
 " Paste mode to prevent autoindentation of pasted lines
 set pastetoggle=<F2>
 
 " Better pasting from clipboard
 " http://tilvim.com/2014/03/18/a-better-paste.html
-map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
+map <leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 
 set clipboard=unnamed   " yank and paste with the system clipboard
 
-" show cursorline only in active window
 if has("autocmd")
+  filetype plugin indent on
+
+  " show cursorline only in active window
   autocmd WinLeave * set nocursorline
   autocmd WinEnter * set cursorline
 endif
 
+if has('syntax') && !exists('g:syntax_on')
+  syntax on
+endif
+
 " Map escape to fd
 imap fd <esc>
+vmap fd <esc>
 
 " Searching
 set incsearch           " use incremental search
@@ -138,14 +146,8 @@ set smartcase           " ignore case if search string is all lower case, case-s
                         " remove search highlighting with <F3>
 
 " Splits
-nnoremap <Leader>v <C-w>v<C-w>l   " open a vertical split and switch to it (,v)
-nnoremap <Leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h)
-
-" open vimrc in new tab for editing
-nmap <Leader>ev :tabedit $MYVIMRC<cr>
-
-" reload init.vim
-map <silent> <Leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+nnoremap <leader>v <C-w>v<C-w>l   " open a vertical split and switch to it (,v)
+nnoremap <leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h)
 
 " Command line completion
 set wildmenu
@@ -163,9 +165,6 @@ if has("autocmd")
   " syntax of these languages is fussy over tabs Vs spaces
   autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-
-  " treat .rss files as XML
-  autocmd BufNewFile,BufRead *.rss,*.atom setfiletype xml
 
   " spell check Git commit messages
   autocmd BufRead COMMIT_EDITMSG setlocal spell spelllang=en_us

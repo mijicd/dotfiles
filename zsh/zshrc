@@ -11,3 +11,5 @@ source ~/.dotfiles/zsh/zsh_hooks.zsh
 
 # trigger z
 source ~/.dotfiles/zsh/z.sh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
