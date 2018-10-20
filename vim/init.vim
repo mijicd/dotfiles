@@ -111,14 +111,14 @@ set sidescroll=1        " number of cols to scroll at a time
 cmap w!! w !sudo tee % >/dev/null
 
 " toggle listchars on or off
-noremap <leader>i :set list!<CR>
+noremap <Leader>i :set list!<CR>
 
 " Paste mode to prevent autoindentation of pasted lines
 set pastetoggle=<F2>
 
 " Better pasting from clipboard
 " http://tilvim.com/2014/03/18/a-better-paste.html
-map <leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
+map <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<cr>
 
 set clipboard=unnamed   " yank and paste with the system clipboard
 
@@ -146,8 +146,8 @@ set smartcase           " ignore case if search string is all lower case, case-s
                         " remove search highlighting with <F3>
 
 " Splits
-nnoremap <leader>v <C-w>v<C-w>l   " open a vertical split and switch to it (,v)
-nnoremap <leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h)
+nnoremap <Leader>v <C-w>v<C-w>l   " open a vertical split and switch to it (,v)
+nnoremap <Leader>h <C-w>s<C-w>j   " open a horizontal split and switch to it (,h)
 
 " Command line completion
 set wildmenu

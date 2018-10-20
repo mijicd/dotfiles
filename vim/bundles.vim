@@ -37,70 +37,65 @@ let g:lightline = { 'colorscheme': 'seoul256' }
 let g:rainbow_active = 1
 
 nmap <C-n> :NERDTreeToggle<CR>
-nmap <leader>t :ALEToggle<CR>
+nmap <Leader>t :ALEToggle<CR>
 
 " FZF
-nmap <leader>f :Files<CR>
-nmap <leader>c :Commits<CR>
+nmap <C-p> :Files<CR>
+nmap <C-g> :Commits<CR>
 
 " LSP
 let g:LanguageClient_serverCommands = { 'haskell': ['hie-wrapper'] }
 let g:LanguageClient_rootMarkers = ['*.cabal', 'stack.yaml']
 
 nnoremap <F5> :call LanguageClient_contextMenu()<CR>
-map <leader>lk :call LanguageClient#textDocument_hover()<CR>
-map <leader>lg :call LanguageClient#textDocument_definition()<CR>
-map <leader>lr :call LanguageClient#textDocument_rename()<CR>
-map <leader>lf :call LanguageClient#textDocument_formatting()<CR>
-map <leader>lb :call LanguageClient#textDocument_references()<CR>
-map <leader>la :call LanguageClient#textDocument_codeAction()<CR>
-map <leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
+map <Leader>lk :call LanguageClient#textDocument_hover()<CR>
+map <Leader>lg :call LanguageClient#textDocument_definition()<CR>
+map <Leader>lr :call LanguageClient#textDocument_rename()<CR>
+map <Leader>lf :call LanguageClient#textDocument_formatting()<CR>
+map <Leader>lb :call LanguageClient#textDocument_references()<CR>
+map <Leader>la :call LanguageClient#textDocument_codeAction()<CR>
+map <Leader>ls :call LanguageClient#textDocument_documentSymbol()<CR>
 
 " Intero
 augroup interoMaps
   au!
 
   " Background process and window management
-  au FileType haskell nnoremap <silent> <leader>is :InteroStart<CR>
-  au FileType haskell nnoremap <silent> <leader>ik :InteroKill<CR>
-
-  " Open intero/GHCi split horizontally
-  au FileType haskell nnoremap <silent> <leader>io :InteroOpen<CR>
+  au FileType haskell nnoremap <silent> <Leader>is :InteroStart<CR>
+  au FileType haskell nnoremap <silent> <Leader>ik :InteroKill<CR>
 
   " Open intero/GHCi split vertically
-  au FileType haskell nnoremap <silent> <leader>iov :InteroOpen<CR><C-W>H
-  au FileType haskell nnoremap <silent> <leader>ih :InteroHide<CR>
+  au FileType haskell nnoremap <silent> <Leader>io :InteroOpen<CR><C-W>H
+  au FileType haskell nnoremap <silent> <Leader>ih :InteroHide<CR>
 
   " Manually save and reload
-  au FileType haskell nnoremap <silent> <leader>wr :w \| :InteroReload<CR>
+  au FileType haskell nnoremap <silent> <Leader>wr :w \| :InteroReload<CR>
 
   " Load individual modules
-  au FileType haskell nnoremap <silent> <leader>il :InteroLoadCurrentModule<CR>
-  au FileType haskell nnoremap <silent> <leader>if :InteroLoadCurrentFile<CR>
+  au FileType haskell nnoremap <silent> <Leader>il :InteroLoadCurrentModule<CR>
+  au FileType haskell nnoremap <silent> <Leader>if :InteroLoadCurrentFile<CR>
 
   " Type-related information
-  au FileType haskell map <silent> <leader>t <Plug>InteroGenericType
-  au FileType haskell map <silent> <leader>T <Plug>InteroType
-  au FileType haskell nnoremap <silent> <leader>it :InteroTypeInsert<CR>
+  au FileType haskell map <silent> <Leader>t <Plug>InteroGenericType
+  au FileType haskell map <silent> <Leader>T <Plug>InteroType
+  au FileType haskell nnoremap <silent> <Leader>it :InteroTypeInsert<CR>
 
   " Navigation
-  au FileType haskell nnoremap <silent> <leader>jd :InteroGoToDef<CR>
+  au FileType haskell nnoremap <silent> <Leader>jd :InteroGoToDef<CR>
 
   " Prompts you to enter targets (no silent):
-  au FileType haskell nnoremap <leader>ist :InteroSetTargets<SPACE>
+  au FileType haskell nnoremap <Leader>ist :InteroSetTargets<SPACE>
 augroup END
 
 let g:intero_start_immediately = 0
 let g:intero_type_on_hover = 1
-let g:intero_window_size = 15
-let g:intero_vertical_split = 1
 
 " Ensime
 augroup ensimeMaps
   au!
 
   au BufWritePost *.scala silent :EnTypeCheck
-  au FileType scala nmap <leader>et :EnType<CR>
-  au FileType scala nmap <leader>ed :EnDeclaration<CR>
-  au FileType scala nmap <leader>er :EnRename<CR>
+  au FileType scala nmap <Leader>et :EnType<CR>
+  au FileType scala nmap <Leader>ed :EnDeclaration<CR>
+  au FileType scala nmap <Leader>er :EnRename<CR>
 augroup END
