@@ -31,10 +31,10 @@ URxvt.depth: 32
 
 ! addons
 URxvt.perl-ext-common: default,matcher,url-select,clipboard,fullscreen
-URxvt.keysym.C-c: perl:clipboard:copy
-URxvt.keysym.C-v: perl:clipboard:paste
-URxvt.keysym.C-u: perl:url-select:select_next
-URxvt.keysym.C-s: perl:keyboard-select:search
+URxvt.keysym.M-c: perl:clipboard:copy
+URxvt.keysym.M-v: perl:clipboard:paste
+URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.keysym.M-s: perl:keyboard-select:search
 URxvt.keysym.F11: perl:fullscreen:switch
 
 ! commands
