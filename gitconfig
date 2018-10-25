@@ -1,6 +1,6 @@
 [user]
     name = Dejan Mijic
-    email = dejan.mjc@gmail.com
+    email = dmijic@acm.org
 
 [github]
     user = mijicd
@@ -32,11 +32,8 @@
     safecrlf = warn
     quotepath = false
 
-[diff]
-    tool = vimdiff
-
 [merge]
-    tool = vimdiff
+    tool = meld
 
 [push]
     default = current
