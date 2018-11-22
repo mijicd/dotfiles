@@ -55,7 +55,9 @@ values."
      markdown
      osx
      python
-     scala
+     (scala :variables
+            scala-auto-start-ensime t
+            scala-auto-insert-asterisk-in-comments t)
      sql
      (themes-megapack :packages zenburn-theme))
 
@@ -103,8 +105,7 @@ values."
    dotspacemacs-elpa-timeout 5
 
    ;; If non nil then spacemacs will check for updates at startup
-   ;; when the current branch is not `develop'. Note that checking for
-   ;; new versions works via git commands, thus it calls GitHub services
+   ;; when the current branch is not `develop'. Note that checking for ;; new versions works via git commands, thus it calls GitHub services
    ;; whenever you start Emacs. (default nil)
    dotspacemacs-check-for-update t
 
