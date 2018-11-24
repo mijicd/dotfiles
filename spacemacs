@@ -44,6 +44,8 @@ values."
      ansible
      auto-completion
      better-defaults
+     bibtex
+     clojure
      docker
      emacs-lisp
      git
@@ -51,9 +53,10 @@ values."
               haskell-completion-backend 'intero
               haskell-enable-hindent-style "johan-tibell"
               haskell-process-type 'stack-ghci)
+     idris
      latex
      markdown
-     osx
+     org
      python
      (scala :variables
             scala-auto-start-ensime t
@@ -65,7 +68,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(multiple-cursors)
+   dotspacemacs-additional-packages '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -383,4 +386,16 @@ you should place your code here."
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
-)
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (powerline org-plus-contrib markdown-mode flycheck dash-functional parent-mode projectile request gitignore-mode flx magit git-commit ghub treepy graphql with-editor smartparens iedit anzu evil goto-chg undo-tree sbt-mode scala-mode json-mode tablist magit-popup docker-tramp json-snatcher json-reformat ghc haskell-mode company hydra highlight spinner pkg-info epl bind-map bind-key yasnippet packed auctex anaconda-mode pythonic f dash s helm avy helm-core async auto-complete popup psci purescript-mode psc-ide org-ref pdf-tools key-chord ivy org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download idris-mode prop-menu htmlize helm-bibtex parsebib gnuplot elm-mode define-word clojure-snippets clj-refactor inflections edn paredit peg cider-eval-sexp-fu cider sesman queue clojure-mode biblio biblio-core zenburn-theme yapfify yaml-mode ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package unfill toc-org sql-indent spaceline smeargle reveal-in-osx-finder restart-emacs rainbow-delimiters pyvenv pytest pyenv-mode py-isort popwin pip-requirements persp-mode pcre2el pbcopy paradox osx-trash osx-dictionary orgit org-bullets open-junk-file noflet neotree mwim multiple-cursors move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum live-py-mode linum-relative link-hint launchctl jinja2-mode intero indent-guide hy-mode hungry-delete hlint-refactor hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-pydoc helm-projectile helm-mode-manager helm-make helm-hoogle helm-gitignore helm-flx helm-descbinds helm-company helm-c-yasnippet helm-ag haskell-snippets google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gh-md fuzzy flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu ensime elisp-slime-nav dumb-jump dockerfile-mode docker diminish cython-mode company-statistics company-ghci company-ghc company-cabal company-auctex company-ansible company-anaconda column-enforce-mode cmm-mode clean-aindent-mode auto-yasnippet auto-highlight-symbol auto-compile auctex-latexmk ansible-doc ansible aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:foreground "#DCDCCC" :background "#3F3F3F")))))
