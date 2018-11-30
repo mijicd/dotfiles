@@ -59,7 +59,6 @@ values."
      org
      python
      (scala :variables
-            scala-auto-start-ensime t
             scala-auto-insert-asterisk-in-comments t)
      sql
      (themes-megapack :packages zenburn-theme))
