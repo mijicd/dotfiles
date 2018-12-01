@@ -43,7 +43,7 @@ URxvt.clipboard.pastecmd: xclip -o -selection clipboard
 URxvt.url-select.launcher: firefox
 
 ! font setup
-URxvt.font: xft:Inconsolata for Powerline:pixelsize=18
+URxvt.font: xft:Source Code Pro:pixelsize=18
 
 ! remove scroll bar
 URxvt.scrollBar: False
