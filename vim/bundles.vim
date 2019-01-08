@@ -7,7 +7,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " editing
 Plug 'editorconfig/editorconfig-vim'
@@ -26,7 +25,6 @@ call plug#end()
 set background=dark
 colorscheme gruvbox
 
-let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 let g:lightline = { 'colorscheme': 'seoul256' }
 let g:rainbow_active = 1
