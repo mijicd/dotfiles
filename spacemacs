@@ -41,19 +41,12 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
-     ansible
      auto-completion
      better-defaults
      bibtex
-     clojure
-     docker
      emacs-lisp
      git
-     (haskell :variables
-              haskell-completion-backend 'intero
-              haskell-enable-hindent-style "johan-tibell"
-              haskell-process-type 'stack-ghci)
-     idris
+     haskell
      latex
      markdown
      org
