@@ -45,6 +45,8 @@ bind J resize-pane -D 5
 bind K resize-pane -U 5
 bind L resize-pane -R 5
 
+# toggle pane synchronization
+bind s setw synchronize-panes
 
 # ----------------------
 # set some pretty colors
