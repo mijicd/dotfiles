@@ -51,10 +51,13 @@ values."
      latex
      markdown
      org
+     purescript
      (scala :variables
             scala-auto-insert-asterisk-in-comments t)
+     shell-scripts
      sql
-     (themes-megapack :packages zenburn-theme))
+     themes-megapack
+     yaml)
 
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
