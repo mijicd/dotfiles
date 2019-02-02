@@ -46,9 +46,9 @@ values."
      bibtex
      emacs-lisp
      git
-     haskell     
+     (haskell :variables
+              haskell-completion-backend 'dante)
      latex
-     lsp
      markdown
      org
      (scala :variables
@@ -60,8 +60,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(
-    (lsp-haskell :location (recipe :fetcher github :repo "emacs-lsp/lsp-haskell")))
+   dotspacemacs-additional-packages '()
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -373,8 +372,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq helm-split-window-inside-p t)
-  (require 'lsp-haskell)
-  (add-hook 'haskell-mode-hook #'lsp))
+  (add-hook 'dante-mode-hook 'flycheck-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
