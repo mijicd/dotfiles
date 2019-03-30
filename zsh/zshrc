@@ -1,15 +1,9 @@
-source ~/.dotfiles/zsh/colors.zsh
-source ~/.dotfiles/zsh/options.zsh
-source ~/.dotfiles/zsh/exports.zsh
-source ~/.dotfiles/zsh/prompt.zsh
-source ~/.dotfiles/zsh/completion.zsh
+# modules
 source ~/.dotfiles/zsh/aliases.zsh
 source ~/.dotfiles/zsh/bindings.zsh
+source ~/.dotfiles/zsh/colors.zsh
+source ~/.dotfiles/zsh/completion.zsh
+source ~/.dotfiles/zsh/exports.zsh
 source ~/.dotfiles/zsh/functions.zsh
-source ~/.dotfiles/zsh/history.zsh
-source ~/.dotfiles/zsh/zsh_hooks.zsh
-
-# trigger z
-source ~/.dotfiles/zsh/z.sh
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.dotfiles/zsh/options.zsh
+source ~/.dotfiles/zsh/plugins.zsh

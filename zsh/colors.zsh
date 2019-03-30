@@ -15,4 +15,3 @@ export PR_BOLD_WHITE PR_BOLD_BLACK
 # color setup
 export CLICOLOR=1
 export LS_COLORS=exfxcxdxbxegedabagacad
-

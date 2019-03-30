@@ -61,35 +61,6 @@ path() {
 function nicemount() { (echo "DEVICE PATH TYPE FLAGS" && mount | awk '$2="";1') | column -t ; }
 
 # -------------------------------------------------------------------
-# myIP address
-# -------------------------------------------------------------------
-function myip() {
-  ifconfig lo0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "lo0       : " $2}'
-  ifconfig en0 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en0 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-  ifconfig en0 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en0 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
-  ifconfig en1 | grep 'inet ' | sed -e 's/:/ /' | awk '{print "en1 (IPv4): " $2 " " $3 " " $4 " " $5 " " $6}'
-  ifconfig en1 | grep 'inet6 ' | sed -e 's/ / /' | awk '{print "en1 (IPv6): " $2 " " $3 " " $4 " " $5 " " $6}'
-}
-
-# -------------------------------------------------------------------
-# (s)ave or (i)nsert a directory.
-# -------------------------------------------------------------------
-s() { pwd > ~/.save_dir ; }
-i() { cd "$(cat ~/.save_dir)" ; }
-
-# -------------------------------------------------------------------
-# console function
-# -------------------------------------------------------------------
-function console () {
-  if [[ $# > 0 ]]; then
-    query=$(echo "$*"|tr -s ' ' '|')
-    tail -f /var/log/system.log|grep -i --color=auto -E "$query"
-  else
-    tail -f /var/log/system.log
-  fi
-}
-
-# -------------------------------------------------------------------
 # shell function to define words
 # http://vikros.tumblr.com/post/23750050330/cute-little-function-time
 # -------------------------------------------------------------------
@@ -100,23 +71,4 @@ givedef() {
   else
     curl "dict://dict.org/d:$1"
   fi
-}
-
-# ------------------- 
-# switches active JDK
-# -------------------
-function setjdk() {
-    if [ $# -ne 0 ]; then
-        removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
-        if [ -n "${JAVA_HOME+x}" ]; then
-            removeFromPath $JAVA_HOME
-        fi
-
-        export JAVA_HOME=`/usr/libexec/java_home -v $@`
-        export PATH=$JAVA_HOME/bin:$PATH
-    fi
-}
-
-function removeFromPath() {
-    export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
 }
