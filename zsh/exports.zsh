@@ -10,4 +10,9 @@ export LC_COLLATE=C
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+# history
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+
 export PATH=$HOME/.local/bin:$PATH
