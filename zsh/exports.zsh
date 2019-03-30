@@ -15,4 +15,11 @@ export LANG=en_US.UTF-8
 HISTSIZE=10000
 SAVEHIST=10000
 
+# enable aliases for Nix
+[ -f ~/.nix-profile/etc/profile.d/nix.sh ] && source ~/.nix-profile/etc/profile.d/nix.sh
+
+# enable completion and aliases for fzf
+[[ $- == *i* ]] && source "/usr/share/fzf/completion.zsh" 2> /dev/null
+source "/usr/share/fzf/key-bindings.zsh"
+
 export PATH=$HOME/.local/bin:$PATH
