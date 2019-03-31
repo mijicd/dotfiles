@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Gruvbox Dark (Soft)",
+    "editor.fontFamily": "Source Code Pro",
+    "editor.fontSize": 16,
+    "vim.leader": " ",
+    "vim.useSystemClipboard": true,
+    "editor.minimap.enabled": false,
+    "keyboard.dispatch": "keyCode",
+    "explorer.confirmDelete": false
+}
