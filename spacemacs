@@ -49,10 +49,11 @@ values."
      (haskell :variables
               haskell-completion-backend 'dante)
      latex
-     lsp
      markdown
      org
      purescript
+     (scala :variables
+            scala-auto-insert-asterisk-in-comments t)
      shell-scripts
      sql
      yaml)
@@ -61,11 +62,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(
-     base16-theme
-     lsp-scala
-     scala-mode
-     sbt-mode)
+   dotspacemacs-additional-packages '(base16-theme)
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -377,27 +374,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq helm-split-window-inside-p t)
-  (add-hook 'dante-mode-hook 'flycheck-mode)
+  (add-hook 'dante-mode-hook 'flycheck-mode))
 
-  ;; Enable defer and ensure by default for use-package
-  (setq use-package-always-defer t
-        use-package-always-ensure t)
-
-  ;; Enable scala-mode and sbt-mode
-  (use-package scala-mode :mode "\\.s\\(cala\\|bt\\)$")
-
-  (use-package sbt-mode
-    :commands sbt-start sbt-command
-    :config
-    (substitute-key-definition
-      'minibuffer-complete-word
-      'self-insert-command
-      minibuffer-local-completion-map))
-
-  (use-package lsp-scala
-    :after scala-mode
-    :demand t
-    ;; enable lsp-scala automatically in scala files
-    :hook (scala-mode . lsp)))
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
