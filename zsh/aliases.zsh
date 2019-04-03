@@ -26,4 +26,5 @@ alias gp='git push'
 alias gpu='git pull --rebase'
 
 # utilities
+alias ensime='sbt clean ensimeConfig test:compile ensimeServerIndex'
 alias vi=nvim
