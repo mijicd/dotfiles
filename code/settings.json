@@ -6,6 +6,7 @@
     "keyboard.dispatch": "keyCode",
     "languageServerHaskell.useCustomHieWrapper": true,
     "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
+    "telemetry.enableTelemetry": false,
     "vim.insertModeKeyBindings": [
         {
             "before": ["f", "d"],
