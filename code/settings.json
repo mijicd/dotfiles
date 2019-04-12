@@ -1,0 +1,24 @@
+{
+    "editor.fontFamily": "Source Code Pro",
+    "editor.fontSize": 16,
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "keyboard.dispatch": "keyCode",
+    "languageServerHaskell.useCustomHieWrapper": true,
+    "languageServerHaskell.useCustomHieWrapperPath": "hie-wrapper",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["f", "d"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["f", "d"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.leader": " ",
+    "vim.useSystemClipboard": true,
+    "workbench.colorTheme": "Gruvbox Dark (Soft)"
+}
