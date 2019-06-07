@@ -46,8 +46,7 @@ values."
      bibtex
      emacs-lisp
      git
-     (haskell :variables
-              haskell-completion-backend 'dante)
+     (haskell :variables haskell-completion-backend 'lsp)
      latex
      lsp
      markdown
@@ -56,7 +55,7 @@ values."
      scala
      shell-scripts
      sql
-     themes-megapack
+     (themes-megapack :packages zenburn-theme)
      yaml)
 
    ;; List of additional packages that will be installed without being
@@ -375,39 +374,13 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (setq helm-split-window-inside-p t)
-  (add-hook 'dante-mode-hook 'flycheck-mode)
 
   ;; Enable defer and ensure by default for use-package
   (setq use-package-always-defer t
         use-package-always-ensure t)
 
-  ;; Enable scala-mode and sbt-mode
-  (use-package scala-mode
-    :mode "\\.s\\(cala\\|bt\\)$")
-
-  (use-package sbt-mode
-    :commands sbt-start sbt-command
-    :config
-    ;; WORKAROUND: https://github.com/ensime/emacs-sbt-mode/issues/31
-    ;; allows using SPACE when in the minibuffer
-    (substitute-key-definition
-        'minibuffer-complete-word
-        'self-insert-command
-        minibuffer-local-completion-map))
-
-  ;; Enable nice rendering of diagnostics like compile errors.
-  (use-package flycheck
-    :init (global-flycheck-mode))
-
-  (use-package lsp-mode
-    ;; Optional - enable lsp-mode automatically in scala files
-    :hook (scala-mode . lsp)
-    :config (setq lsp-prefer-flymake nil))
-
-  (use-package lsp-ui)
-
-  ;; Add company-lsp backend for metals
-  (use-package company-lsp))
+  (use-package flycheck :init (global-flycheck-mode))
+  (use-package lsp-mode :hook (scala-mode . lsp)))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
