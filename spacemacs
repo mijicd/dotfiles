@@ -46,7 +46,7 @@ values."
      bibtex
      emacs-lisp
      git
-     (haskell :variables haskell-completion-backend 'lsp)
+     haskell
      latex
      lsp
      markdown
