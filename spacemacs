@@ -41,17 +41,23 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
+     agda
      auto-completion
      better-defaults
      bibtex
+     dhall
      emacs-lisp
      git
      haskell
+     javascript
+     json
      latex
      lsp
      markdown
      org
      purescript
+     python
+     rust
      scala
      shell-scripts
      sql
