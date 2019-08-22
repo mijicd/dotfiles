@@ -167,10 +167,11 @@ bar {
     status_command i3blocks -c ~/.dotfiles/i3/i3blocks.conf
 }
 
-# screen locking
+# shortcuts
 bindsym $mod+shift+x exec i3lock -c 000000
+bindsym $mod+shift+s exec systemctl suspend
 
 # system utilities
 exec --no-startup-id feh --bg-scale /data/wallpaper.jpg
 exec --no-startup-id keynav daemonize
-exec setxkbmap -layout us,de,rs -variant ,,latinalternatequotes rs -option 'grp:alt_shift_toggle' -option 'ctrl:nocaps' 
+exec --no-startup-id setxkbmap -layout us,de,rs -variant ,,latinalternatequotes rs -option 'grp:alt_shift_toggle' -option 'ctrl:nocaps' 
