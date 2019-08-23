@@ -41,6 +41,7 @@ values."
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      helm
+     agda
      auto-completion
      better-defaults
      bibtex
