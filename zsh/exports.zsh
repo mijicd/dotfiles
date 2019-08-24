@@ -15,7 +15,4 @@ export LANG=en_US.UTF-8
 HISTSIZE=10000
 SAVEHIST=10000
 
-# enable aliases for Nix
-[ -f ~/.nix-profile/etc/profile.d/nix.sh ] && source ~/.nix-profile/etc/profile.d/nix.sh
-
 export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$PATH
