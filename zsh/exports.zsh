@@ -15,4 +15,4 @@ export LANG=en_US.UTF-8
 HISTSIZE=10000
 SAVEHIST=10000
 
-export PATH=$HOME/.local/bin:$HOME/.cabal/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
