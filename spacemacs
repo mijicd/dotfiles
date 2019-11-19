@@ -48,6 +48,7 @@ values."
      emacs-lisp
      git
      haskell
+     html
      javascript
      json
      latex
