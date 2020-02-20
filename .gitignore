@@ -1,7 +1,5 @@
-# keep directories while ignoring keys
+fish/fish_variables
 ssh/
 !ssh/config
-
-# vim
 vim/.init.vim-rplugin~
 vim/.netrwhist
