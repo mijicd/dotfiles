@@ -41,7 +41,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start a program launcher
-bindsym $mod+d exec rofi -show run -width 100 -location 1 -lines 5 -bw 2 -yoffset -2
+bindsym $mod+d exec --no-startup-id rofi -show run -theme Arc-Dark
 
 # change focus
 bindsym $mod+h focus left
