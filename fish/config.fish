@@ -18,6 +18,7 @@ function gc     ; git commit -m $argv   ; end
 function gcb    ; git checkout -b $argv ; end
 function gcl    ; git clone $argv       ; end
 function gco    ; git checkout $argv    ; end
+function gd     ; git diff              ; end
 function gp     ; git push              ; end
 function gpu    ; git pull --rebase     ; end
 function gs     ; git status            ; end
