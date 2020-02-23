@@ -1,6 +1,7 @@
 # exports
 set -U fish_user_paths ~/.local/bin $fish_user_paths
-set -x LANG en_US.UTF-8
+set -x LANG 'en_US.UTF-8'
+set -x LC_ALL 'en_US.UTF-8'
 set -x LESS '--ignore-case --raw-control-chars'
 set -x PAGER less
 
@@ -19,6 +20,7 @@ function gcb    ; git checkout -b $argv ; end
 function gcl    ; git clone $argv       ; end
 function gco    ; git checkout $argv    ; end
 function gd     ; git diff              ; end
+function gl     ; git log               ; end
 function gp     ; git push              ; end
 function gpu    ; git pull --rebase     ; end
 function gs     ; git status            ; end
