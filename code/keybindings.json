@@ -1,0 +1,43 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight"
+    },
+    {
+        "key": "ctrl+alt+h",
+        "command": "workbench.action.moveEditorToLeftGroup"
+    },
+    {
+        "key": "ctrl+alt+l",
+        "command": "workbench.action.moveEditorToRightGroup"
+    },
+    {
+        "key": "ctrl+\\",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+-",
+        "command": "workbench.action.splitEditorDown"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "editor.action.moveLinesUpAction"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "editor.action.moveLinesDownAction"
+    }
+]
