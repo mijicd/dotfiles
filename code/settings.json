@@ -19,5 +19,6 @@
             "after": ["<Esc>"]
         }
     ],
-    "workbench.colorTheme": "One Dark Pro"
+    "workbench.colorTheme": "Gruvbox Dark Soft",
+    "workbench.iconTheme": "material-icon-theme"
 }
