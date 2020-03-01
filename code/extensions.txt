@@ -1,0 +1,15 @@
+alefragnani.project-manager
+CoenraadS.bracket-pair-colorizer
+jdinhlife.gruvbox
+justusadam.language-haskell
+kalitaalexey.vscode-rust
+ms-azuretools.vscode-docker
+ms-vsliveshare.vsliveshare
+PKief.material-icon-theme
+redhat.vscode-yaml
+scala-lang.scala
+scalameta.metals
+vscodevim.vim
+wayou.vscode-todo-highlight
+yzhang.markdown-all-in-one
+zhuangtongfa.material-theme
