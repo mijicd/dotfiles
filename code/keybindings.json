@@ -34,10 +34,10 @@
     },
     {
         "key": "ctrl+j",
-        "command": "editor.action.moveLinesUpAction"
+        "command": "editor.action.moveLinesDownAction"
     },
     {
         "key": "ctrl+k",
-        "command": "editor.action.moveLinesDownAction"
+        "command": "editor.action.moveLinesUpAction"
     }
 ]
