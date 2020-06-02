@@ -20,5 +20,6 @@
         }
     ],
     "workbench.colorTheme": "Gruvbox Dark Soft",
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDragAndDrop": false
 }
