@@ -12,16 +12,3 @@ function ....   ; cd ../../..       ; end
 function l      ; ls -al $argv      ; end
 function ll     ; ls -GFhl $argv    ; end
 function vi     ; nvim $argv        ; end
-
-# git
-function ga     ; git add $argv         ; end
-function gb     ; git branch $argv      ; end
-function gc     ; git commit -m $argv   ; end
-function gcb    ; git checkout -b $argv ; end
-function gcl    ; git clone $argv       ; end
-function gco    ; git checkout $argv    ; end
-function gd     ; git diff              ; end
-function gl     ; git log               ; end
-function gp     ; git push $argv        ; end
-function gpu    ; git pull --rebase     ; end
-function gs     ; git status            ; end
