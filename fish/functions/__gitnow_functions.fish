@@ -15,7 +15,7 @@ end
 
 # adapted from https://gist.github.com/oneohthree/f528c7ae1e701ad990e6
 function __gitnow_slugify
-    echo $argv | command iconv -t ascii//TRANSLIT | command sed -E 's/[^a-zA-Z0-9]+/_/g' | command sed -E 's/^(-|_)+|(-|_)+$//g' | command tr A-Z a-z
+    echo $argv | command iconv -t ascii//TRANSLIT | command sed -E 's/[^a-zA-Z0-9\-]+/_/g' | command sed -E 's/^(-|_)+|(-|_)+$//g'
 end
 
 function __gitnow_clone_repo
@@ -140,4 +140,49 @@ end
 
 function __gitnow_is_git_repository
     command git rev-parse --git-dir >/dev/null 2>&1
+end
+
+function __gitnow_has_uncommited_changes
+    command git diff-index --quiet HEAD -- || echo "1" 2>&1
+end
+
+function __gitnow_get_latest_tag
+    command git tag --sort=-creatordate | head -n1 2>/dev/null
+end
+
+# lexicographic order and tag names treated as versions
+# https://stackoverflow.com/a/52680984/2510591
+function __gitnow_get_tags_ordered
+    command git -c 'versionsort.suffix=-' tag --list --sort=-version:refname
+end
+
+function __gitnow_get_latest_semver_release_tag
+    for tg in (__gitnow_get_tags_ordered)
+        if echo $tg | grep -qE '^v?([0-9]+).([0-9]+).([0-9]+)$'
+            echo $tg 2>/dev/null
+            break
+        end
+    end
+end
+
+function __gitnow_increment_number -a strv
+    command echo $strv | awk '
+        function increment(val) {
+            if (val ~ /[0-9]+/) { return val + 1 }
+            return val
+        }
+        { print increment($0) }
+    ' 2>/dev/null
+end
+
+function __gitnow_get_valid_semver_release_value -a tagv
+    command echo $tagv | command sed -n 's/^v\\{0,1\\}\([0-9].[0-9].[0-9]*\)\([}]*\)/\1/p' 2>/dev/null
+end
+
+function __gitnow_get_valid_semver_prerelease_value -a tagv
+    command echo $tagv | command sed -n 's/^v\\{0,1\\}\([0-9].[0-9].[0-9]-[a-zA-Z0-9\-_.]*\)\([}]*\)/\1/p' 2>/dev/null
+end
+
+function __gitnow_is_number -a strv
+    command echo -n $strv | command grep -qE '^([0-9]+)$'
 end

@@ -21,5 +21,12 @@
     ],
     "workbench.colorTheme": "Gruvbox Dark Soft",
     "workbench.iconTheme": "material-icon-theme",
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "metals.javaHome": "/home/dejan/.sdkman/candidates/java/current",
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "files.watcherExclude": {
+        "**/.bloop": true,
+        "**/.metals": true,
+        "**/.ammonite": true
+    }
 }
