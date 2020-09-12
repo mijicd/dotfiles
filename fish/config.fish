@@ -12,3 +12,6 @@ function ....   ; cd ../../..       ; end
 function l      ; ls -al $argv      ; end
 function ll     ; ls -GFhl $argv    ; end
 function vi     ; nvim $argv        ; end
+
+# theme
+set -g theme_color_scheme gruvbox
