@@ -5,7 +5,6 @@ justusadam.language-haskell
 rust-lang.rust
 mauve.terraform
 ms-azuretools.vscode-docker
-ms-vsliveshare.vsliveshare
 PKief.material-icon-theme
 redhat.vscode-yaml
 scala-lang.scala
@@ -13,3 +12,5 @@ scalameta.metals
 vscodevim.vim
 wayou.vscode-todo-highlight
 yzhang.markdown-all-in-one
+gitduck.code-streaming
+
