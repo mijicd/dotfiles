@@ -32,8 +32,5 @@
     safecrlf = warn
     quotepath = false
 
-[merge]
-    tool = meld
-
 [push]
     default = current
