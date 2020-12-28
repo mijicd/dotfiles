@@ -187,6 +187,6 @@ bindsym $mod+shift+n move workspace to output left
 bindsym $mod+shift+m move workspace to output right
 
 # system utilities
-exec --no-startup-id feh --bg-scale /data/wallpaper.jpg
+exec --no-startup-id feh --bg-scale /home/dejan/Documents/wallpaper.jpg
 exec --no-startup-id keynav daemonize
 exec --no-startup-id setxkbmap -layout us,de,rs -variant ,,latinalternatequotes rs -option 'grp:alt_shift_toggle' -option 'ctrl:nocaps' 
