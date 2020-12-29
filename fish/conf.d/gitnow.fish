@@ -1,20 +1,13 @@
 # GitNow — Speed up your Git workflow. 🐠
 # https://github.com/joseluisq/gitnow
 
-function _gitnow_install -e gitnow_install
-    echo "Installing Gitnow..."
-
-    # download .gitnow example file
-    set -l config_file "$fish_snippets/.gitnow"
-    
-    echo "GitNow: Downloading default configuration file..."
-    curl -sSo $config_file https://raw.githubusercontent.com/joseluisq/gitnow/master/.gitnow
-    echo "GitNow: Configured and ready to use!"
+function __gitnow_install -e paket_install
+    echo (gitnow -v)" is installed and ready to use!"
+    echo "Just run the `gitnow` command if you want explore the API."
 end
 
-function _gitnow_uninstall -e gitnow_uninstall
-    echo "Uninstalling Gitnow..."
-    command rm -f $fish_snippets/.gitnow
+function __gitnow_uninstall -e paket_uninstall
+    echo "GitNow is uninstalled successfully."
 end
 
 function gitnow -d "Gitnow: Speed up your Git workflow. 🐠" -a xversion
@@ -252,6 +245,88 @@ function release -d "GitNow: Creates a new Gitflow release branch from current b
     commandline -f repaint
 end
 
+function merge -d "GitNow: Merges given branch into the active one"
+    if not __gitnow_is_git_repository
+        __gitnow_msg_not_valid_repository "merge"
+        return
+    end
+
+    set -l len (count $argv)
+    if test $len -eq 0
+        echo "Merge: No argument given, needs one parameter"
+        return
+    end
+
+    set -l v_abort
+    set -l v_continue
+    set -l v_branch
+
+    for v in $argv
+        switch $v
+            case -a --abort
+                set v_abort $v
+            case -c --continue
+                set v_continue $v
+            case -h --help
+                echo "NAME"
+                echo "      Gitnow: merge - Merge given branch into the active one"
+                echo "EXAMPLES"
+                echo "      merge <branch to merge>"
+                echo "OPTIONS:"
+                echo "      -a --abort              Abort a conflicted merge"
+                echo "      -c --continue           Continue a conflicted merge"
+                echo "      -h --help               Show information about the options for this command"
+                return
+            case -\*
+            case '*'
+                set v_branch $v
+        end
+    end
+
+    # abort
+    if test "$v_abort";
+        echo "Abort the current merge"
+        command git merge --abort
+        commandline -f repaint
+        return
+    end
+
+    # continue
+    if test "$v_continue";
+        echo "Continue the current merge"
+        command git merge --continue
+        commandline -f repaint
+        return
+    end
+
+    # No branch defined
+    if not test -n "$v_branch"
+        echo "Provide a valid branch name to merge."
+        commandline -f repaint
+        return
+    end
+
+    set -l v_found (__gitnow_check_if_branch_exist $v_branch)
+
+    # Branch was not found
+    if test $v_found -eq 0;
+        echo "Local branch `$v_branch` was not found. Not possible to merge."
+
+        commandline -f repaint
+        return
+    end
+
+    # Detect merging current branch
+    if [ "$v_branch" = (__gitnow_current_branch_name) ]
+        echo "Branch `$v_branch` is the same as current branch. Nothing to do."
+        commandline -f repaint
+        return
+    end
+
+    command git merge $v_branch
+    commandline -f repaint
+end
+
 function move -d "GitNow: Switch from current branch to another but stashing uncommitted changes"
     if not __gitnow_is_git_repository
         __gitnow_msg_not_valid_repository "move"
@@ -355,19 +430,19 @@ function logs -d "Gitnow: Shows logs in a fancy way"
         set args $argv
     end
 
-    command git log $args --color --graph \
+    LC_ALL=C command git log $args --color --graph \
         --pretty=format:"%Cred%h%C(reset) -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%C(reset) %C(brightmagenta dim)###%GK###%C(reset)%C(brightblack)@@%G?@@%C(reset)" --abbrev-commit \
-        | command sed -E 's/@@@@//' \
-        | command sed -E 's/@@([^"]*)@@/ (\1)/' \
-        | command sed -E "s/###([^\"]*)###([^\"]*)\(G\)/"(command tput setaf 2)"\1/" \
-        | command sed -E 's/###([^"]*)###/\1/' \
-        | command sed -E 's/\(B\)/(bad signature)/' \
-        | command sed -E 's/\(U\)/(good unknown validity signature)/' \
-        | command sed -E 's/\(X\)/(good expired signature)/' \
-        | command sed -E 's/\(Y\)/(good signature with expired key)/' \
-        | command sed -E 's/\(R\)/(good signature with revoked key)/' \
-        | command sed -E 's/\(E\)/(No checked signature)/' \
-        | command sed -E 's/\(N\)//' \
+        | LC_ALL=C command sed -E 's/@@@@//' \
+        | LC_ALL=C command sed -E 's/@@([^"]*)@@/ (\1)/' \
+        | LC_ALL=C command sed -E "s/###([^\"]*)###([^\"]*)\(G\)/"(command tput setaf 2)"\1/" \
+        | LC_ALL=C command sed -E 's/###([^"]*)###/\1/' \
+        | LC_ALL=C command sed -E 's/\(B\)/(bad signature)/' \
+        | LC_ALL=C command sed -E 's/\(U\)/(good unknown validity signature)/' \
+        | LC_ALL=C command sed -E 's/\(X\)/(good expired signature)/' \
+        | LC_ALL=C command sed -E 's/\(Y\)/(good signature with expired key)/' \
+        | LC_ALL=C command sed -E 's/\(R\)/(good signature with revoked key)/' \
+        | LC_ALL=C command sed -E 's/\(E\)/(No checked signature)/' \
+        | LC_ALL=C command sed -E 's/\(N\)//' \
         | command less -R
 
     commandline -f repaint
@@ -463,8 +538,8 @@ function tag -d "Gitnow: Tag commits following Semver"
                 return
             end
 
-            set -l x (echo $vstr | awk -F '.' '{print $1}')
-            set -l prefix (echo $v_latest | awk -F "$vstr" '{print $1}')
+            set -l x (echo $vstr | LC_ALL=C command awk -F '.' '{print $1}')
+            set -l prefix (echo $v_latest | LC_ALL=C command awk -F "$vstr" '{print $1}')
             set x (__gitnow_increment_number $x)
             set -l xyz "$prefix$x.0.0"
 
@@ -490,9 +565,9 @@ function tag -d "Gitnow: Tag commits following Semver"
                 return
             end
 
-            set -l x (echo $vstr | awk -F '.' '{print $1}')
-            set -l y (echo $vstr | awk -F '.' '{print $2}')
-            set -l prefix (echo $v_latest | awk -F "$vstr" '{print $1}')
+            set -l x (echo $vstr | LC_ALL=C command awk -F '.' '{print $1}')
+            set -l y (echo $vstr | LC_ALL=C command awk -F '.' '{print $2}')
+            set -l prefix (echo $v_latest | LC_ALL=C command awk -F "$vstr" '{print $1}')
             set y (__gitnow_increment_number $y)
             set -l xyz "$prefix$x.$y.0"
 
@@ -518,13 +593,13 @@ function tag -d "Gitnow: Tag commits following Semver"
                 return
             end
 
-            set -l x (echo $vstr | awk -F '.' '{print $1}')
-            set -l y (echo $vstr | awk -F '.' '{print $2}')
-            set -l z (echo $vstr | awk -F '.' '{print $3}')
-            set -l s (echo $z | awk -F '-' '{print $1}')
+            set -l x (echo $vstr | LC_ALL=C command awk -F '.' '{print $1}')
+            set -l y (echo $vstr | LC_ALL=C command awk -F '.' '{print $2}')
+            set -l z (echo $vstr | LC_ALL=C command awk -F '.' '{print $3}')
+            set -l s (echo $z | LC_ALL=C command awk -F '-' '{print $1}')
 
             if __gitnow_is_number $s
-                set -l prefix (echo $v_latest | awk -F "$vstr" '{print $1}')
+                set -l prefix (echo $v_latest | LC_ALL=C command awk -F "$vstr" '{print $1}')
                 set s (__gitnow_increment_number $s)
                 set -l xyz "$prefix$x.$y.$s"
 
