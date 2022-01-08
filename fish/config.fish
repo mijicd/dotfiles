@@ -10,9 +10,12 @@ set -x PAGER less
 function ..     ; cd ..             ; end
 function ...    ; cd ../..          ; end
 function ....   ; cd ../../..       ; end
-function l      ; ls -al $argv      ; end
-function ll     ; ls -GFhl $argv    ; end
+function l      ; exa -al $argv     ; end
+function ll     ; exa -GFhl $argv   ; end
 function vi     ; nvim $argv        ; end
 
 # theme
 set -g theme_color_scheme gruvbox
+
+source /opt/asdf-vm/asdf.fish
+
