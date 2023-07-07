@@ -4,7 +4,7 @@ icons_format = "{icon}"
 theme = "gruvbox-dark"
 
 [icons]
-icons = "awesome6"
+icons = "material-nf"
 
 [[block]]
 block = "disk_space"
@@ -18,7 +18,6 @@ format_alt = " $icon_swap $swap_used_percents"
 [[block]]
 block = "cpu"
 interval = 1
-format = " $icon $barchart $utilization "
 
 [[block]]
 block = "load"
