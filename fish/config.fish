@@ -7,15 +7,14 @@ set -x LESS '--ignore-case --raw-control-chars'
 set -x PAGER less
 
 # useful aliases
-function ..     ; cd ..             ; end
-function ...    ; cd ../..          ; end
-function ....   ; cd ../../..       ; end
-function l      ; exa -al $argv     ; end
-function ll     ; exa -GFhl $argv   ; end
-function vi     ; nvim $argv        ; end
+function ..     ; cd ..          ; end
+function ...    ; cd ../..       ; end
+function ....   ; cd ../../..    ; end
+function l      ; ls -al $argv   ; end
+function ll     ; ls -GFhl $argv ; end
+function vi     ; nvim $argv     ; end
 
 # theme
 set -g theme_color_scheme gruvbox
 
-source /opt/asdf-vm/asdf.fish
-
+source ~/.asdf/asdf.fish
