@@ -1,7 +1,6 @@
 alefragnani.project-manager
 CoenraadS.bracket-pair-colorizer
 jdinhlife.gruvbox
-justusadam.language-haskell
 rust-lang.rust
 mauve.terraform
 ms-azuretools.vscode-docker
@@ -12,5 +11,4 @@ scalameta.metals
 vscodevim.vim
 wayou.vscode-todo-highlight
 yzhang.markdown-all-in-one
-gitduck.code-streaming
 
