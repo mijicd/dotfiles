@@ -12,6 +12,12 @@
             "after": ["<Esc>"]
         }
     ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<C-p>"],
+            "commands": ["workbench.action.quickOpen"]
+        }
+    ],
     "vim.visualModeKeyBindings": [
         {
             "before": ["f", "d"],
