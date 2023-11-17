@@ -62,3 +62,9 @@ key_bindings:
 scrolling:
   history: 10000
   multiplier: 3
+
+shell:
+  program: /usr/bin/fish
+  args:
+    - -c
+    - "tmux attach || tmux"
