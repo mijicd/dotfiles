@@ -61,11 +61,11 @@ set-window-option -g window-status-style fg=brightblue,bg=colour236,dim
 set-window-option -g window-status-current-style fg=brightred,bg=colour236,bright
 
 # show host name, session name, window & pane number
-set -g status-left-length 100
+set -g status-left-length 50
 set -g status-left "#[fg=green]: #h : #[fg=blue] #S #I:#P"
 
 # show the system load
-set -g status-right-length 100
+set -g status-right-length 150
 set -g status-right "#[fg=green,bg=default,bright]#($TMUX_PLUGIN_MANAGER_PATH/tmux-mem-cpu-load/tmux-mem-cpu-load)"
 
 # ----------------------
