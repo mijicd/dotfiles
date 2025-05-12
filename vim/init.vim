@@ -78,7 +78,6 @@ vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " encoding
-set termencoding=utf-8
 set encoding=utf-8
 
 " encryption
@@ -112,9 +111,6 @@ cmap w!! w !sudo tee % >/dev/null
 
 " toggle listchars on or off
 noremap <Leader>i :set list!<CR>
-
-" Paste mode to prevent autoindentation of pasted lines
-set pastetoggle=<F2>
 
 " Better pasting from clipboard
 " http://tilvim.com/2014/03/18/a-better-paste.html
